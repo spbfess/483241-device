@@ -7,10 +7,9 @@
 	<body>
 		<header class="main-header">
 			<nav class="main-navigation">
-				<!-- search form here -->
+				<input class="main-search" name="search" type="text"  value="Поиск по сайту">
 				<ul class="user-navigation">
 					<li class="logon-link"><a href="#">Вход</a></li>
-					<!-- Выйти? <username>? -->
 					<li class="compare"><a href="#">Сравнить</a></li>
 					<li class="cart"><a href="#">Корзина</a></li>
 				</ul>
@@ -23,7 +22,7 @@
 							<li><a href="#">Виртуальная реальность</a></li>
 							<li><a href="#">Фитнес-браслеты</a></li>
 							<li><a href="#">Квадрокоптеры</a></li>
-							<li><a href="#">Моноподы для селфи</a></li>
+							<li><a href="catalog-monopods.html">Моноподы для селфи</a></li>
 							<li><a href="#">Умные часы</a></li>
 							<li><a href="#">Экшн-камеры</a></li>
 						</ul>
@@ -38,13 +37,87 @@
 		<main class="container">
 			<h1 class="visually-hidden">Магазин гаджетов</h1>
 			<section class="poplular">
-				<h2 class="visually-hidden">Популярные категории</h1>
-					<!-- слайдер на фрадиобаттанах, его разметка не завершена -->
-					<ul class="slider"></form>
-						<li>Моноподы<input type="radio" name="category" value="monopods" checked></li>
-						<li>Финтес-браслеты<input type="radio" name="category" value="fitbands"></li>
-						<li>Квадрокоптеры<input type="radio" name="category" value="quadcopters"></li>
-					</ul>
+				<h2 class="visually-hidden">Популярные категории</h2>
+				<!-- слайдер на радиобаттанах, его разметка не завершена -->
+				<input id="slider-monopods" type="radio" name="category" value="monopods" checked>
+				<input id="slider-fitbands" type="radio" name="category" value="fitbands">
+				<input id="slider-quadcopters" type="radio" name="category" value="quadcopters">
+				
+				<ul class="slides-list">
+					<li class="slides-item slides-monopods">
+						<h3 class=visually-hidden>Моноподы</h3>
+						<img src="img/8meters_monopod.png" alt="8ми метровый монопод" width="500" height="500">
+						<div class="slides-item-description">
+							<p class="slogan">Худеем правильно!</p>
+							<p class="description">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего в 5 килограмм.</p>
+							<a class="btn" href="#">Подробнее</a>
+							<table class="specification">
+								<tr class="specification-data">
+									<td>8,5 м</td>
+									<td>5 кг</td>
+									<td>Карбон</td>
+								</tr>
+								<tr class="specification-keys">
+									<td>Длина палки</td>
+									<td>Вес палки</td>
+									<td>Материал</td>
+								</tr>
+							</table>
+						</div>
+					</li>
+					<li class="slides-item slides-fitbands">
+						<h3 class=visually-hidden>Фитнес-браслеты</h3>
+						<img src="img/motivating_fitband.png" alt="Мотивирующий фитнес-браслет" width="500" height="500">
+						<div class="slides-item-description">
+							<p class="slogan">Делай селфи, как Бен Стиллер!</p>
+							<p class="description">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
+							<a class="btn" href="#">Подробнее</a>
+							<table class="specification">
+								<tr class="specification-data">
+									<td>48 часов</td>
+								</tr>
+								<tr class="specification-keys">
+									<td>Без подзарядки</td>
+								</tr>
+							</table>
+						</div>
+					</li>
+					<li class="slides-item slides-quadcopters">
+						<h3 class=visually-hidden>Квадрокоптеры</h3>
+						<img src="img/laser_copter.png" alt="Квадрокоптер с лазером" width="500" height="500">
+						<!-- <label for="slider-quadcopters">copters<label> -->
+						<div class="slides-item-description">
+							<p class="slogan">Порхает как бабочка, жалит как пчела!</p>
+							<p class="description">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
+							<a class="btn" href="#">Подробнее</a>
+							<table class="specification">
+								<tr class="specification-data">
+									<td>800 м</td>
+									<td>50 м</td>
+								</tr>
+								<tr class="specification-keys">
+									<td>Дальность полета</td>
+									<td>Радиус поражения</td>
+								</tr>
+							</table>
+						</div>
+					</li>
+				</ul>
+			</section>
+			
+			<section class="categories">
+			<section>
+
+			<section class="services">
+			</services>
+
+			<section class="brands">
+			</section>
+
+			<section class="info">
+			</section>
+
+			<section class="contacts">
 			</section>
 		</main>
 

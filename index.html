@@ -1,12 +1,54 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Девайс</title>
-  </head>
-  <body>
+	<head>
+	    <meta charset="utf-8">
+	    <title>HTML Academy: "Device" by Dmitry Nefyodov</title>
+ 	</head>
+	<body>
+		<header class="main-header">
+			<nav class="main-navigation">
+				<!-- search form here -->
+				<ul class="user-navigation">
+					<li class="logon-link"><a href="#">Вход</a></li>
+					<!-- Выйти? <username>? -->
+					<li class="compare"><a href="#">Сравнить</a></li>
+					<li class="cart"><a href="#">Корзина</a></li>
+				</ul>
 
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">Базовый HTML и CSS</a>».</p>
+				<ul class="site-navigation">
+					<li class="catalog">
+						Католог товаров
+						<ul class="catalog-menu">
+							<!-- Куда должны вести ссылки? даже гипотетически? -->
+							<li><a href="#">Виртуальная реальность</a></li>
+							<li><a href="#">Фитнес-браслеты</a></li>
+							<li><a href="#">Квадрокоптеры</a></li>
+							<li><a href="#">Моноподы для селфи</a></li>
+							<li><a href="#">Умные часы</a></li>
+							<li><a href="#">Экшн-камеры</a></li>
+						</ul>
+					</li>
+					<li class="delivery"><a href="#">Доставка</a></li>
+					<li class="guaranty"><a href="#">Гарантия</a></li>
+					<li class="contacts"><a href="#">Контакты</a></li>
+				</ul>
+			</nav>
+		</header>
 
-  </body>
+		<main class="container">
+			<h1 class="visually-hidden">Магазин гаджетов</h1>
+			<section class="poplular">
+				<h2 class="visually-hidden">Популярные категории</h1>
+					<!-- слайдер на фрадиобаттанах, его разметка не завершена -->
+					<ul class="slider"></form>
+						<li>Моноподы<input type="radio" name="category" value="monopods" checked></li>
+						<li>Финтес-браслеты<input type="radio" name="category" value="fitbands"></li>
+						<li>Квадрокоптеры<input type="radio" name="category" value="quadcopters"></li>
+					</ul>
+			</section>
+		</main>
+
+		<footer class="main-footer">
+		</footer>
+	</body>
 </html>

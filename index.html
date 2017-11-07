@@ -7,8 +7,12 @@
 	<body>
 		<header class="main-header">
 			<nav class="main-navigation">
+				<a class="main-header-logo">
+					<img src="img/main_header_logo.png" alt="Логотип сайта гаждетов Девайс" width="170" height="40">
+				</a>
 				<input class="main-search" name="search" type="text"  value="Поиск по сайту">
 				<ul class="user-navigation">
+					<!-- TODO: поразысмыслить над целесообразностью объединения логона и ссылок корзины и сравнения в одну сущность  -->
 					<li class="logon-link"><a href="#">Вход</a></li>
 					<li class="compare"><a href="#">Сравнить</a></li>
 					<li class="cart"><a href="#">Корзина</a></li>
@@ -38,7 +42,7 @@
 			<section class="promo-slider">
 				<h2 class="visually-hidden">Интересные предложения</h2>
 				
-				<!-- слайдер на радиобаттанах, его разметка не завершена -->
+				<!-- TODO: слайдер на радиобаттанах, его разметка не завершена -->
 				<input id="promo-1st-switch" type="radio" name="promo-number" value="1" checked>
 				<input id="promo-2nd-switch" type="radio" name="promo-number" value="2">
 				<input id="promo-3rd-switch" type="radio" name="promo-number" value="3">
@@ -65,7 +69,7 @@
 						<div class="promo-info">
 							<p class="promo-slogan">Худеем правильно!</p>
 							<p class="promo-desc">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего в 5 килограмм.</p>
-							<a class="btn btn-promo-details" href="#">Подробнее</a>
+							<a class="button button-promo-details" href="#">Подробнее</a>
 							<table class="promo-spec">
 								<tr class="promo-spec-data">
 									<td>8,5 м</td>
@@ -86,7 +90,7 @@
 						<div class="promo-info">
 							<p class="promo-slogan">Делай селфи, как Бен Стиллер!</p>
 							<p class="promo-desc">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
-							<a class="btn btn-promo-details" href="#">Подробнее</a>
+							<a class="button button-promo-details" href="#">Подробнее</a>
 							<table class="promo-spec">
 								<tr class="promo-spec-data">
 									<td>48 часов</td>
@@ -106,7 +110,7 @@
 							<p class="promo-desc">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
 							<!-- Предполагаю, что тут должна открываться карточка товара в отдельной странице (которая вертастаться не будет, не задана в макете), поэтому это ссылка.
 								Хотя если предположить js попап, наверное можно было бы сделать кнопку -->
-							<a class="btn btn-promo-details" href="#">Подробнее</a>
+							<a class="button button-promo-details" href="#">Подробнее</a>
 							<table class="promo-spec">
 								<tr class="promo-spec-data">
 									<td>800 м</td>
@@ -239,21 +243,55 @@
 						<li>Автротрейдинг</li>
 						<li>ЖелДорЭкспедиция</li>
 					</ul>
-					<button class="btn btn-about-us-details">Подробнее о нас</button>
+					<button class="button button-about-us-details">Подробнее о нас</button>
 				</section>
 
 				<section class="contacts">
 					<h3>Контакты</h3>
 					<p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
 
-					<!-- Вызов гугл мапы js-скриптом, предполагаю что делается на основе кнопки. Там посмотрим... -->
-					<button class="btn-contacts-map"></button>
-					<button class="btn btn-contacts-write-us">Напишите нам</button>
+					<!-- Вызов гугл мапы и модального окна формы обратной свзи js-скриптом, предполагаю что делается на основе кнопки. Или все-таки как ссылка? Там посмотрим... -->
+					<button class="contacts-map"><img src="img/map.jpg" alt="Карта как проехать" width="560" height="222"></button>
+					<button class="button button-contacts-write-us">Напишите нам</button>
 				</section>	
 			</section>
 		</main>
 
 		<footer class="main-footer">
+			<a class="main-footer-logo">
+				<img src="img/main_footer_logo.png" alt="Логотип сайта гаждетов Девайс" width="170" height="40">
+			</a>
+			<ul class="footer-user-navigation">
+				<li class="logon-link"><a href="#">Вход</a></li>
+				<li class="compare"><a href="#">Сравнить</a></li>
+				<li class="cart"><a href="#">Корзина</a></li>
+			</ul>
+			<p class="footer-address">г. Москва, ул. Строителей, 15</p>
+			<ul class="footer-site-navigation">
+				<li class="delivery"><a href="delivery.html">Доставка</a></li>
+				<li class="guaranty"><a href="guaranty.html">Гарантия</a></li>
+				<li class="contacts"><a href="#contacts">Контакты</a></li>
+			</ul>
+			<p class="footer-tel">г. Москва, ул. Строителей, 15</p>
+			<ul class="footer-social">
+	          <li><a class="social-button social-button-facebok" href="https://www.facebook.com">Фейсбук</a></li>
+	          <li><a class="social-button social-button-instagram" href="https://vk.com">Инстаграм</a></li>
+	          <li><a class="social-button social-button-twitter" href="https://twitter.com/">Твиттер</a></li>
+    		</ul>
+    		<!-- TODO: Спросить наставника, надо ли оборачивать эти списки в див, как в демке. Какой в этом смысл? -->
+    		<a class="footer-copyright-logo" href="https://htmlacademy.ru"><img src="img/htmlacademy_log.png" alt="Логотип HTML академии" width="30" height="38"></a>
 		</footer>
+
+		<section class="modal modal-write-us">
+	      <h2 class="visually-hidden">Напишите нам</h2>	
+	      <p>Введите свой логин и пароль.</p>
+	      <!-- Здесь будет форма -->
+	      <button class="modal-close"></button>
+	    </section>
+
+	    <section class="modal modal-map">
+	      <h2 class="visually-hidden">Как до нас добраться</h2>
+	      <button class="modal-close"></button>
+	    </section>
 	</body>
 </html>

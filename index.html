@@ -212,29 +212,30 @@
 
 			<section class="brands">
 				<h2 class="visually-hidden">Бренды</h2>
+				<!-- TODO: спросить у наставника, нужна ли подпись к ссылке если есть alt к вложенной картинке -->
 				<ul class="brands-list">
 					<li class="brands-item brands-item-dji">
-						<a href="https://www.dji.com">dji official site</a>
+						<a href="https://www.dji.com"><img src="img/dji_logo.png" alt="логотип бренда DJI" width="295" height="100"></a>
 					</li>
 					<li class="brands-item brands-item-spgadgets">
-						<a href="https://www.sp-gadgets.com">SP gadgets official site</a>
+						<a href="https://www.sp-gadgets.com"><img src="img/sp_gadgets_logo.png" alt="логотип бренда SP Gadgets" width="295" height="100"></a>
 					</li>
 					<li class="brands-item brands-item-gopro">
-						<a href="https://gopro.com/">GoPro official site</a>
+						<a href="https://gopro.com/"><img src="img/gopro_logo.png" alt="логотип бренда GoPro" width="295" height="100"></a>
 					</li>
 					<li class="brands-item brands-item-vive">
-						<a href="https://www.vive.com">Vive official site</a>
+						<a href="https://www.vive.com"><img src="img/vive_logo.png" alt="логотип бренда Vive" width="295" height="100"></a>
 					</li>
 				</ul>
 			</section>
 
-			<section class="info">
+			<div class="main-info">
 				<!-- Секция из секций, можно и дивом, нужен общий контейнер для параллельного отображения следующих 2-х секций.
-				Поскольку они родственны семантически, запихнул в общую секцию. -->
+				Поскольку они родственны семантически, можно в общую секцию. 
+				UPD: Выбрал div-->
 
-				<h2 class="visually-hidden">Информация</h2>
 				<section class="about-us">
-					<h3>О нас</h3>
+					<h2>О нас</h3>
 
 					<p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
 					<p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
@@ -247,14 +248,14 @@
 				</section>
 
 				<section class="contacts">
-					<h3>Контакты</h3>
+					<h2>Контакты</h3>
 					<p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
 
 					<!-- Вызов гугл мапы и модального окна формы обратной свзи js-скриптом, предполагаю что делается на основе кнопки. Или все-таки как ссылка? Там посмотрим... -->
-					<button class="contacts-map"><img src="img/map.jpg" alt="Карта как проехать" width="560" height="222"></button>
+					<button class="contacts-map"><img src="img/map.jpg" alt="Карта офиса по адресу улица Строителей, 15" width="560" height="222"></button>
 					<button class="button button-contacts-write-us">Напишите нам</button>
 				</section>	
-			</section>
+			</div>
 		</main>
 
 		<footer class="main-footer">
@@ -272,7 +273,7 @@
 				<li class="guaranty"><a href="guaranty.html">Гарантия</a></li>
 				<li class="contacts"><a href="#contacts">Контакты</a></li>
 			</ul>
-			<p class="footer-tel">г. Москва, ул. Строителей, 15</p>
+			<p class="footer-tel">Тел.: +7 (495) 495-95-95</p>
 			<ul class="footer-social">
 	          <li><a class="social-button social-button-facebok" href="https://www.facebook.com">Фейсбук</a></li>
 	          <li><a class="social-button social-button-instagram" href="https://vk.com">Инстаграм</a></li>
@@ -283,8 +284,7 @@
 		</footer>
 
 		<section class="modal modal-write-us">
-	      <h2 class="visually-hidden">Напишите нам</h2>	
-	      <p>Введите свой логин и пароль.</p>
+	      <h2 class="visually-hidden">Напишите нам</h2>
 	      <!-- Здесь будет форма -->
 	      <button class="modal-close"></button>
 	    </section>

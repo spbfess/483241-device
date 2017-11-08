@@ -39,13 +39,13 @@
 
 		<main class="container">
 			<h1 class="visually-hidden">Магазин гаджетов</h1>
-			<section class="promo-slider">
+			<section class="promo">
 				<h2 class="visually-hidden">Интересные предложения</h2>
 				
-				<!-- TODO: слайдер на радиобаттанах, его разметка не завершена -->
-				<input id="promo-1st-switch" type="radio" name="promo-number" value="1" checked>
-				<input id="promo-2nd-switch" type="radio" name="promo-number" value="2">
-				<input id="promo-3rd-switch" type="radio" name="promo-number" value="3">
+				<!-- слайдер на радиобаттанах, его разметка еще местами под вопроcом -->
+				<input id="promo-1st-switch" type="radio" name="promo-number" checked>
+				<input id="promo-2nd-switch" type="radio" name="promo-number">
+				<input id="promo-3rd-switch" type="radio" name="promo-number">
 				
 				<!-- TODO: подумать на тему абсолютного позиционирования блока переключателей, 
 				возможно понадобится еще один "оберточный" div списка слайдов.
@@ -167,6 +167,39 @@
 				<h2 class="visually-hidden">Сервисы</h2>
 				<!-- Yet another slider -->
 
+				<!-- TODO: слайдер на радиобаттанах, пока альфа-версия разметки -->
+				<input id="services-delivery" type="radio" name="service" checked>
+				<input id="services-guaranty" type="radio" name="service">
+				<input id="services-credit"   type="radio" name="service">
+				
+
+				<ul class="services-controls-list">
+					<li>
+						<label class="button button-services-controls" for="services-delivery">Доставка</label>
+					</li>
+					<li>
+						<label class="button button-services-controls" for="services-guaranty">Гарантия</label>
+					</li>
+					<li>
+						<label class="button button-services-controls" for="services-credit">Кредит</label>
+					</li>
+				</ul>
+
+				<ul class="services-decription-list">
+					<li class="services-decription-item services-decription-item-delivery">
+						<h3>Доставка</h3>
+						<p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+					</li>
+					<li class="services-decription-item services-decription-item-guaranty">
+						<h3>Гарантия</h3>
+						<p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
+					</li>
+					<li class="services-decription-item services-decription-item-credit">
+						<h3>Кредит</h3>
+						<p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
+					</li>
+				</ul>
+
 			</section>
 
 			<section class="brands">
@@ -191,7 +224,7 @@
 			<div class="main-info">
 				<!-- Секция из секций, можно и дивом, нужен общий контейнер для параллельного отображения следующих 2-х секций.
 				Поскольку они родственны семантически, можно в общую секцию. 
-				UPD: Выбрал div-->
+				UPD: Выбрал div -->
 
 				<section class="about-us">
 					<h2>О нас</h2>
@@ -233,12 +266,14 @@
 				<li class="contacts"><a href="contacts.html">Контакты</a></li>
 			</ul>
 			<p class="footer-tel">Тел.: +7 (495) 495-95-95</p>
+
+			<!-- TODO: Спросить наставника, надо ли оборачивать эти списки в див, как в демке. Какой в этом смысл? -->
 			<ul class="footer-social">
 	          <li><a class="social-button social-button-facebok" href="https://www.facebook.com">Фейсбук</a></li>
 	          <li><a class="social-button social-button-instagram" href="https://www.instagram.com">Инстаграм</a></li>
 	          <li><a class="social-button social-button-twitter" href="https://twitter.com">Твиттер</a></li>
     		</ul>
-    		<!-- TODO: Спросить наставника, надо ли оборачивать эти списки в див, как в демке. Какой в этом смысл? -->
+  
     		<a class="footer-copyright-logo" href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/htmlacademy_log.svg" alt="Логотип HTML академии" width="30" height="38"></a>
 		</footer>
 

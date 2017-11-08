@@ -5,5 +5,7 @@
 *.pdf
 *.psd
 *.sublime*
+.gitignore
+test.html
 node_modules/
 Thumbs.db

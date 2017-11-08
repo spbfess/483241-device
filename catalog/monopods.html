@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+	    <meta charset="utf-8">
+	    <title>Моноподы</title>
+ 	</head>
+	<body>
+		<header class="main-header">
+			<nav class="main-navigation">
+				<a class="main-header-logo">
+					<img src="img/main_header_logo.png" alt="Логотип сайта гаждетов Девайс" width="170" height="40">
+				</a>
+				<input class="main-search" name="search" type="text"  value="Поиск по сайту">
+				<ul class="user-navigation">
+					<!-- TODO: поразысмыслить над целесообразностью объединения логона и ссылок корзины и сравнения в одну сущность  -->
+					<li class="user-link"><a href="#">Валентин Петухов</a></li>
+					<li class="logout-link"><a href="#">Выйти</a></li>
+					<li class="compare"><a href="#">Сравнить</a></li>
+					<li class="cart"><a href="#">Корзина</a></li>
+				</ul>
+
+				<ul class="site-navigation">
+					<li class="catalog">
+						<!-- Добавил как линку, без href для единообразия разметки-->
+						<a>Католог товаров</a>
+						<ul class="catalog-menu">
+							<li><a href="catalog/vr.html">Виртуальная реальность</a></li>
+							<li><a href="catalog/fitbands.html">Фитнес-браслеты</a></li>
+							<li><a href="catalog/copters.html">Квадрокоптеры</a></li>
+							<li><a href="catalog/monopods.html">Моноподы для селфи</a></li>
+							<li><a href="catalog/watches.html">Умные часы</a></li>
+							<li><a href="catalog/cameras.html">Экшн-камеры</a></li>
+						</ul>
+					</li>
+					<li class="delivery"><a href="delivery.html">Доставка</a></li>
+					<li class="guaranty"><a href="guaranty.html">Гарантия</a></li>
+					<li class="contacts"><a href="#contacts">Контакты</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main class="container">
+			<h1 class="page-title">Моноподы для селфи</h1>
+      
+			<ul class="breadcrumbs">
+				<li><a href="index.html">Главная</a></li>
+				<li><a href="catalog.html">Каталог товаров</a></li>
+				<li class="breadcrumbs-current">Моноподы для селфи</li>
+			</ul>
+			
+			<section class="filters">
+				<h2 class="visually-hidden">Фильтр товаров</h2>
+				
+				<form class="filters-form" name="filters-form">
+				<h3>Фильтр</h3>
+				<!-- Здесь будет форма -->
+				</form>
+
+				<div class="filters-sort">
+					<h3>Сортировка</h3>
+
+					<input id="sort-by-price" type="radio" name="sort-by-option" value="by-price" checked>
+					<input id="sort-by-type" type="radio" name="sort-by-option" value="by-type">
+					<input id="sort-by-popularity" type="radio" name="sort-by-option" value="by-popularity">
+					<input id="sort-ascending" type="radio" name="sort-by-order" value="asc" checked>
+					<input id="sort-descending" type="radio" name="sort-by-order" value="desc">
+					
+					<ul class="filters-sort-by-option">
+						<li class="sort-by-option-current">
+							<label for="sort-by-price"></label>
+						</li>
+						<li><label for="sort-by-type"></label></li>
+						<li><label for="sort-by-popularity"></label></li>
+					</ul>
+
+					<ul class="filters-sort-by-order">
+						<li class="sort-by-order-current">
+							<label for="sort-ascending"></label>
+						</li>
+						<li><label for="sort-descending"></label></li>
+					</ul>
+				</div>
+			</section>
+
+			<section class="goods">
+				<h2 class="visually-hidden">Список товаров</h2>
+				<ul class="goods-list">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+
+				<ul class="goods-paginator">
+				</ul>
+			</section>
+		</main>
+
+		<footer class="main-footer">
+			<a class="main-footer-logo">
+				<img src="img/main_footer_logo.png" alt="Логотип сайта гаждетов Девайс" width="170" height="40">
+			</a>
+			<ul class="footer-user-navigation">
+				<li class="logon-link"><a href="#">Вход</a></li>
+				<li class="compare"><a href="#">Сравнить</a></li>
+				<li class="cart"><a href="#">Корзина</a></li>
+			</ul>
+			<p class="footer-address">г. Москва, ул. Строителей, 15</p>
+			<ul class="footer-site-navigation">
+				<li class="delivery"><a href="delivery.html">Доставка</a></li>
+				<li class="guaranty"><a href="guaranty.html">Гарантия</a></li>
+				<li class="contacts"><a href="#contacts">Контакты</a></li>
+			</ul>
+			<p class="footer-tel">Тел.: +7 (495) 495-95-95</p>
+			<ul class="footer-social">
+	          <li><a class="social-button social-button-facebok" href="https://www.facebook.com">Фейсбук</a></li>
+	          <li><a class="social-button social-button-instagram" href="https://vk.com">Инстаграм</a></li>
+	          <li><a class="social-button social-button-twitter" href="https://twitter.com/">Твиттер</a></li>
+    		</ul>
+    		<!-- TODO: Спросить наставника, надо ли оборачивать эти списки в див, как в демке. Какой в этом смысл? -->
+    		<a class="footer-copyright-logo" href="https://htmlacademy.ru"><img src="img/htmlacademy_log.svg" alt="Логотип HTML академии" width="30" height="38"></a>
+		</footer>
+	</body>
+</html>

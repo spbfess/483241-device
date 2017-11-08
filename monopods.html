@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+	    <meta charset="utf-8">
+	    <title>Каталог моноподов</title>
+ 	</head>
+	<body>
+		<header class="main-header">
+			<nav class="main-navigation">
+				<a class="main-header-logo" href="index.html">
+					<img src="img/main_header_logo.png" alt="Логотип сайта гаждетов Девайс" width="170" height="40">
+				</a>
+				<input class="main-search" name="search" type="text" value="Поиск по сайту">
+				<ul class="user-navigation">
+					<!-- TODO: поразысмыслить над целесообразностью объединения логона и ссылок корзины и сравнения в одну сущность  -->
+					<li class="profile">
+						<a href="profile.html">
+							<span class="profile-picture"></span>
+							<span class="profile-user">Валентин Петухов</span>
+						</a>
+					</li>
+					<li class="logout"><a href="#">Выйти</a></li>
+					<li class="compare"><a href="#">Сравнить</a></li>
+					<li class="cart"><a href="#">Корзина</a></li>
+				</ul>
+
+				<ul class="site-navigation">
+					<li class="catalog">
+						<!-- Добавил как линку без href для единообразия разметки-->
+						<a>Католог товаров</a>
+						<ul class="catalog-menu">
+							<li><a href="vr.html">Виртуальная реальность</a></li>
+							<li><a href="fitbands.html">Фитнес-браслеты</a></li>
+							<li><a href="copters.html">Квадрокоптеры</a></li>
+							<li class="site-navigation-current"><a>Моноподы для селфи</a></li>
+							<li><a href="watches.html">Умные часы</a></li>
+							<li><a href="cameras.html">Экшн-камеры</a></li>
+						</ul>
+					</li>
+					<li class="delivery"><a href="delivery.html">Доставка</a></li>
+					<li class="guaranty"><a href="guaranty.html">Гарантия</a></li>
+					<li class="contacts"><a href="contacts.html">Контакты</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main class="container">
+			<h1 class="page-title">Моноподы для селфи</h1>
+      
+			<ul class="breadcrumbs">
+				<li><a href="index.html">Главная</a></li>
+				<li><a href="catalog.html">Каталог товаров</a></li>
+				<li class="breadcrumbs-current">Моноподы для селфи</li>
+			</ul>
+			
+			<section class="filters">
+				<h2 class="visually-hidden">Фильтр товаров</h2>
+				
+				<form class="filters-form" name="filters-form">
+				<h3>Фильтр</h3>
+				<!-- Здесь будет форма -->
+				</form>
+
+				<div class="filters-sort">
+					<h3>Сортировка</h3>
+
+					<input id="sort-by-price" type="radio" name="sort-by-option" value="by-price" checked>
+					<input id="sort-by-type" type="radio" name="sort-by-option" value="by-type">
+					<input id="sort-by-popularity" type="radio" name="sort-by-option" value="by-popularity">
+					<input id="sort-ascending" type="radio" name="sort-by-order" value="asc" checked>
+					<input id="sort-descending" type="radio" name="sort-by-order" value="desc">
+					
+					<ul class="filters-sort-by-option">
+						<li class="sort-by-option-current">
+							<label for="sort-by-price"></label>
+						</li>
+						<li><label for="sort-by-type"></label></li>
+						<li><label for="sort-by-popularity"></label></li>
+					</ul>
+
+					<ul class="filters-sort-by-order">
+						<li class="sort-by-order-current">
+							<label for="sort-ascending"></label>
+						</li>
+						<li><label for="sort-descending"></label></li>
+					</ul>
+				</div>
+			</section>
+
+			<section class="goods">
+				<h2 class="visually-hidden">Список моноподов</h2>
+				<ul class="goods-list">
+					<li class="goods-item">
+						<h3><a href="goods/monopods/rookie_selfipod.html">Любительская селфи-палка</a></h3>
+						<!--  TODO: вопрос, как размечать цену после заголовка? h3 занимает всю строку по умолчанию.
+						можно сверстать название товара как абзац с включенным span'ом с ценой, но тогда семантически 
+						карточку товара не выделить -->
+						<span>500 руб.</span>
+						<img src="img/goods/monopods/rookie_selfipod.jpg" alt="Любительская селфи-палка" width="360" height="380">
+					</li>
+					<li class="goods-item">
+						<h3><a href="goods/monopods/profi_selfipod.html">Профессиональная селфи-палка</a></h3>
+						<span>1500 руб.</span>
+						<img src="img/goods/monopods/profi_selfipod.jpg" alt="Профессиональная селфи-палка" width="360" height="380">
+					</li>
+					<li class="goods-item">
+						<h3><a href="goods/monopods/unsikable_selfipod.html">Непотопляемая селфи-палка</a></h3>
+						<span>2500 руб.</span>
+						<img src="img/goods/monopods/unsikable_selfipod.jpg" alt="Непотопляемая селфи-палка" width="360" height="380">
+					</li>
+					<li class="goods-item">
+						<h3><a href="goods/monopods/folow_me_selfipod.html">Селфи-палка «Следуй за мной»</a></h3>
+						<span>4900 руб.</span>
+						<img src="img/goods/monopods/folow_me_selfipod.jpg" alt="Селфи-палка «Следуй за мной»" width="360" height="380">
+					</li>
+				</ul>
+
+				<ul class="pagination-list">
+					<li class="pagination-item pagination-item-prev">Назад</li>
+					<li class="pagination-item pagination-item-current">1</li>
+					<li class="pagination-item">2</li>
+					<li class="pagination-item">3</li>
+					<li class="pagination-item pagination-item-next">Вперед</li>
+				</ul>
+			</section>
+		</main>
+
+		<footer class="main-footer">
+			<a class="main-footer-logo">
+				<img src="img/main_footer_logo.png" alt="Логотип сайта гаждетов Девайс" width="170" height="40">
+			</a>
+			<ul class="footer-user-navigation">
+				<li class="login"><a href="#">Вход</a></li>
+				<li class="compare"><a href="#">Сравнить</a></li>
+				<li class="cart"><a href="#">Корзина</a></li>
+			</ul>
+			<p class="footer-address">г. Москва, ул. Строителей, 15</p>
+			<ul class="footer-site-navigation">
+				<li class="delivery"><a href="delivery.html">Доставка</a></li>
+				<li class="guaranty"><a href="guaranty.html">Гарантия</a></li>
+				<li class="contacts"><a href="contacts.html">Контакты</a></li>
+			</ul>
+			<p class="footer-tel">Тел.: +7 (495) 495-95-95</p>
+			<ul class="footer-social">
+	          <li><a class="social-button social-button-facebok" href="https://www.facebook.com">Фейсбук</a></li>
+	          <li><a class="social-button social-button-instagram" href="https://vk.com">Инстаграм</a></li>
+	          <li><a class="social-button social-button-twitter" href="https://twitter.com/">Твиттер</a></li>
+    		</ul>
+    		<!-- TODO: Спросить наставника, надо ли оборачивать эти списки в див, как в демке. Какой в этом смысл? -->
+    		<a class="footer-copyright-logo" href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/htmlacademy_log.svg" alt="Логотип HTML академии" width="30" height="38"></a>
+		</footer>
+	</body>
+</html>

@@ -62,80 +62,80 @@
 				<li class="breadcrumbs-current">Моноподы для селфи</li>
 			</ul>
 			
-			<section class="filters">
-				<h2 class="visually-hidden">Фильтр товаров</h2>
-				
-				<form class="filters-form" name="filters-form">
-				<h3>Фильтр</h3>
-				<!-- Здесь будет форма -->
+			<!-- Переделал всю структуру отсюда до хэдера, должно упростить построение сетки, но на мой взгляд логически ужасно по сравнению с предыдущим вариантом, в котором однако построение сетки может стать реальной болью. Если будет время попробую сверстать оба варианта, пока пойду с этим  -->
+
+			<section class="filter">
+				<h2>Фильтр</h2>		
+				<form class="filter-form" name="filter-form">
+					<!-- Здесь будет форма. Скоро -->
 				</form>
-
-				<div class="filters-sort">
-					<h3>Сортировка</h3>
-					<ul class="filters-sort-by-option">
-						<li><a class="sort-by-price sort-by-option-current" href="#">Сортировка по цене</a></li>
-						<li><a class="sort-by-type" href="#">Сортировка по типу</a></li>
-						<li><a class="sort-by-popularity" href="#">Сортировка по популярности</a></li>
-					</ul>
-					<ul class="filters-sort-by-order">
-						<li><a class="sort-ascending sort-by-order-current" aria-label="Сортировка по возрастанию" href="#"></a></li>
-						<li><a class="sort-descending" aria-label="Сортировка по убыванию" href="#"></a></li>
-					</ul>
-				</div>
 			</section>
+			
+			<div class="output">
+				<section class="sort">
+					<h2>Сортировка</h2>
+					<div class="sort-block">
+						<ul class="sort-by-option">
+							<li><a class="sort-by-option-current" href="#">Сортировка по цене</a></li>
+							<li><a href="#">Сортировка по типу</a></li>
+							<li><a href="#">Сортировка по популярности</a></li>
+						</ul>
+						<ul class="sort-by-order">
+							<li><a class="sort-ascending sort-by-order-current" href="#">Сортировка по возрастанию</a></li>
+							<li><a class="sort-descending" href="#">Сортировка по убыванию</a></li>
+						</ul>
+					</div>
+				</section>
 
-			<section class="goods">
-				<h2 class="visually-hidden">Список моноподов</h2>
-				<ul class="goods-list">
-					<li>
-						<h3><a href="goods/monopods/rookie_selfipod.html">Любительская селфи-палка</a></h3>
-						<!--  TODO: вопрос, как размечать цену после заголовка? h3 занимает всю строку по умолчанию.
-						можно сверстать название товара как абзац с включенным span'ом с ценой, но тогда семантически 
-						карточку товара не выделить -->
-						<span class="goods-price">500 руб.</span>
-						<p class="goods-item-bar">
-							<img src="img/goods/monopods/rookie_selfipod.jpg" alt="Любительская селфи-палка" width="360" height="380">
-							<button type="button" class="button-add-to-cart">В корзину</button>
-							<button type="button" class="button-add-to-comparison">Добавить к сравнению</button>
-						</p>
-					</li>
-					<li>
-						<h3><a href="goods/monopods/profi_selfipod.html">Профессиональная селфи-палка</a></h3>
-						<span class="goods-price">1500 руб.</span>
-						<p class="goods-item-bar">
-							<img src="img/goods/monopods/profi_selfipod.jpg" alt="Профессиональная селфи-палка" width="360" height="380">
-							<button type="button" class="button-add-to-cart">В корзину</button>
-							<button type="button" class="button-add-to-comparison">Добавить к сравнению</button>
-						</p>
-					</li>
-					<li>
-						<h3><a href="goods/monopods/unsikable_selfipod.html">Непотопляемая селфи-палка</a></h3>
-						<span class="goods-price">2500 руб.</span>
-						<p class="goods-item-bar">
-							<img src="img/goods/monopods/unsikable_selfipod.jpg" alt="Непотопляемая селфи-палка" width="360" height="380">
-							<button type="button" class="button-add-to-cart">В корзину</button>
-							<button type="button" class="button-add-to-comparison">Добавить к сравнению</button>
-						</p>
-					</li>
-					<li>
-						<h3><a href="goods/monopods/folow_me_selfipod.html">Селфи-палка «Следуй за мной»</a></h3>
-						<span class="goods-price">4900 руб.</span>
-						<p class="goods-item-bar">
-							<img src="img/goods/monopods/folow_me_selfipod.jpg" alt="Селфи-палка «Следуй за мной»" width="360" height="380">
-							<button type="button" class="button-add-to-cart">В корзину</button>
-							<button type="button" class="button-add-to-comparison">Добавить к сравнению</button>
-						</p>
-					</li>
-				</ul>
-
-				<ul class="pagination-list">
-					<li class="pagination-item-prev"><a href="#">Назад</a></li>
-					<li class="pagination-item-current"><a>1</a></li>
-					<li><a href="#">2</a></li>
-					<li><a href="#">3</a></li>
-					<li class="pagination-item-next"><a href="#">Вперед</a></li>
-				</ul>
-			</section>
+				<section class="goods">
+					<h2 class="visually-hidden">Список товаров</h2>
+					<ul class="goods-list">
+						<li>
+							<h3><a href="goods/monopods/rookie_selfipod.html">Любительская селфи-палка</a></h3>
+							<span class="goods-price">500 руб.</span>
+							<p class="goods-item-bar">
+								<img src="img/goods/monopods/rookie_selfipod.jpg" alt="Любительская селфи-палка" width="360" height="380">
+								<button type="button" class="button-add-to-cart">В корзину</button>
+								<button type="button" class="button-add-to-comparison">Добавить к сравнению</button>
+							</p>
+						</li>
+						<li>
+							<h3><a href="goods/monopods/profi_selfipod.html">Профессиональная селфи-палка</a></h3>
+							<span class="goods-price">1500 руб.</span>
+							<p class="goods-item-bar">
+								<img src="img/goods/monopods/profi_selfipod.jpg" alt="Профессиональная селфи-палка" width="360" height="380">
+								<button type="button" class="button-add-to-cart">В корзину</button>
+								<button type="button" class="button-add-to-comparison">Добавить к сравнению</button>
+							</p>
+						</li>
+						<li>
+							<h3><a href="goods/monopods/unsikable_selfipod.html">Непотопляемая селфи-палка</a></h3>
+							<span class="goods-price">2500 руб.</span>
+							<p class="goods-item-bar">
+								<img src="img/goods/monopods/unsikable_selfipod.jpg" alt="Непотопляемая селфи-палка" width="360" height="380">
+								<button type="button" class="button-add-to-cart">В корзину</button>
+								<button type="button" class="button-add-to-comparison">Добавить к сравнению</button>
+							</p>
+						</li>
+						<li>
+							<h3><a href="goods/monopods/folow_me_selfipod.html">Селфи-палка «Следуй за мной»</a></h3>
+							<span class="goods-price">4900 руб.</span>
+							<p class="goods-item-bar">
+								<img src="img/goods/monopods/folow_me_selfipod.jpg" alt="Селфи-палка «Следуй за мной»" width="360" height="380">
+								<button type="button" class="button-add-to-cart">В корзину</button>
+								<button type="button" class="button-add-to-comparison">Добавить к сравнению</button>
+							</p>
+						</li>
+					</ul>
+					<ul class="pagination-list">
+						<li class="pagination-item-prev"><a href="#">Назад</a></li>
+						<li class="pagination-item-current"><a>1</a></li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+						<li class="pagination-item-next"><a href="#">Вперед</a></li>
+					</ul>
+				</section>
+			</div>
 		</main>
 
 		<footer class="main-footer">
@@ -143,7 +143,7 @@
 				<img src="img/device_logo.png" alt="Логотип сайта гаждетов Девайс" width="170" height="40">
 			</a>
 			<ul class="main-footer-user-navigation">
-					<li class="login"><a href="#">Вход</a></li>
+				<li class="login"><a href="#">Вход</a></li>
 			</ul>
 			<ul class="main-footer-goods-actions">
 				<li class="compare"><a href="#">Сравнить</a></li>
@@ -157,7 +157,7 @@
 			</ul>
 			<p class="tel">Тел.: +7 (495) 495-95-95</p>
 
-			<!-- wrapped in div for specific line decoration element to process -->
+			<!-- wrapped inещ div for specific line decoration element to process -->
 			<div class="main-footer-external-links">
 				<ul class="social">
 		          <li><a class="social-button social-button-facebok" href="https://www.facebook.com">Фейсбук</a></li>

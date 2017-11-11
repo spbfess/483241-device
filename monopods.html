@@ -72,26 +72,14 @@
 
 				<div class="filters-sort">
 					<h3>Сортировка</h3>
-
-					<input id="sort-by-price" type="radio" name="sort-by-option" value="by-price" checked>
-					<input id="sort-by-type" type="radio" name="sort-by-option" value="by-type">
-					<input id="sort-by-popularity" type="radio" name="sort-by-option" value="by-popularity">
-					<input id="sort-ascending" type="radio" name="sort-by-order" value="asc" checked>
-					<input id="sort-descending" type="radio" name="sort-by-order" value="desc">
-					
 					<ul class="filters-sort-by-option">
-						<li class="sort-by-option-current">
-							<label for="sort-by-price">сортировка по цене</label>
-						</li>
-						<li><label for="sort-by-type">сортировка по типу</label></li>
-						<li><label for="sort-by-popularity">сортировка по популярности</label></li>
+						<li><a class="sort-by-price sort-by-option-current" href="#">Сортировка по цене</a></li>
+						<li><a class="sort-by-type" href="#">Сортировка по типу</a></li>
+						<li><a class="sort-by-popularity" href="#">Сортировка по популярности</a></li>
 					</ul>
-
 					<ul class="filters-sort-by-order">
-						<li class="sort-by-order-current">
-							<label for="sort-ascending">сортировка по возрастанию</label>
-						</li>
-						<li><label for="sort-descending">сортировка по убыванию</label></li>
+						<li><a class="sort-ascending sort-by-order-current" aria-label="Сортировка по возрастанию" href="#"></a></li>
+						<li><a class="sort-descending" aria-label="Сортировка по убыванию" href="#"></a></li>
 					</ul>
 				</div>
 			</section>

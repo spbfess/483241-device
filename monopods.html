@@ -66,8 +66,83 @@
 
 			<section class="filter">
 				<h2>Фильтр</h2>		
-				<form class="filter-form" name="filter-form">
-					<!-- Здесь будет форма. Скоро -->
+
+				<form class="filter-form" action="https://echo.htmlacademy.ru" method="get" oninput="lower_cost_output.value=lower_cost_set.value;upper_cost_output.value=upper_cost_set.value;">
+					
+					<h3>Стоимость</h3>
+
+					<!-- хз как его делать, поэтому буду думать о сугубо графическом его воплощении. ul как контейнер всего этого безобразия, два li - ручки левая и правая, перед левой ручкой псевдоэлементом будет "неактивная полоса", перед правой (или после левой) - активная, после правой - неактивная. Ручка = сам ползунок(в виде бэкграунда к лейблу инпута) + подпись от или до, содержащая аутпут выставленного значения. Отправляеются два скрытых инпута, с дефолтными значениями. Смена значений равно как и оживление такого слйдера, видимо только через js -->
+
+					<ul class="filter-cost">
+						<li class="filter-cost-left-lever">
+							<label tabindex="0" aria-label="Нижняя граница цены">
+								<input type="number" name="lower_cost_set" value="0">
+							</label>
+							<span>от <output name="lower_cost_output">0</output></span>
+							
+						</li>
+						<li class="filter-cost-right-lever">
+							<label tabindex="0" aria-label="Верхняя граница цены">
+								<input type="number" name="upper_cost_set" value="5000">	
+							</label>
+							<span>до <output name="upper_cost_output">5000</output></span>
+						</li>
+					</ul>
+
+					<h3>Цвет</h3>
+					
+					<ul class="filter-color-list">
+						<li>
+							<label class="filter-color-black">
+								<input type="checkbox" name="color" value="black" checked>
+								<!-- Здесь и далее оставил подписи в виде спанов, поскольку они имеют смысловую нагрузку. Не уверен что можно использовать псевдоэлементы для подписи, ведь это уже стилизация, то есть оформление. Или нет? -->
+								<span>Черный</span>
+							</label>
+						</li>
+						<li>
+							<label class="filter-color-white">
+								<input type="checkbox" name="color" value="white">
+								<span>Белый</span>
+							</label>
+						</li>
+						<li>
+							<label class="filter-color-blue">
+								<input type="checkbox" name="color" value="blue" checked>
+								<span>Синий</span>
+							</label>
+						</li>
+						<li>
+							<label class="filter-color-red">
+								<input type="checkbox" name="color" value="red" checked>
+								<span>Красный</span>
+							</label>
+						</li>
+						<li>
+							<label class="filter-color-pink">
+								<input type="checkbox" name="color" value="pink">
+								<span>Розовый</span>
+							</label>
+						</li>
+					</ul>
+					
+					<h3>Bluetooth</h3>
+
+					<ul class="filter-bluetooth-list">
+						<li>
+							<label class="filter-bluetooth-yes">
+								<input type="radio" name="bluetooth" value="yes" checked>
+								<span>Есть</span>
+							</label>
+						</li>
+						<li>
+							<label class="filter-bluetooth-no">
+								<input type="radio" name="bluetooth" value="no">
+								<span>Нет</span>
+							</label>
+						</li>
+					</ul>
+ 
+					<button class="button-filter-submit" type="submit">Показать</button>
 				</form>
 			</section>
 			
@@ -143,7 +218,7 @@
 							</div>
 						</li>
 					</ul>
-					<ul class="pagination-list">
+					<ul class="pagination-list" aria-label="Навигация по страницам">
 						<li class="pagination-item-prev"><a href="#">Назад</a></li>
 						<li class="pagination-item-current"><a>1</a></li>
 						<li><a href="#">2</a></li>
@@ -165,17 +240,17 @@
 				<li class="compare"><a href="#">Сравнить</a></li>
 				<li class="cart"><a href="#">Корзина</a></li>
 			</ul>
-			<p class="address">г. Москва, ул. Строителей, 15</p>
+			<p class="address" aria-label="Адрес">г. Москва, ул. Строителей, 15</p>
 			<ul class="main-footer-site-navigation">
 				<li><a href="delivery.html">Доставка</a></li>
 				<li><a href="guaranty.html">Гарантия</a></li>
 				<li><a href="contacts.html">Контакты</a></li>
 			</ul>
-			<p class="tel">Тел.: +7 (495) 495-95-95</p>
+			<p class="tel" aria-label="Телефон">Тел.: +7 (495) 495-95-95</p>
 
-			<!-- wrapped inещ div for specific line decoration element to process -->
+			<!-- wrapped into div for specific line decoration element to process -->
 			<div class="main-footer-external-links">
-				<ul class="social">
+				<ul class="social" aria-label="Мы в социальных сетях">
 		          <li><a class="social-button social-button-facebok" href="https://www.facebook.com">Фейсбук</a></li>
 		          <li><a class="social-button social-button-instagram" href="https://www.instagram.com">Инстаграм</a></li>
 		          <li><a class="social-button social-button-twitter" href="https://twitter.com">Твиттер</a></li>

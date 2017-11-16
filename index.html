@@ -8,13 +8,15 @@
 
  	</head>
 	<body>
-		<header class="main-header">
-			<nav class="main-navigation layout-centralizer">
+		<header class="main-header layout-centralizer">
+		 	<nav class="main-navigation">
 				<a class="main-header-logo">
 					<img src="img/device_header_logo.png" alt="Логотип сайта гаждетов Девайс" width="164" height="36">
 				</a>
 				<form class="main-search">
-					<input class="main-search-input" name="search" type="text" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
+					<!-- <label> -->
+						<input name="search" type="text" placeholder="Поиск по сайту"><span></span>
+					<!-- </label> -->
 					<button type="submit">Найти</button>
 				</form>
 				<ul class="user-navigation">
@@ -24,14 +26,10 @@
 					<li class="compare"><a href="#">Сравнить</a></li>
 					<li class="cart"><a href="#">Корзина</a></li>
 				</ul>
-
 				<ul class="site-navigation">
 					<li class="catalog">
 						<a href="catalog.html">Католог товаров</a>
-						<!-- Так адресовал проблему разметки каталога по столбцам: решил зачем дивянничать, -
-						был список, списком и останется, каждый элемент - столбец, внутри пихаем ссылки сколько душе угодно,
-						их сделаем блочными, классифицировать ничего не надо, здесь псевдо-класссы по номеру чайлда то что нужно,
-						поскольку ссылки сгруппированы явно нелогически -->
+						<!-- Так адресовал проблему разметки каталога по столбцам: решил зачем дивянничать, - был список, списком и останется, каждый элемент - столбец, внутри пихаем ссылки сколько душе угодно, их сделаем блочными, классифицировать ничего не надо, здесь псевдо-класссы по номеру чайлда то что нужно, поскольку ссылки сгруппированы явно нелогически -->
 						<ul class="catalog-menu">
 							<li>
 								<a href="vr.html">Виртуальная реальность</a>

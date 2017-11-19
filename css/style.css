@@ -51,7 +51,6 @@ body {
 	font-family: "opensanslight", Arial, sans-serif;
 	font-size: 15px;
 	line-height: 30px;
-	font-weight: normal;
 	color: #464646;
 
 	background-color: #ffffff;
@@ -89,6 +88,7 @@ a {
 
 .main-navigation a {
 	color: #000000;
+	/*display: block;*/
 }
 
 .main-header-logo {
@@ -227,7 +227,7 @@ a {
 .site-navigation > li > a {
 	font-family: "gilroyextrabold", Arial, sans-serif;
 	font-size: 18px;
-	line-height: auto;
+	line-height: normal;
 	letter-spacing: 0.2em;
 
 	text-transform: uppercase;
@@ -241,10 +241,6 @@ a {
 /*.catalog-menu {
 	visibility: visible;
 }*/
-
-.site-navigation li {
-	tabindex: 0;
-}
 
 .site-navigation li:hover .catalog-menu,
 .site-navigation li:focus .catalog-menu,
@@ -280,10 +276,6 @@ site-navigation catalog a{
 	background-repeat: no-repeat;
 	width: 16px;
 	height: 16px;
-	/*height: 100px;*/*/
-	background-color: red;
-	/*background-size: contain;*/
-	/*border: 1px solid black;*/
 }
 
 /*.site-navigation {
@@ -308,23 +300,19 @@ site-navigation catalog a{
 	
 	font-family: "gilroyextrabold", Arial, sans-serif;
 	font-size: 18px;
-	line-height: auto;
+	line-height: normal;
 	letter-spacing: 0.2em;
 
 	color: rgb(0, 0, 0);
 	text-transform: uppercase;
 
 	background-color: transparent;
-	border: 0;
-	border-radius: none;
+	border: none;
+	border-radius: 0;
 }
 
 .button-promo-details {
 	width: 220px;
-}
-
-.button-services-controls {
-	width: 160px;
 }
 
 .button:hover,
@@ -357,9 +345,25 @@ site-navigation catalog a{
 
 .button:active {
 	color: rgba(0, 0, 0, 0.3);
+	outline: 0;
 }
 
-/* ============== PROMO ============== */
+.button-services-controls {
+	width: 160px;
+}
+
+
+/*.button-services-controls:active {
+	background-color: #000000;
+	color: #f7e184;
+}
+
+.button-services-controls:active::before {
+	display: none;
+}*/
+
+
+/* ============== INDEX PROMO ============== */
 
 .promo {
 	width: 1160px;
@@ -368,6 +372,8 @@ site-navigation catalog a{
 
 .promo-slider-controls,
 .promo-list {
+	margin: 0;
+	padding: 0;
 	list-style: none;
 }
 
@@ -410,6 +416,7 @@ site-navigation catalog a{
 	position: relative;
 }
 
+/* Циферка с номером слайда, вынес в декоративный псевдо-элемент */
 .promo-item::before {
 	position: absolute;
 	
@@ -434,19 +441,20 @@ site-navigation catalog a{
 	content:"03";
 }
 
+/* Дефолты для контейнера промо картинок */
 .promo-item-monopods .promo-item-image {
-	width: 384;
-	height: 486;
+	width: 384px;
+	height: 486px;
 }
 
 .promo-item-fitbands .promo-item-image {
-	width: 345;
-	height: 485;
+	width: 345px;
+	height: 485px;
 }
 
 .promo-item-copters .promo-item-image {
-	width: 526;
-	height: 334;
+	width: 526px;
+	height: 334px;
 }
 
 .promo-slogan {
@@ -455,7 +463,7 @@ site-navigation catalog a{
 
 	font-family: "gilroyextrabold", Arial, sans-serif;
 	font-size: 47px;
-	line-height: auto;
+	line-height: normal;
 }
 
 .promo-spec-data {
@@ -470,7 +478,7 @@ site-navigation catalog a{
 }
 
 
-/* ============== CATEGORIES ============== */
+/* ============== INDEX CATEGORIES ============== */
 
 .categories {
 	width: 1160px;
@@ -492,7 +500,7 @@ site-navigation catalog a{
 
 	font-family: "gilroyextrabold", Arial, sans-serif;
 	font-size: 18px;
-	line-height: auto;
+	line-height: normal;
 	letter-spacing: 0.01em;
 	color: #000000;
 }
@@ -545,4 +553,69 @@ a.categories-item-copters::before {
 	background-image: url("../img/icons/copters_icon.svg");
 }
 
-/* ============== SERVICES ============== */
+/* ============== INDEX SERVICES ============== */
+
+.services {
+	line-height: 0.01em;
+	background-color: #e5e5e5;
+	border: 1px solid blue;
+}
+
+.services h3 {
+	font-family: "gilroyextrabold", Arial, sans-serif;
+	font-size: 47px;
+	line-height: normal;
+	color: #000000;
+}
+
+.services-container {
+	width: 1160px;
+}
+
+.services-controls-list,
+.services-decription-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.button-services-controls:active {
+	color: #f7e184;
+}
+
+.button-services-controls:active::before {
+	background-color: #000000;
+}
+
+/* ============== INDEX BRANDS ============== */
+
+
+.brands {
+	width: 1160px;
+}
+
+.brands-list {
+	display: flex;
+	justify-content: space-between;
+	margin: 0;
+	padding: 0;
+	
+	list-style: none;
+	box-sizing: content-box;
+}
+
+.brands-item {
+	width: 260px;
+	height: 100px;
+	background-color: rgba(216,216,216, 0.2);
+}
+
+
+/* MAIN INFO*/
+
+/*.main-info {
+	background-color: orange;
+}
+.main-info2 {
+	background-color: red;
+}*/

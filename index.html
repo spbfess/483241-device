@@ -153,57 +153,59 @@
 				</ul>
 			</section>
 
-			<section  class="services">
-				<h2 class="visually-hidden">Сервисы</h2>
-				<!-- TODO: слайдер на радиобаттанах, пока альфа-версия разметки -->
-				<input id="services-delivery" type="radio" name="service" checked>
-				<input id="services-warranty" type="radio" name="service">
-				<input id="services-credit"   type="radio" name="service">
+			<section  class="services layout-centralizer">
+				<div class="services-container layout-centralizer">
+					<h2 class="visually-hidden">Сервисы</h2>
+					<!-- TODO: слайдер на радиобаттанах, пока альфа-версия разметки -->
+					<input id="services-delivery" type="radio" name="service" checked>
+					<input id="services-warranty" type="radio" name="service">
+					<input id="services-credit"   type="radio" name="service">	
 				
+					<ul class="services-controls-list">
+						<li>
+							<label class="button button-services-controls" for="services-delivery" tabindex="0">Доставка</label>
+						</li>
+						<li>
+							<label class="button button-services-controls" for="services-warranty" tabindex="0">Гарантия</label>
+						</li>
+						<li>
+							<label class="button button-services-controls" for="services-credit" tabindex="0">Кредит</label>
+						</li>
+					</ul>
 
-				<ul class="services-controls-list">
-					<li>
-						<label class="button button-services-controls" for="services-delivery" tabindex="0">Доставка</label>
-					</li>
-					<li>
-						<label class="button button-services-controls" for="services-warranty" tabindex="0">Гарантия</label>
-					</li>
-					<li>
-						<label class="button button-services-controls" for="services-credit" tabindex="0">Кредит</label>
-					</li>
-				</ul>
-
-				<ul class="services-decription-list">
-					<li class="services-decription-item services-decription-item-delivery">
-						<h3>Доставка</h3>
-						<p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
-					</li>
-					<li class="services-decription-item services-decription-item-warranty">
-						<h3>Гарантия</h3>
-						<p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
-					</li>
-					<li class="services-decription-item services-decription-item-credit">
-						<h3>Кредит</h3>
-						<p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
-					</li>
-				</ul>
+					<ul class="services-decription-list">
+						<li class="services-decription-item services-decription-item-delivery">
+							<h3>Доставка</h3>
+							<p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+						</li>
+						<li class="services-decription-item services-decription-item-warranty">
+							<h3>Гарантия</h3>
+							<p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
+						</li>
+						<li class="services-decription-item services-decription-item-credit">
+							<h3>Кредит</h3>
+							<p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
+						</li>
+					</ul>
+				</div>
 
 			</section>
 
-			<section class="brands">
+			<section class="brands layout-centralizer">
 				<h2 class="visually-hidden">Бренды</h2>
 				<ul class="brands-list">
 					<li class="brands-item brands-item-dji">
-						<a href="https://www.dji.com"><img src="img/brands/dji_logo.jpg" alt="логотип бренда DJI" width="260" height="100"></a>
+						<!-- Сделать изображение контентным (логотип же!) и при этом эффект перекатывания на CSS невозможно, либо с ипользованием фоновых изображений что нарушает концепцию логотипа как контента, либо джава скрипт, что так или иначе аффектит деградейшн при выключенном javascript. Если наставник одобрит, запилю подключаемый джава скрипт, согласно спеке, а не инлайн вариант -->
+						<a href="https://www.dji.com"><img src="img/brands/dji_logo_inactive.jpg" alt="логотип бренда DJI" width="260" height="100" onmouseover="this.src='img/brands/dji_logo.jpg';" onmouseout="this.src='img/brands/dji_logo_inactive.jpg';"></a>
 					</li>
 					<li class="brands-item brands-item-spgadgets">
-						<a href="https://www.sp-gadgets.com"><img src="img/brands/sp_gadgets_logo.jpg" alt="логотип бренда SP Gadgets" width="260" height="100"></a>
+						<a href="https://www.sp-gadgets.com"><img src="img/brands/sp_gadgets_logo_inactive.jpg" alt="логотип бренда SP Gadgets" width="260" height="100" onmouseover="this.src='img/brands/sp_gadgets_logo.jpg';" onmouseout="this.src='img/brands/sp_gadgets_logo_inactive.jpg';"></a>
 					</li>
 					<li class="brands-item brands-item-gopro">
-						<a href="https://gopro.com/"><img src="img/brands/gopro_logo.jpg" alt="логотип бренда GoPro" width="260" height="100"></a>
+						<a href="https://gopro.com/"><img src="img/brands/gopro_logo_inactive.jpg" alt="логотип бренда GoPro" width="260" height="100" onmouseover="this.src='img/brands/gopro_logo.jpg';" onmouseout="this.src='img/brands/gopro_logo_inactive.jpg';"></a>
 					</li>
 					<li class="brands-item brands-item-vive">
-						<a href="https://www.vive.com"><img src="img/brands/vive_logo.jpg" alt="логотип бренда Vive" width="260" height="100"></a>
+						<a href="https://www.vive.com"><img src="img/brands/vive_logo_inactive.jpg" alt="логотип бренда Vive" width="260" height="100" onmouseover="this.src='img/brands/vive_logo.jpg';" onmouseout="this.src='img/brands/vive_logo_inactive.jpg';"></a>
 					</li>
 				</ul>
 			</section>

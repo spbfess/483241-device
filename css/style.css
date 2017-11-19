@@ -1,3 +1,5 @@
+/* ============== FONTS ============== */
+
 @font-face {
     font-family: "gilroylight";
     src: url("../fonts/gilroylight.woff2") format("woff2"),
@@ -34,6 +36,8 @@
 
 }
 
+/* ============== GENERAL ============== */
+
 body {
 	box-sizing: border-box;
 	border: 1px solid red;
@@ -61,6 +65,9 @@ a {
 	margin: 0 auto;
 }
 
+
+/* ============== HEADER ============== */
+
 .main-header {
 	margin-top: 40px;
 	padding-top: 53px;
@@ -72,7 +79,7 @@ a {
 	color: #ffffff;
 	
 	box-sizing: border-box;
-	background-color: #f7e296;
+	background-color: rgba(240, 197, 46, 0.5);
 	/*z-index: 1;*/
 }
 
@@ -80,16 +87,14 @@ a {
 	position: relative;
 }
 
+.main-navigation a {
+	color: #000000;
+}
+
 .main-header-logo {
 	position: absolute;
 	top: -70px;
 	left: 0;
-}
-
-.main-navigation a {
-	font-size: 15px;
-	line-height: 36px;
-	color: #000000;
 }
 
 .main-navigation a:hover,
@@ -107,6 +112,8 @@ a {
 .goods-actions,
 .catalog-menu {
 	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
 .main-search {
@@ -138,7 +145,7 @@ a {
 	border: 0;
 	border-bottom: 2px solid rgba(0, 0, 0, 0);
 	background-color: transparent;
-	/*tracking=10*/
+	letter-spacing: 0.01em;
 }
 
 .main-search input[type="text"] + span {
@@ -228,6 +235,7 @@ a {
 
 .catalog-menu {
 	visibility: hidden;
+	letter-spacing: 0.01em;
 }
 
 /*.catalog-menu {
@@ -253,15 +261,30 @@ site-navigation catalog a{
 	display: block;
 }*/
 
-/*.site-navigation catalog a::before {
+.site-navigation a.catalog {
+	/*border: 1px solid blue;*/
+	/*display: inline-block;*/
+	position: relative;
+}
+
+.site-navigation a.catalog::before {
 	content: "";
 	position: absolute;
-	display: inline-block;
-	width: 100px;
-	height: 100px;
+	left: 230px;
+	top: 3px;
+	display: block;
+	vertical-align: center;
+	background-image: url("../img/icons/catalog_icon2.png");
+	opacity: 0.3;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 16px;
+	height: 16px;
+	/*height: 100px;*/*/
 	background-color: red;
-	border: 2px solid red;
-}*/
+	/*background-size: contain;*/
+	/*border: 1px solid black;*/
+}
 
 /*.site-navigation {
 	font-size: 15px;
@@ -274,3 +297,252 @@ site-navigation catalog a{
 	color: rgba(0, 0, 0, 0.1);
 }*/
 
+.button {
+	display: flex;
+	position: relative;
+	align-items: center;
+	justify-content: center;
+	width: 260px;
+	height: 40px;
+	z-index: 1;	
+	
+	font-family: "gilroyextrabold", Arial, sans-serif;
+	font-size: 18px;
+	line-height: auto;
+	letter-spacing: 0.2em;
+
+	color: rgb(0, 0, 0);
+	text-transform: uppercase;
+
+	background-color: transparent;
+	border: 0;
+	border-radius: none;
+}
+
+.button-promo-details {
+	width: 220px;
+}
+
+.button-services-controls {
+	width: 160px;
+}
+
+.button:hover,
+.button:focus {
+	cursor: pointer;
+}
+
+.button::before{
+	display: block;
+	position: absolute;
+	content: "";
+	margin: auto 0;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+	height: 8px;
+
+	cursor: pointer;
+	background-color: #f0c52e;
+}
+
+
+.button:hover::before,
+.button:focus::before {
+	height: 100%;
+}
+
+.button:active {
+	color: rgba(0, 0, 0, 0.3);
+}
+
+/* ============== PROMO ============== */
+
+.promo {
+	width: 1160px;
+	letter-spacing: 0.01em;
+}
+
+.promo-slider-controls,
+.promo-list {
+	list-style: none;
+}
+
+.promo-slider-controls li {
+	display: inline-block;
+	margin: 0;
+}
+
+.promo-slider-controls li:not(last-of-type) {
+	margin-right: 21px;
+}
+
+.promo-slider-controls label {
+	display: block;
+	width: 23px;
+	height: 23px;
+
+	font-size: 0;
+
+	background-image: url("../img/promo/slider_button_empty.svg");
+	background-position: center;
+	background-repeat: no-repeat;
+
+	cursor: pointer;
+}
+
+#promo-1st-switch[checked] ~ .promo-slider-controls label[for="promo-1st-switch"],
+#promo-2nd-switch[checked] ~ .promo-slider-controls label[for="promo-2nd-switch"],
+#promo-3rd-switch[checked] ~ .promo-slider-controls label[for="promo-3rd-switch"] {
+	background-image: url("../img/promo/slider_button.svg");
+}
+
+
+/*.promo input[type="radio"] {
+	display: none;
+}*/
+
+
+.promo-item {
+	position: relative;
+}
+
+.promo-item::before {
+	position: absolute;
+	
+	right: 47px;
+	top: 0;
+
+	font-family: "gilroyextrabold", Arial, sans-serif;
+	font-size: 179.2px;
+	/*color: #ffffff;*/
+	/*добавлю цвет после позиционирования всего списка по-над хэдером, пока на белом фоне будет не видно*/
+}
+
+.promo-item:nth-of-type(1)::before {
+	content:"01";
+}
+
+.promo-item:nth-of-type(2)::before {
+	content:"02";
+}
+
+.promo-item:nth-of-type(3)::before {
+	content:"03";
+}
+
+.promo-item-monopods .promo-item-image {
+	width: 384;
+	height: 486;
+}
+
+.promo-item-fitbands .promo-item-image {
+	width: 345;
+	height: 485;
+}
+
+.promo-item-copters .promo-item-image {
+	width: 526;
+	height: 334;
+}
+
+.promo-slogan {
+	margin: 0;
+	padding: 0;
+
+	font-family: "gilroyextrabold", Arial, sans-serif;
+	font-size: 47px;
+	line-height: auto;
+}
+
+.promo-spec-data {
+	font-family: "gilroylight", Arial, sans-serif;
+	font-size: 36px;
+	color: #000000;
+}
+
+.promo-spec-keys {
+	font-size: 13px;
+	line-height: 20px;
+}
+
+
+/* ============== CATEGORIES ============== */
+
+.categories {
+	width: 1160px;
+}
+
+.categories-list {
+	display: flex;
+	justify-content: space-between;
+
+	margin: 0;
+	padding: 0;
+
+	list-style: none;
+}
+
+.categories-list a {
+	display: block;
+	width: 160px;
+
+	font-family: "gilroyextrabold", Arial, sans-serif;
+	font-size: 18px;
+	line-height: auto;
+	letter-spacing: 0.01em;
+	color: #000000;
+}
+
+.categories-list a::before {
+	display: block;
+	content: "";
+
+	height: 160px;
+	background-color: rgba(240, 197, 46, 0.5);
+	background-position: center;
+	background-repeat: no-repeat;
+	margin-bottom: 38px;
+}
+
+.categories-list a:hover::before,
+.categories-list a:focus::before,
+.categories-list a:active::before {
+	background-color: rgba(240, 197, 46, 1);
+}
+
+.categories-list a:active {
+	opacity: 0.3;
+	/*background-color: rgba(240, 197, 46, 1);*/
+}
+
+
+a.categories-item-vr::before {
+	background-image: url("../img/icons/vr_icon.svg");
+}
+
+a.categories-item-monopods::before {
+	background-image: url("../img/icons/monopods_icon.svg");
+	background-position: center bottom;
+}
+
+a.categories-item-cameras::before {
+	background-image: url("../img/icons/cameras_icon.svg");
+}
+
+a.categories-item-fitbands::before {
+	background-image: url("../img/icons/fitbands_icon.svg");
+}
+
+a.categories-item-watches::before {
+	background-image: url("../img/icons/watches_icon.svg");
+}
+
+a.categories-item-copters::before {
+	background-image: url("../img/icons/copters_icon.svg");
+}
+
+/* ============== SERVICES ============== */

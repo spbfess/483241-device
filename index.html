@@ -28,7 +28,7 @@
 				</ul>
 				<ul class="site-navigation">
 					<li>
-						<a class="catalog" href="catalog.html">Католог товаров</a>
+						<a class="catalog" href="catalog.html">Каталог товаров</a>
 						<!-- Так адресовал проблему разметки каталога по столбцам: решил зачем дивянничать, - был список, списком и останется, каждый элемент - столбец, внутри пихаем ссылки сколько душе угодно, их сделаем блочными, классифицировать ничего не надо, здесь псевдо-класссы по номеру чайлда то что нужно, поскольку ссылки сгруппированы явно нелогически -->
 						<!-- <p>aaaa</p> -->
 						<ul class="catalog-menu">
@@ -55,12 +55,12 @@
 
 		<main class="container">
 			<h1 class="visually-hidden">Магазин гаджетов</h1>
-			<section class="promo">
+			<section class="promo layout-centralizer">
 				<h2 class="visually-hidden">Интересные предложения</h2>
 				
 				<!-- слайдер на радиобаттанах, его разметка еще местами под вопроcом -->
-				<input id="promo-1st-switch" type="radio" name="promo-number" checked>
-				<input id="promo-2nd-switch" type="radio" name="promo-number">
+				<input id="promo-1st-switch" type="radio" name="promo-number" >
+				<input id="promo-2nd-switch" type="radio" name="promo-number" checked>
 				<input id="promo-3rd-switch" type="radio" name="promo-number">
 				
 				<!-- TODO: подумать на тему абсолютного позиционирования блока переключателей, 
@@ -82,7 +82,7 @@
 						<p class="promo-item-image"><img src="img/promo/8-meters_monopod.png" alt="8-ми метровый монопод" width="384" height="486"></p>
 						<div class="promo-info">
 							<p class="promo-slogan">Делай селфи, как Бен Стиллер!</p>
-							<span class="promo-number">01</span>
+							<!-- <span class="promo-number">01</span> -->
 							<p class="promo-desc">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего в 5 килограмм.</p>
 							<a class="button button-promo-details" href="#">Подробнее</a>
 							<table class="promo-spec">
@@ -104,7 +104,7 @@
 						<p class="promo-item-image"><img src="img/promo/motivating_fitband.png" alt="Мотивирующий фитнес-браслет" width="345" height="485"></p>
 						<div class="promo-info">
 							<p class="promo-slogan">Худеем правильно!</p>
-							<span class="promo-number">02</span>
+							<!-- <span class="promo-number">02</span> -->
 							<p class="promo-desc">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
 							<a class="button button-promo-details" href="#">Подробнее</a>
 							<table class="promo-spec">
@@ -122,7 +122,7 @@
 						<p class="promo-item-image"><img src="img/promo/laser_copter.png" alt="Квадрокоптер с лазером" width="526" height="334"></p>
 						<div class="promo-info">
 							<p class="promo-slogan">Порхает как бабочка, жалит как пчела!</p>
-							<span class="promo-number">03</span>
+							<!-- <span class="promo-number">03</span> -->
 							<p class="promo-desc">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
 							<!-- Предполагаю, что тут должна открываться карточка товара в отдельной странице (которая вертастаться не будет, не задана в макете), поэтому это ссылка. -->
 							<a class="button button-promo-details" href="#">Подробнее</a>
@@ -141,7 +141,7 @@
 				</ul>
 			</section>
 			
-			<section class="categories">
+			<section class="categories layout-centralizer">
 				<h2 class="visually-hidden">Категории товаров</h2>
 				<ul class="categories-list">
 					<li><a class="categories-item-vr" href="vr.html">Виртуальная реальность</a></li>

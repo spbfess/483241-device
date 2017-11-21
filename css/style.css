@@ -139,13 +139,13 @@ a {
 	font-family: "opensanslight", Arial, sans-serif;
 	font-size: 15px;
 	line-height: 36px;
+	letter-spacing: 0.01em;
 	color: rgba(0, 0, 0, 0.1);
 
 	box-sizing: border-box;
 	border: 0;
-	border-bottom: 2px solid rgba(0, 0, 0, 0);
 	background-color: transparent;
-	letter-spacing: 0.01em;
+	
 }
 
 .main-search input[type="text"] + span {

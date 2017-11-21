@@ -3,34 +3,34 @@
 	<head>
 	    <meta charset="utf-8">
 	    <title>Каталог моноподов</title>
+	    <link href="css/normalize.css" rel="stylesheet">
+  		<link href="css/style.css" rel="stylesheet">
  	</head>
 	<body>
-		<header class="main-header">
-			<nav class="main-navigation">
+		<header class="main-header wrapper">
+		 	<nav class="main-navigation">
 				<a class="main-header-logo" href="index.html">
 					<img src="img/device_header_logo.png" alt="Логотип сайта гаждетов Девайс" width="164" height="36">
 				</a>
 				<form class="main-search">
-					<input class="main-search-input" name="search" type="text" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
+					<label>
+						<input name="search" type="text" placeholder="Поиск по сайту"><span>ghbdtn</span>
+					</label>
 					<button type="submit">Найти</button>
 				</form>
 				<ul class="user-navigation">
 					<li class="profile"><a href="profile.html">Валентин Петухов</a></li>
 					<li class="logout"><a href="#">Выйти</a></li>
 				</ul>
-
 				<ul class="goods-actions">
 					<li class="compare"><a href="#">Сравнить</a></li>
 					<li class="cart"><a href="#">Корзина</a></li>
 				</ul>
-
 				<ul class="site-navigation">
-					<li class="catalog">
-						<a href="catalog.html">Католог товаров</a>
-						<!-- Так адресовал проблему разметки каталога по столбцам: решил зачем дивянничать, -
-						был список, списком и останется, каждый элемент - столбец, внутри пихаем ссылки сколько душе угодно,
-						их сделаем блочными, классифицировать ничего не надо, здесь псевдо-класссы по номеру чайлда то что нужно,
-						поскольку ссылки сгруппированы явно нелогически -->
+					<li>
+						<a class="catalog" href="catalog.html">Каталог товаров</a>
+						<!-- Так адресовал проблему разметки каталога по столбцам: решил зачем дивянничать, - был список, списком и останется, каждый элемент - столбец, внутри пихаем ссылки сколько душе угодно, их сделаем блочными, классифицировать ничего не надо, здесь псевдо-класссы по номеру чайлда то что нужно, поскольку ссылки сгруппированы явно нелогически -->
+						<!-- <p>aaaa</p> -->
 						<ul class="catalog-menu">
 							<li>
 								<a href="vr.html">Виртуальная реальность</a>
@@ -54,14 +54,15 @@
 		</header>
 
 		<main class="container">
-			<h1 class="page-title">Моноподы для селфи</h1>
-      
-			<ul class="breadcrumbs">
-				<li><a href="index.html">Главная</a></li>
-				<li><a href="catalog.html">Каталог товаров</a></li>
-				<li class="breadcrumbs-current">Моноподы для селфи</li>
-			</ul>
-			
+			<div class="wrapper">
+				<h1 class="page-title">Моноподы для селфи</h1>
+	      
+				<ul class="breadcrumbs">
+					<li><a href="index.html">Главная</a></li>
+					<li><a href="catalog.html">Каталог товаров</a></li>
+					<li class="breadcrumbs-current">Моноподы для селфи</li>
+				</ul>
+			</div>
 			<!-- Переделал всю структуру отсюда до хэдера, должно упростить построение сетки, но на мой взгляд логически ужасно по сравнению с предыдущим вариантом, в котором однако построение сетки может стать реальной болью. Если будет время попробую сверстать оба варианта, пока пойду с этим  -->
 
 			<section class="filter">
@@ -142,7 +143,7 @@
 						</li>
 					</ul>
  
-					<button class="button-filter-submit" type="submit">Показать</button>
+					<button class="button button-filter-submit" type="submit">Показать</button>
 				</form>
 			</section>
 			
@@ -173,7 +174,7 @@
 							<div class="goods-item-bar">
 								<img src="img/goods/monopods/rookie_selfipod.jpg" alt="Любительская селфи-палка" width="360" height="380">
 								<p class="goods-item-buttons">
-									<button type="button" class="button-add-to-cart">В корзину</button>
+									<button type="button" class="button button-add-to-cart">В корзину</button>
 									<button type="button" class="button-add-to-comparison">Добавить к сравнению</button>
 								</p>
 							</div>
@@ -186,7 +187,7 @@
 							<div class="goods-item-bar">
 								<img src="img/goods/monopods/profi_selfipod.jpg" alt="Профессиональная селфи-палка" width="360" height="380">
 								<p class="goods-item-buttons">
-									<button type="button" class="button-add-to-cart">В корзину</button>
+									<button type="button" class="button button-add-to-cart">В корзину</button>
 									<button type="button" class="button-add-to-comparison">Добавить к сравнению</button>
 								</p>
 							</div>
@@ -199,7 +200,7 @@
 							<div class="goods-item-bar">
 								<img src="img/goods/monopods/unsikable_selfipod.jpg" alt="Непотопляемая селфи-палка" width="360" height="380">
 								<p class="goods-item-buttons">
-									<button type="button" class="button-add-to-cart">В корзину</button>
+									<button type="button" class="button button-add-to-cart">В корзину</button>
 									<button type="button" class="button-add-to-comparison">Добавить к сравнению</button>
 								</p>
 							</div>
@@ -212,7 +213,7 @@
 							<div class="goods-item-bar">
 								<img src="img/goods/monopods/folow_me_selfipod.jpg" alt="Селфи-палка «Следуй за мной»" width="360" height="380">
 								<p class="goods-item-buttons">
-									<button type="button" class="button-add-to-cart">В корзину</button>
+									<button type="button" class="button button-add-to-cart">В корзину</button>
 									<button type="button" class="button-add-to-comparison">Добавить к сравнению</button>
 								</p>
 							</div>

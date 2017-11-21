@@ -60,12 +60,20 @@ a {
 	text-decoration: none;
 }
 
-.layout-centralizer {
+.wrapper {
 	margin: 0 auto;
 	width: 1160px;
 }
 
+.page-title {
+	font-family: "gilroyextrabold", Arial, sans-serif;
+	font-size: 47px;
+	line-height: 1.2em;
+	letter-spacing: 0.01em;
+	color: #000000;
 
+	background-color: $ffffff;
+}
 /* ============== HEADER ============== */
 
 .main-header {
@@ -878,3 +886,67 @@ a.categories-item-copters::after {
 .modal-write-us-field input:focus:-moz-placeholder				{ color: rgba(70, 70, 70, 1); }
 .modal-write-us-field input:focus:-ms-input-placeholder			{ color: rgba(70, 70, 70, 1); }
 
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* ++++++++++++++++++++++++ MONOPODS.HTML ++++++++++++++++++++++++ */
+
+/* ============== MAIN ============== */
+
+.breadcrumbs {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	align-items: baseline;
+	box-sizing: border-box;
+}
+
+/* НАСТАВНИКУ: стрелки в крошках (КАЖДАЯ, КАРЛ!) спозиционирована на 1px отлично от соседней 17 18 19 px до элемнтов по бокам
+делаем по макету - это хардкод получается, не могу задать псевдоклассами дефолтное поведение. В случае добавления вложенности по навигации - 
+нужно править css :( */
+.breadcrumbs a {
+	padding-right: 39px;
+}
+
+.breadcrumbs li {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.breadcrumbs a {
+	/*display: block;*/
+	/*border: 1px solid black;*/
+	position: relative;
+	box-sizing: border-box;
+}
+.breadcrumbs a::after {
+	content: "";
+	display: block;
+	position: absolute;
+	/*top: 50%;*/
+	top: 50%;
+	width: 4px;
+	height: 8px;
+	margin-top: -4px;
+	/*border: 1px dashed blue;*/
+	background-image: url("../img/nav-arrow.svg");
+	background-position: center;
+	background-repeat: no-repeat;
+	box-sizing: border-box;
+}
+
+.breadcrumbs li:first-of-type a::after {
+	right: 19px;
+}
+
+.breadcrumbs li:nth-of-type(2) a::after {
+	right: 17px;
+}
+
+
+.breadcrumbs a,
+.breadcrumbs-current {
+	font-size: 14px;
+	line-height: 36px;
+	letter-spacing: : 0.01em;
+	color: rgba(0, 0, 0, .3);
+}

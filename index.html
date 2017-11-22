@@ -13,9 +13,8 @@
 					<img src="img/device_header_logo.png" alt="Логотип сайта гаждетов Девайс" width="164" height="36">
 				</a>
 				<form class="main-search">
-					<label>
-						<input name="search" type="text" placeholder="Поиск по сайту"><span>ghbdtn</span>
-					</label>
+					<label for="main_search_input"><span class="visually-hidden">Поиск по сайту</span></label>
+					<input id="main_search_input" name="search" type="text" placeholder="Поиск по сайту">
 					<button type="submit">Найти</button>
 				</form>
 				<ul class="user-navigation">
@@ -26,7 +25,7 @@
 					<li class="cart"><a href="#">Корзина</a></li>
 				</ul>
 				<ul class="site-navigation">
-					<li>
+					<li class="site-navigation-item">
 						<a class="catalog" href="catalog.html">Каталог товаров</a>
 						<!-- Так адресовал проблему разметки каталога по столбцам: решил зачем дивянничать, - был список, списком и останется, каждый элемент - столбец, внутри пихаем ссылки сколько душе угодно, их сделаем блочными, классифицировать ничего не надо, здесь псевдо-класссы по номеру чайлда то что нужно, поскольку ссылки сгруппированы явно нелогически -->
 						<!-- <p>aaaa</p> -->
@@ -45,9 +44,9 @@
 							</li>
 						</ul>
 					</li>
-					<li><a href="delivery.html">Доставка</a></li>
-					<li><a href="warranty.html">Гарантия</a></li>
-					<li><a href="contacts.html">Контакты</a></li>
+					<li class="site-navigation-item"><a href="delivery.html">Доставка</a></li>
+					<li class="site-navigation-item"><a href="warranty.html">Гарантия</a></li>
+					<li class="site-navigation-item"><a href="contacts.html">Контакты</a></li>
 				</ul>
 			</nav>
 		</header>

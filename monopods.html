@@ -66,9 +66,9 @@
 			<!-- Переделал всю структуру отсюда до хэдера, должно упростить построение сетки, но на мой взгляд логически ужасно по сравнению с предыдущим вариантом, в котором однако построение сетки может стать реальной болью. Если будет время попробую сверстать оба варианта, пока пойду с этим  -->
 
 			<section class="filter">
-				<h2>Фильтр</h2>		
+				<h2 class="filter-header">Фильтр</h2>		
 
-				<form class="filter-form" action="https://echo.htmlacademy.ru" method="get" oninput="lower_cost_output.value=lower_cost_set.value;upper_cost_output.value=upper_cost_set.value;">
+				<form class="filter-body" action="https://echo.htmlacademy.ru" method="get" oninput="lower_cost_output.value=lower_cost_set.value;upper_cost_output.value=upper_cost_set.value;">
 					
 					<h3>Стоимость</h3>
 
@@ -150,17 +150,17 @@
 			<div class="output">
 				<section class="sort">
 					<h2>Сортировка</h2>
-					<div class="sort-block">
-						<ul class="sort-by-option">
-							<li><a class="sort-by-option-current">Сортировка по цене</a></li>
-							<li><a href="#">Сортировка по типу</a></li>
-							<li><a href="#">Сортировка по популярности</a></li>
-						</ul>
-						<ul class="sort-by-order">
-							<li><a class="sort-ascending sort-by-order-current">Сортировка по возрастанию</a></li>
-							<li><a class="sort-descending" href="#">Сортировка по убыванию</a></li>
-						</ul>
-					</div>
+					<!-- <div class="sort-block"> -->
+					<ul class="sort-by-option">
+						<li><a class="sort-by-option-current">По цене</a></li>
+						<li><a href="#">По типу</a></li>
+						<li><a href="#">По популярности</a></li>
+					</ul>
+					<ul class="sort-by-order">
+						<li><a class="sort-ascending sort-by-order-current">Сортировка по возрастанию</a></li>
+						<li><a class="sort-descending" href="#">Сортировка по убыванию</a></li>
+					</ul>
+					<!-- </div> -->
 				</section>
 
 				<section class="goods">
@@ -168,8 +168,8 @@
 					<ul class="goods-list">
 						<li>
 							<div class="goods-item-title">
-								<h3><a href="goods/monopods/rookie_selfipod.html">Любительская селфи-палка</a></h3>
-								<span class="goods-price">500 руб.</span>
+								<h3 class="goods-item-name"><a href="goods/monopods/rookie_selfipod.html">Любительская селфи-палка</a></h3>
+								<span class="goods-item-price">500 руб.</span>
 							</div>
 							<div class="goods-item-bar">
 								<img src="img/goods/monopods/rookie_selfipod.jpg" alt="Любительская селфи-палка" width="360" height="380">
@@ -181,8 +181,8 @@
 						</li>
 						<li>
 							<div class="goods-item-title">
-								<h3><a href="goods/monopods/profi_selfipod.html">Профессиональная селфи-палка</a></h3>
-								<span class="goods-price">1500 руб.</span>
+								<h3 class="goods-item-name"><a href="goods/monopods/profi_selfipod.html">Профессиональная селфи-палка</a></h3>
+								<span class="goods-item-price">1500 руб.</span>
 							</div>
 							<div class="goods-item-bar">
 								<img src="img/goods/monopods/profi_selfipod.jpg" alt="Профессиональная селфи-палка" width="360" height="380">
@@ -194,8 +194,8 @@
 						</li>
 						<li>
 							<div class="goods-item-title">
-								<h3><a href="goods/monopods/unsikable_selfipod.html">Непотопляемая селфи-палка</a></h3>
-								<span class="goods-price">2500 руб.</span>
+								<h3 class="goods-item-name"><a href="goods/monopods/unsikable_selfipod.html">Непотопляемая селфи-палка</a></h3>
+								<span class="goods-item-price">2500 руб.</span>
 							</div>
 							<div class="goods-item-bar">
 								<img src="img/goods/monopods/unsikable_selfipod.jpg" alt="Непотопляемая селфи-палка" width="360" height="380">
@@ -207,8 +207,8 @@
 						</li>
 						<li>
 							<div class="goods-item-title">
-								<h3><a href="goods/monopods/folow_me_selfipod.html">Селфи-палка «Следуй за мной»</a></h3>
-								<span class="goods-price">4900 руб.</span>
+								<h3 class="goods-item-name"><a href="goods/monopods/folow_me_selfipod.html">Селфи-палка «Следуй за мной»</a></h3>
+								<span class="goods-item-price">4900 руб.</span>
 							</div>
 							<div class="goods-item-bar">
 								<img src="img/goods/monopods/folow_me_selfipod.jpg" alt="Селфи-палка «Следуй за мной»" width="360" height="380">

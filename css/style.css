@@ -686,12 +686,23 @@ a.categories-item-copters::after {
 	background-color: rgba(216,216,216, .2);
 }
 
+.brands-item img.colored {
+	display: none;
+}
+
+.brands-item:hover img.greyed {
+	display: none;
+}
+.brands-item:hover img.colored {
+	display: block;	
+}
+
 
 /* MAIN INFO DIV*/
 
 /* ============== INDEX ABOUT-US ============== */
 
-.about-us h2{
+.about-us h2 {
 	font-family: "gilroyextrabold", Arial, sans-serif;
 	font-size: 47px;
 	letter-spacing: .01em;
@@ -706,12 +717,12 @@ a.categories-item-copters::after {
 	line-height: 40px;
 	color: #000000;
 	list-style: circle;
-	/*!!переделать*/
+	/*!! это временные кружки, потом переделать */
 }
 
 /* ============== INDEX CONTACTS ============== */
 
-.contacts h2{
+.contacts h2 {
 	font-family: "gilroyextrabold", Arial, sans-serif;
 	font-size: 47px;
 	letter-spacing: .01em;

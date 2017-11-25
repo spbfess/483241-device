@@ -105,6 +105,7 @@ input[type="radio"].visually-hidden {
 	position: relative;
 	background-color: #f7e296;
 	min-height: 299px;
+	/*min-height: 186px;*/
 }
 
 .main-navigation a {
@@ -149,17 +150,19 @@ input[type="radio"].visually-hidden {
 .goods-actions a {
 	display: block;
 	padding: 6px 0;
+
+	border-top: 2px solid transparent;
 	border-bottom: 2px solid transparent;
 }
 
 .main-search input[type="text"] {
 	display: block;
 	margin: 0;
-	padding: 0;
+	padding: 6px 0;
 	padding-left: 40px;
 
 	width: 355px;
-	height: 49px;
+	/*height: 49px;*/
 
 	font-family: "opensanslight", Arial, sans-serif;
 	font-size: 15px;
@@ -168,6 +171,7 @@ input[type="radio"].visually-hidden {
 	color: rgba(0, 0, 0, .1);
 
 	border: 0;
+	border-top: 2px solid transparent;
 	border-bottom: 2px solid transparent;
 	background-color: transparent;
 }
@@ -244,20 +248,20 @@ input[type="radio"].visually-hidden {
 .main-search button[type="submit"] {
 	margin: 0;
 	min-width: 85px;
-	height: 49px;
+	/*height: 49px;*/
 	padding: 6px 20px;
 	opacity: 0;
 
-	/*font-size: 15px;*/
-	/*text-align: center;*/
-	/*vertical-align: top;*/
+	font-family: "opensanslight", Arial, sans-serif;
+	font-size: 15px;
+	line-height: 36px;
+	letter-spacing: .01em;
+
 	color: black;
-	
 	border: 2px solid #000000;
 	border-radius: 0;
 	
 	background-color: transparent;
-	/*box-sizing: border-box;*/
 }
 
 .main-search input[type="text"]:focus ~ button[type="submit"] {
@@ -311,11 +315,10 @@ site-navigation catalog a{
 	display: block;
 }*/
 
-.site-navigation a.catalog {
-	/*border: 1px solid blue;*/
-	/*display: inline-block;*/
+/*.site-navigation a.catalog {
+
 	position: relative;
-}
+}*/
 
 .site-navigation a.catalog::before {
 	content: "";
@@ -423,6 +426,10 @@ site-navigation catalog a{
 	list-style: none;
 }
 
+.promo-slider-controls {
+	position: absolute;
+}
+
 .promo-slider-controls li {
 	display: inline-block;
 	margin: 0;
@@ -459,12 +466,14 @@ site-navigation catalog a{
 /* Циферка с номером слайда, вынес в декоративный псевдо-элемент */
 .promo-item::before {
 	position: absolute;
-	
+	/*display: block;*/
 	right: 47px;
 	top: 0;
 
 	font-family: "gilroyextrabold", Arial, sans-serif;
+	line-height: 179.2px;
 	font-size: 179.2px;
+	/*font-size: 100px;*/
 	
 	/*добавлю цвет после позиционирования всего списка по-над хэдером, пока на белом фоне будет не видно*/
 	/* color: #ffffff; */	
@@ -1250,7 +1259,8 @@ body {
 
 .main-header {
 	padding-top: 40px;
-	min-height: 299px;
+	/*min-height: 299px;*/
+	
 
 	/* --- TEMPORARY FOR GRID --- */
 	box-shadow: inset 0 0 0 1px orange;
@@ -1344,7 +1354,7 @@ body {
 	display: block;
 
 	/* --- TEMPORARY FOR GRID --- */
-	background-color: rgba(255, 255, 255, .7);
+	background-color: rgba(0, 0, 255, .2);
 	box-shadow: inset 0 0 0 1px;
 	/* -------------------------- */
 }
@@ -1356,9 +1366,10 @@ body {
 }
 
 .site-navigation-catalog .catalog {
-	display: inline-block;
-	margin-bottom: 22px;
-	padding-right: 28px;
+	/*display: inline-block;*/
+	/*margin-bottom: 22px;*/
+	width: 246px;
+	padding-right: 26px;
 
 	vertical-align: top;
 }
@@ -1381,10 +1392,19 @@ body {
 
 .catalog-menu {
 	display: flex;
-	width: 1040px;
+	z-index: 2;
+	position: absolute;
+	width: 1160px;
+	top: 21px;
+	left: -60px;
+	padding: 0 60px;
+	padding-top: 22px;
+	padding-bottom: 32px;
 
+	background-color: #f7e296;
+	
 	/* --- TEMPORARY FOR GRID --- */
-	box-shadow: inset 0 0 0 1px;
+	/*box-shadow: inset 0 0 0 1px;*/
 	background-color: rgba(0, 0, 0, .1);
 	/* -------------------------- */
 }
@@ -1400,7 +1420,7 @@ body {
 	display: block;
 
 	/* --- TEMPORARY FOR GRID --- */
-	box-shadow:  inset 0 0 0 1px black;
+	/*	box-shadow:  inset 0 0 0 1px black; */
 	background-color: rgba(0 ,0 ,0, .1);
 	/* -------------------------- */
 }
@@ -1421,4 +1441,24 @@ body {
 	min-width: 160px;
 }
 
+
+.promo-list {
+	position: relative;
+	margin-top: -125px;
+	z-index: -1;
+}
+
+.promo-item-image,
+.promo-slogan,
+.promo-desc {
+	margin: 0;
+	padding: 0;
+}
+
+.promo-item-image {
+	/* --- TEMPORARY FOR GRID --- */
+	/*box-shadow: inset 0 0 0 1px;*/
+	background-color: rgb(0, 255, 0);
+	/* -------------------------- */
+}
 

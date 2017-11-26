@@ -87,7 +87,7 @@ a {
 .page-title {
 	font-family: "gilroyextrabold", Arial, sans-serif;
 	font-size: 47px;
-	line-height: 1.2em;
+	line-height: 1.2;
 	letter-spacing: .01em;
 	color: #000000;
 
@@ -118,6 +118,7 @@ input[type="radio"].visually-hidden {
 	padding-top: 40px;
 
 	line-height: 36px;
+	letter-spacing: .01em;
 	color: #000000;	
 
 	/* --- TEMPORARY FOR GRID --- */
@@ -393,7 +394,7 @@ input[type="radio"].visually-hidden {
 .site-navigation-item > a {
 	font-family: "gilroyextrabold", Arial, sans-serif;
 	font-size: 18px;
-	line-height: 1.2em;
+	line-height: 1.2;
 	letter-spacing: .2em;
 
 	text-transform: uppercase;
@@ -525,7 +526,7 @@ input[type="radio"].visually-hidden {
 	
 	font-family: "gilroyextrabold", Arial, sans-serif;
 	font-size: 18px;
-	line-height: 1.2em;
+	line-height: 1.2;
 	letter-spacing: .2em;
 
 	color: rgb(0, 0, 0);
@@ -573,13 +574,9 @@ input[type="radio"].visually-hidden {
 
 .promo {
 	position: relative;
-	margin-top: -125px;
+	margin-top: -126px;
 	/*width: 1160px;*/
 	letter-spacing: .01em;
-}
-
-.button-promo-details {
-	width: 220px;
 }
 
 .promo input[type="radio"] {
@@ -628,22 +625,28 @@ input[type="radio"].visually-hidden {
 
 .promo-item {
 	position: relative;
+	display: flex;
+	justify-content: space-between;
+	box-shadow: inset 0 0 0 1px purple;
+	margin-right: 60px;
+}
+
+.promo-info {
+	width: 500px;
 }
 
 /* Циферка с номером слайда, вынес в декоративный псевдо-элемент */
 .promo-item::before {
 	position: absolute;
-	/*display: block;*/
-	right: 47px;
+	right: -12px;
 	top: 0;
 
 	font-family: "gilroyextrabold", Arial, sans-serif;
-	line-height: 179.2px;
+	line-height: 1;
 	font-size: 179.2px;
-	/*font-size: 100px;*/
 	
 	/*добавлю цвет после позиционирования всего списка по-над хэдером, пока на белом фоне будет не видно*/
-	/* color: #ffffff; */	
+	 /*color: #ffffff; 	*/
 }
 
 .promo-item:nth-of-type(1)::before {
@@ -658,23 +661,41 @@ input[type="radio"].visually-hidden {
 	content:"03";
 }
 
-.promo-item-image, /* занулил абзацы, лучше потом это сделать индивидуально */
-.promo-slogan,
-.promo-desc {
-	margin: 0;
-	padding: 0;
+.promo-info {
+	padding-top: 94px;
+	position: relative;
+}
+
+
+.promo-info::before {
+	content: "";
+	position: absolute;
+	display: block;
+	top: 51px;
+	left: 0;
+	width: 100px;
+	height: 7px;
+	background-color: #ffffff;
 }
 
 /* Дефолты для контейнера промо картинок */
 
 .promo-item-image {
-	width: 530px;
+	margin: 0;
+	padding: 0;
+	width: 560px;
 	height: 490px;
 
 	/* --- TEMPORARY FOR GRID --- */
 	/*box-shadow: inset 0 0 0 1px;*/
+	box-shadow: inset 0 0 0 1px;
 	background-color: rgb(0, 255, 0);
 	/* -------------------------- */
+}
+
+.promo-item-monopods .promo-item-image {
+	background-position: 150px 0;
+
 }
 
 /* реальные размеры картинок, оставлю пока для референса */
@@ -697,10 +718,42 @@ input[type="radio"].visually-hidden {
 .promo-slogan {
 	margin: 0;
 	padding: 0;
+	margin-bottom: 17px;
 
 	font-family: "gilroyextrabold", Arial, sans-serif;
 	font-size: 47px;
-	line-height: 1.2em;
+	line-height: 1.2;
+	color: #000000;
+}
+
+.promo-desc {
+	margin: 0;
+	padding: 0;
+	margin-bottom: 41px;
+}
+
+.button-promo-details {
+	width: 220px;
+	margin-bottom: 55px;
+}
+
+/*.promo-spec td{
+	border-spacing: 80px;
+	margin-right: 80px;
+}*/
+
+
+.promo-spec {
+	border-collapse: collapse;
+	border: 0;
+}
+
+.promo-spec td:not(:last-of-type) {
+	padding-right: 80px;
+}
+
+.promo-spec-data td {
+	padding-bottom: 14px;
 }
 
 .promo-spec-data {
@@ -737,7 +790,7 @@ input[type="radio"].visually-hidden {
 
 	font-family: "gilroyextrabold", Arial, sans-serif;
 	font-size: 18px;
-	line-height: 1.2em;
+	line-height: 1.2;
 	letter-spacing: .01em;
 	color: rgba(0, 0, 0, 1);;
 }
@@ -816,7 +869,7 @@ a.categories-item-copters::after {
 /* ============== INDEX SERVICES ============== */
 
 .services {
-	line-height: .01em;
+	letter-spacing: .01em;
 	border: 1px solid blue;
 	min-height: 288px;
 	background-color: #e5e5e5;
@@ -826,7 +879,7 @@ a.categories-item-copters::after {
 	font-family: "gilroyextrabold", Arial, sans-serif;
 	font-size: 47px;
 	/*line-height: normal*/;
-	line-height: 1.2em;
+	line-height: 1.2;
 	color: #000000;
 }
 
@@ -895,7 +948,7 @@ a.categories-item-copters::after {
 	font-family: "gilroyextrabold", Arial, sans-serif;
 	font-size: 47px;
 	letter-spacing: .01em;
-	line-height: 1.2em;
+	line-height: 1.2;
 	color: #000000;
 
 }
@@ -915,7 +968,7 @@ a.categories-item-copters::after {
 	font-family: "gilroyextrabold", Arial, sans-serif;
 	font-size: 47px;
 	letter-spacing: .01em;
-	line-height: 1.2em;
+	line-height: 1.2;
 	color: #000000;
 
 }
@@ -951,6 +1004,7 @@ a.categories-item-copters::after {
 .main-footer-user-navigation a,
 .main-footer-goods-actions a {
 	color: rgba(255, 255, 255, .7);
+	letter-spacing: .01em;
 }
 
 .main-footer-user-navigation a:hover,
@@ -987,7 +1041,7 @@ a.categories-item-copters::after {
 .main-footer-site-navigation {
 	font-family: "gilroyextrabold", Arial, sans-serif;
 	font-size: 18px;
-	line-height: 1.2em;
+	line-height: 1.2;
 	letter-spacing: .2em;
 	text-transform: uppercase;
 }
@@ -1013,7 +1067,7 @@ a.categories-item-copters::after {
 	font-size:0; /*!!переделать*/
 	
 	outline: 0;
-	border: 1px solid transparent;
+	border: 0;
 	border-radius: 50%;
 	background-image: url("../img/modal_close.svg");
 	background-position: center center;
@@ -1037,6 +1091,8 @@ a.categories-item-copters::after {
 /* ============== MODAL WRITE-US ============== */
 
 .modal-write-us-field {
+	display: block;
+
 	font-family: "gilroyextrabold", Arial, sans-serif;
 	font-size: 18px;
 	line-height: 18px;
@@ -1206,7 +1262,7 @@ a.categories-item-copters::after {
 .filter-header {
 	font-family: "gilroyextrabold", Arial, sans-serif;
 	font-size: 16px;
-	line-height: 1.2em;
+	line-height: 1.2;
 	color: #000000;
 	letter-spacing: .2em;
 	background-color: rgba(0, 0, 0, .08);
@@ -1224,7 +1280,7 @@ a.categories-item-copters::after {
 .filter-body h3 {
 	font-family: "gilroyextrabold", Arial, sans-serif;
 	font-size: 18px;
-	line-height: 1.2em;
+	line-height: 1.2;
 	color: #000000;
 	letter-spacing: .01em;
 }
@@ -1260,7 +1316,7 @@ a.categories-item-copters::after {
 .sort h2 {
 	font-family: "gilroyextrabold", Arial, sans-serif;
 	font-size: 16px;
-	line-height: 1.2em;
+	line-height: 1.2;
 	color: #000000;
 	letter-spacing: .2em;
 	text-transform: uppercase;
@@ -1325,7 +1381,7 @@ a.sort-by-order-current:active {
 .goods-item-name {
 	font-family: "gilroyextrabold", Arial, sans-serif;
 	font-size: 18px;
-	line-height: 1.2em;
+	line-height: 1.2;
 	color: #000000;
 	letter-spacing: .01em;
 }
@@ -1338,7 +1394,7 @@ a.sort-by-order-current:active {
 	background-color: #ebebeb;
 	font-family: "gilroyextrabold", Arial, sans-serif;
 	font-size: 16px;
-	line-height: 1.2em;
+	line-height: 1.2;
 	letter-spacing: .2em;
 	text-transform: uppercase;
 }
@@ -1379,7 +1435,7 @@ a.sort-by-order-current:active {
 
 .goods-item-price {
 	font-size: 16px;
-	line-height: 1.2em;
+	line-height: 1.2;
 	letter-spacing: .01em;
 }
 
@@ -1411,9 +1467,8 @@ a.sort-by-order-current:active {
 	width: 55px;
 	height: 55px;
 
-	/*border: 1px solid transparent;*/
-	border: 0;
 	font-size:0; /*!!переделать*/
+	border: 0;
 	outline: 0;
 	opacity: .5;
 	cursor: pointer; 

@@ -634,9 +634,21 @@ input[type="radio"].visually-hidden {
 	background-image: url("../img/promo/slider_button.svg");
 }
 
+#promo-1st-switch:checked ~ .promo-list li:nth-of-type(1) {
+	display: flex;
+}
+
+#promo-2nd-switch:checked ~ .promo-list li:nth-of-type(2) {
+	display: flex;
+}
+
+#promo-3rd-switch:checked ~ .promo-list li:nth-of-type(3) {
+	display: flex;
+}  
+
 .promo-item {
 	position: relative;
-	display: flex;
+	display: none;
 	justify-content: space-between;
 	box-shadow: inset 0 0 0 1px purple;
 	margin-right: 60px;
@@ -659,8 +671,7 @@ input[type="radio"].visually-hidden {
 	line-height: 1;
 	font-size: 179.2px;
 	
-	/*добавлю цвет после позиционирования всего списка по-над хэдером, пока на белом фоне будет не видно*/
-	 /*color: #ffffff; 	*/
+	color: #ffffff; 	
 }
 
 .promo-item:nth-of-type(1)::before {
@@ -910,6 +921,7 @@ a.categories-item-copters::after {
 
 .services {
 	padding-top: 1px; /* this is a dirty hack for negative margin purposes, until I sort a gradient usage out */
+	margin-bottom: 94px;
 	min-height: 288px;
 
 	letter-spacing: .01em;
@@ -926,7 +938,7 @@ a.categories-item-copters::after {
 	color: #000000;
 
 	margin: 0;
-	margin-bottom: 7px;
+	margin-bottom: 25px;
 	padding: 0;
 }
 
@@ -948,6 +960,26 @@ a.categories-item-copters::after {
 	/* -------------------------- */
 }
 
+#services-delivery:checked ~ .services-controls-list label[for="services-delivery"],
+#services-warranty:checked ~ .services-controls-list label[for="services-warranty"],
+#services-credit:checked ~ .services-controls-list label[for="services-credit"] {
+	color: #f7e184;
+	width: 100%;
+}
+
+#services-delivery:checked ~ .services-controls-list label[for="services-delivery"]::before,
+#services-warranty:checked ~ .services-controls-list label[for="services-warranty"]::before,
+#services-credit:checked ~ .services-controls-list label[for="services-credit"]::before  {
+	background-color: #000000;
+	height: 100%;
+}
+
+#services-delivery:checked ~ .services-decription-list .services-decription-item-delivery,
+#services-warranty:checked ~ .services-decription-list .services-decription-item-warranty,
+#services-credit:checked ~ .services-decription-list .services-decription-item-credit {
+	display: block;
+}
+
 .services-controls-list,
 .services-decription-list {
 	list-style: none;
@@ -960,6 +992,10 @@ a.categories-item-copters::after {
 	border-right: 7px solid #000000;
 }
 
+.services-controls-list li:not(:last-of-type) {
+	margin-bottom: 24px;
+}
+
 .services-controls-list li:first-of-type {
 	padding-top: 80px;
 }
@@ -970,7 +1006,7 @@ a.categories-item-copters::after {
 
 .services-decription-list {
 	padding-top: 69px;
-	padding-bottom: 76px;
+	padding-bottom: 75px;
 }
 
 .services-decription-list p {
@@ -978,8 +1014,9 @@ a.categories-item-copters::after {
 	padding: 0;
 }
 
-.services-decription-list li {
+.services-decription-item {
 	position: relative;
+	display: none;
 	padding-right: 325px;
 
 	/* --- TEMPORARY FOR GRID --- */
@@ -1028,16 +1065,20 @@ a.categories-item-copters::after {
 
 
 .button-services-controls:active {
-	color: #f7e184;
-	width: 100%;
+/*	color: #f7e184;
+	width: 100%;*/
 	/* TODO: пока подпись кнопок центруется, потом переделаю, когда слайдер буду допиливать */
 }
 
 .button-services-controls:active::before {
-	background-color: #000000;
+/*	background-color: #000000;*/
 }
 
 /* ============== INDEX BRANDS ============== */
+
+.brands {
+	margin-bottom: 93px;
+}
 
 .brands-list {
 	display: flex;
@@ -1046,13 +1087,32 @@ a.categories-item-copters::after {
 	padding: 0;
 	
 	list-style: none;
-	box-sizing: content-box;
+
+	/* --- TEMPORARY FOR GRID --- */
+	box-shadow: inset 0 0 0 1px blue;
+	/* -------------------------- */
+
 }
 
 .brands-item {
 	width: 260px;
 	height: 100px;
 	background-color: rgba(216,216,216, .2);
+}
+
+.brands-item img {
+	display: block;
+
+	/* --- TEMPORARY FOR GRID --- */
+	outline: 1px solid red;
+	outline-offset: -1px;
+	/* -------------------------- */
+}
+
+.brands-item {
+	/* --- TEMPORARY FOR GRID --- */
+	box-shadow: inset 0 0 0 1px purple;
+	/* -------------------------- */
 }
 
 .brands-item img.colored {
@@ -1068,9 +1128,39 @@ a.categories-item-copters::after {
 
 /* MAIN INFO DIV*/
 
-/* ============== INDEX ABOUT-US ============== */
+.main-info {
+	display: flex;
+	justify-content: space-between;
+}
 
-.about-us h2 {
+.about-us h2::before,
+.contacts h2::before {
+	display: block;
+	position: absolute;
+	content: "";
+	width: 80px;
+	height: 7px;
+
+	top: 0;
+	left: 0;
+
+	background-color: black;
+}
+
+/* ============== INDEX ABOUT-US CONTACTS ============== */
+
+.about-us,
+.contacts {
+	width: 560px;
+}
+
+.about-us h2,
+.contacts h2 {
+	position: relative;
+	margin: 0;
+	padding: 0;
+	padding-top: 53px;
+
 	font-family: "gilroyextrabold", Arial, sans-serif;
 	font-size: 47px;
 	letter-spacing: .01em;
@@ -1086,17 +1176,6 @@ a.categories-item-copters::after {
 	color: #000000;
 	list-style: circle;
 	/*!! это временные кружки, потом переделать */
-}
-
-/* ============== INDEX CONTACTS ============== */
-
-.contacts h2 {
-	font-family: "gilroyextrabold", Arial, sans-serif;
-	font-size: 47px;
-	letter-spacing: .01em;
-	line-height: 1.2;
-	color: #000000;
-
 }
 
 .contacts-map {

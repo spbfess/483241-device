@@ -1087,8 +1087,10 @@ a.categories-item-copters::after {
 }
 
 .brands-item {
+	display: block;
 	width: 260px;
 	height: 100px;
+	
 	background-color: rgba(216,216,216, .2);
 }
 
@@ -1111,10 +1113,13 @@ a.categories-item-copters::after {
 	display: none;
 }
 
-.brands-item:hover img.greyed {
+.brands-item:hover img.greyed,
+.brands-item:focus img.greyed {
 	display: none;
 }
-.brands-item:hover img.colored {
+
+.brands-item:hover img.colored,
+.brands-item:focus img.colored {
 	display: block;	
 }
 

@@ -578,7 +578,8 @@ input[type="radio"].visually-hidden {
 .promo {
 	position: relative;
 	margin-top: -126px;
-	margin-bottom: 106px;
+	/*margin-bottom: 106px;*/
+	margin-bottom: 95px;
 	letter-spacing: .01em;
 }
 
@@ -594,25 +595,32 @@ input[type="radio"].visually-hidden {
 }
 
 .promo-slider-controls {
+	display: flex;
+	justify-content: space-between;
 	position: absolute;
+	width: 78px;
+	height: 12px;
+
+	top: 342px;
+	right: 83px;
+	z-index: 1;
+	box-shadow: inset 0 0 0 1px blue;
 }
 
 .promo-slider-controls li {
 	display: inline-block;
+	box-shadow: inset 0 0 0 1px red;
+	width: 12px;
 	margin: 0;
-}
-
-.promo-slider-controls li:not(last-of-type) {
-	margin-right: 21px;
 }
 
 .promo-slider-controls label {
 	display: block;
-	width: 23px;
-	height: 23px;
+	width: 12px;
+	height: 12px;
 
 	font-size: 0;
-
+	background-size: contain;
 	background-image: url("../img/promo/slider_button_empty.svg");
 	background-position: center;
 	background-repeat: no-repeat;
@@ -632,12 +640,14 @@ input[type="radio"].visually-hidden {
 	justify-content: space-between;
 	box-shadow: inset 0 0 0 1px purple;
 	margin-right: 60px;
-	padding-bottom: 9px;
 }
 
 .promo-info {
+	position: relative;
 	width: 500px;
+	padding-top: 94px;
 }
+
 
 /* Циферка с номером слайда, вынес в декоративный псевдо-элемент */
 .promo-item::before {
@@ -665,12 +675,6 @@ input[type="radio"].visually-hidden {
 	content:"03";
 }
 
-.promo-info {
-	padding-top: 94px;
-	position: relative;
-}
-
-
 .promo-info::before {
 	content: "";
 	position: absolute;
@@ -685,22 +689,48 @@ input[type="radio"].visually-hidden {
 /* Дефолты для контейнера промо картинок */
 
 .promo-item-image {
+	position: relative;
 	margin: 0;
 	padding: 0;
 	width: 560px;
-	height: 490px;
+	height: 512px;
 
 	/* --- TEMPORARY FOR GRID --- */
 	/*box-shadow: inset 0 0 0 1px;*/
 	box-shadow: inset 0 0 0 1px;
-	background-color: rgb(0, 255, 0);
+	/*background-color: rgb(0, 255, 0);*/
 	/* -------------------------- */
 }
 
-.promo-item-monopods .promo-item-image {
+
+.promo-item-image img {
+	position: absolute;
+	display: block;
+	/* --- TEMPORARY FOR GRID --- */
+	box-shadow: inset 0 0 0 1px;
+	/* -------------------------- */
+}
+
+.promo-item-monopods img {
+	top: 15px;
+	left: 50%;
+	transform: translate(-50%);
+}
+
+.promo-item-fitbands img {
+	top: 27px;
+	right: 100px;
+}
+
+.promo-item-copters img {
+	top: 80px;
+	right: 3px;
+}
+
+/*.promo-item-monopods .promo-item-image {
 	background-position: 150px 0;
 
-}
+}*/
 
 /* реальные размеры картинок, оставлю пока для референса */
 
@@ -738,12 +768,13 @@ input[type="radio"].visually-hidden {
 
 .button-promo-details {
 	width: 220px;
-	margin-bottom: 55px;
+	margin-bottom: 48px;
 }
 
 .promo-spec {
 	margin: 0;
 	padding: 0;
+	margin-bottom: 20px;
 	border-collapse: collapse;
 	border: 0;
 }
@@ -765,6 +796,7 @@ input[type="radio"].visually-hidden {
 .promo-spec-data {
 	font-family: "gilroylight", Arial, sans-serif;
 	font-size: 36px;
+	line-height: 1.2;
 	color: #000000;
 }
 
@@ -938,6 +970,7 @@ a.categories-item-copters::after {
 
 .services-decription-list {
 	padding-top: 69px;
+	padding-bottom: 76px;
 }
 
 .services-decription-list p {
@@ -950,21 +983,47 @@ a.categories-item-copters::after {
 	padding-right: 325px;
 
 	/* --- TEMPORARY FOR GRID --- */
-	min-height: 247px;
+	/*min-height: 247px;*/
 	box-shadow: inset 0 0 0 1px purple;
 	/* -------------------------- */
 }
 
-.services-decription-item-delivery::before {
-	content: "";
+.services-decription-item::before {
 	position: absolute;
-	top: 15.5px;
-	right: 66px;
 	display: block;
+	content: "";
+	background-repeat: no-repeat;
+	/* background-position: 0 0; */
+}
+
+.services-decription-item-delivery::before {
 	width: 136px;
 	height: 164px;
+	top: 15.5px;
+	right: 66px;
+
 	/*background-color: green;*/
 	background-image: url("../img/icons/delivery_icon.svg");
+}
+
+.services-decription-item-warranty::before {
+	width: 171px;
+	height: 195px;
+	top: -8.5px;
+	right: 46px;
+	
+	/*background-color: green;*/
+	background-image: url("../img/icons/warranty_icon.svg");
+}
+
+.services-decription-item-credit::before {
+	width: 156px;
+	height: 188px;
+	
+	top: -8.5px;
+	right: 70px;
+	/*background-color: green;*/
+	background-image: url("../img/icons/credit_icon.svg");
 }
 
 

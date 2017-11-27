@@ -55,96 +55,98 @@
 			</header>
 		</div>
 		<main class="container">
-			<h1 class="visually-hidden">Магазин гаджетов</h1>
-			<section class="promo wrapper">
-				<h2 class="visually-hidden">Интересные предложения</h2>
-				
-				<!-- слайдер на радиобаттанах, его разметка еще местами под вопроcом -->
-				<input id="promo-1st-switch" type="radio" name="promo-number" >
-				<input id="promo-2nd-switch" type="radio" name="promo-number" checked>
-				<input id="promo-3rd-switch" type="radio" name="promo-number">
-				
-				<!-- TODO: подумать на тему абсолютного позиционирования блока переключателей, 
-				возможно понадобится еще один "оберточный" div списка слайдов.
-					Другим подходом может быть отрисовка блока переключателей в каждом слайде, 
-				но оверхедом будет лишний код, плюс отрисовка при переключении возможно будет 
-				с "мельканием" элементов управления. 
-				-->
+			<div class="wrapper">
+				<h1 class="visually-hidden">Магазин гаджетов</h1>
+				<section class="promo">
+					<h2 class="visually-hidden">Интересные предложения</h2>
+					
+					<!-- слайдер на радиобаттанах, его разметка еще местами под вопроcом -->
+					<input id="promo-1st-switch" type="radio" name="promo-number" >
+					<input id="promo-2nd-switch" type="radio" name="promo-number" checked>
+					<input id="promo-3rd-switch" type="radio" name="promo-number">
+					
+					<!-- TODO: подумать на тему абсолютного позиционирования блока переключателей, 
+					возможно понадобится еще один "оберточный" div списка слайдов.
+						Другим подходом может быть отрисовка блока переключателей в каждом слайде, 
+					но оверхедом будет лишний код, плюс отрисовка при переключении возможно будет 
+					с "мельканием" элементов управления. 
+					-->
 
-				<!-- <label class="label1" for="promo-1st-switch" tabindex="0">Промо 1</label>
-				<label class="label2" for="promo-2nd-switch" tabindex="0">Промо 2</label>
-				<label class="label3" for="promo-3rd-switch" tabindex="0">Промо 3</label>-->
+					<!-- <label class="label1" for="promo-1st-switch" tabindex="0">Промо 1</label>
+					<label class="label2" for="promo-2nd-switch" tabindex="0">Промо 2</label>
+					<label class="label3" for="promo-3rd-switch" tabindex="0">Промо 3</label>-->
 
-				<ul class="promo-slider-controls">
-						<li><label class="label1" for="promo-1st-switch" tabindex="0">Промо 1</label></li>
-						<li><label class="label2" for="promo-2nd-switch" tabindex="0">Промо 2</label></li>
-						<li><label class="label3" for="promo-3rd-switch" tabindex="0">Промо 3</label></li>
-				</ul>
+					<ul class="promo-slider-controls">
+							<li><label class="label1" for="promo-1st-switch" tabindex="0">Промо 1</label></li>
+							<li><label class="label2" for="promo-2nd-switch" tabindex="0">Промо 2</label></li>
+							<li><label class="label3" for="promo-3rd-switch" tabindex="0">Промо 3</label></li>
+					</ul>
 
-				<ul class="promo-list">
-					<li class="promo-item promo-item-monopods">
-						<h3 class=visually-hidden>Моноподы</h3>
-						<p class="promo-item-image"><img src="img/promo/8-meters_monopod.png" alt="8-ми метровый монопод" width="384" height="486"></p>
-						<div class="promo-info">
-							<p class="promo-slogan">Делай селфи,</br> как Бен Стиллер!</p>
-							<!-- <span class="promo-number">01</span> -->
-							<p class="promo-desc">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
-							<a class="button button-promo-details" href="#">Подробнее</a>
-							<table class="promo-spec">
-								<tr class="promo-spec-data">
-									<td>8,5 м</td>
-									<td>5 кг</td>
-									<td>Карбон</td>
-								</tr>
-								<tr class="promo-spec-keys">
-									<td>Длина палки</td>
-									<td>Вес палки</td>
-									<td>Материал</td>
-								</tr>
-							</table>
-						</div>
-					</li>
-					<li class="promo-item promo-item-fitbands">
-						<h3 class=visually-hidden>Фитнес-браслеты</h3>
-						<p class="promo-item-image"><img src="img/promo/motivating_fitband.png" alt="Мотивирующий фитнес-браслет" width="345" height="485"></p>
-						<div class="promo-info">
-							<p class="promo-slogan">Худеем</br> правильно!</p>
-							<!-- <span class="promo-number">02</span> -->
-							<p class="promo-desc">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
-							<a class="button button-promo-details" href="#">Подробнее</a>
-							<table class="promo-spec">
-								<tr class="promo-spec-data">
-									<td>48 часов</td>
-								</tr>
-								<tr class="promo-spec-keys">
-									<td>Без подзарядки</td>
-								</tr>
-							</table>
-						</div>
-					</li>
-					<li class="promo-item promo-item-copters">
-						<h3 class=visually-hidden>Квадрокоптеры</h3>
-						<p class="promo-item-image"><img src="img/promo/laser_copter.png" alt="Квадрокоптер с лазером" width="526" height="334"></p>
-						<div class="promo-info">
-							<p class="promo-slogan">Порхает как бабочка, жалит как пчела!</p>
-							<!-- <span class="promo-number">03</span> -->
-							<p class="promo-desc">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
-							<!-- Предполагаю, что тут должна открываться карточка товара в отдельной странице (которая вертастаться не будет, не задана в макете), поэтому это ссылка. -->
-							<a class="button button-promo-details" href="#">Подробнее</a>
-							<table class="promo-spec">
-								<tr class="promo-spec-data">
-									<td>800 м</td>
-									<td>50 м</td>
-								</tr>
-								<tr class="promo-spec-keys">
-									<td>Дальность полета</td>
-									<td>Радиус поражения</td>
-								</tr>
-							</table>
-						</div>
-					</li>
-				</ul>
-			</section>
+					<ul class="promo-list">
+						<li class="promo-item promo-item-monopods">
+							<h3 class=visually-hidden>Моноподы</h3>
+							<p class="promo-item-image"><img src="img/promo/8-meters_monopod.png" alt="8-ми метровый монопод" width="384" height="486"></p>
+							<div class="promo-info">
+								<p class="promo-slogan">Делай селфи,</br> как Бен Стиллер!</p>
+								<!-- <span class="promo-number">01</span> -->
+								<p class="promo-desc">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
+								<a class="button button-promo-details" href="#">Подробнее</a>
+								<table class="promo-spec">
+									<tr class="promo-spec-data">
+										<td>8,5 м</td>
+										<td>5 кг</td>
+										<td>Карбон</td>
+									</tr>
+									<tr class="promo-spec-keys">
+										<td>Длина палки</td>
+										<td>Вес палки</td>
+										<td>Материал</td>
+									</tr>
+								</table>
+							</div>
+						</li>
+						<li class="promo-item promo-item-fitbands">
+							<h3 class=visually-hidden>Фитнес-браслеты</h3>
+							<p class="promo-item-image"><img src="img/promo/motivating_fitband.png" alt="Мотивирующий фитнес-браслет" width="345" height="485"></p>
+							<div class="promo-info">
+								<p class="promo-slogan">Худеем</br> правильно!</p>
+								<!-- <span class="promo-number">02</span> -->
+								<p class="promo-desc">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
+								<a class="button button-promo-details" href="#">Подробнее</a>
+								<table class="promo-spec">
+									<tr class="promo-spec-data">
+										<td>48 часов</td>
+									</tr>
+									<tr class="promo-spec-keys">
+										<td>Без подзарядки</td>
+									</tr>
+								</table>
+							</div>
+						</li>
+						<li class="promo-item promo-item-copters">
+							<h3 class=visually-hidden>Квадрокоптеры</h3>
+							<p class="promo-item-image"><img src="img/promo/laser_copter.png" alt="Квадрокоптер с лазером" width="526" height="334"></p>
+							<div class="promo-info">
+								<p class="promo-slogan">Порхает как бабочка, жалит как пчела!</p>
+								<!-- <span class="promo-number">03</span> -->
+								<p class="promo-desc">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
+								<!-- Предполагаю, что тут должна открываться карточка товара в отдельной странице (которая вертастаться не будет, не задана в макете), поэтому это ссылка. -->
+								<a class="button button-promo-details" href="#">Подробнее</a>
+								<table class="promo-spec">
+									<tr class="promo-spec-data">
+										<td>800 м</td>
+										<td>50 м</td>
+									</tr>
+									<tr class="promo-spec-keys">
+										<td>Дальность полета</td>
+										<td>Радиус поражения</td>
+									</tr>
+								</table>
+							</div>
+						</li>
+					</ul>
+				</section>
+			</div>
 			
 			<section class="categories wrapper">
 				<h2 class="visually-hidden">Категории товаров</h2>
@@ -179,11 +181,11 @@
 					</ul>
 
 					<ul class="services-decription-list">
-						<li class="services-decription-item services-decription-item-delivery">
+						<li style="display: none" class="services-decription-item services-decription-item-delivery">
 							<h3>Доставка</h3>
 							<p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
 						</li>
-						<li class="services-decription-item services-decription-item-warranty">
+						<li style="display: none" class="services-decription-item services-decription-item-warranty">
 							<h3>Гарантия</h3>
 							<p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.</br> Товар, не дом, конечно же.</p>
 						</li>

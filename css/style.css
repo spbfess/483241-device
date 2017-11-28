@@ -1406,19 +1406,11 @@ a.categories-item-copters::after {
 	text-transform: uppercase;
 }
 
-/*.main-footer-bottom*/
-
-.main-footer-copyright-logo {
-	display: block;
+.main-footer-bottom .right-column {
 	width: 80px;
 	height: 36px;
-	background-color: rgba(0, 200, 0, .2);
+	padding-left: 53px;
 }
-
-
-/*.main-footer-copyright-logo svg {
-	fill: #ffc600;
-}*/
 
 .main-footer-copyright-logo:hover {
 	opacity: .6;
@@ -1434,21 +1426,28 @@ a.categories-item-copters::after {
 
 .main-footer-social {
 	display: flex;
+	justify-content: space-between;
 	align-items: center;
+	width: 140px;
 }
 
 .main-footer-social a {
 	display: block;
 	width: 32px;
 	height: 32px;
+
 	border-radius: 50%;
+	opacity: .3;
 }
 
-/*.social-button-facebok svg{
-	width: 32px;
-	height: 32px;
-	transform: translate(-1px, -3px);
-}*/
+.main-footer-social a:hover,
+.main-footer-social a:focus {
+	opacity: .6;
+}
+
+.main-footer-social a:active {
+	opacity: .1;	
+}
 
 .main-footer-bottom::before {
 	display: block;

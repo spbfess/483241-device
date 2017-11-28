@@ -1257,13 +1257,13 @@ a.categories-item-copters::after {
 }
 
 .main-footer-container {
+	padding-top: 65px;
 	display: flex;
 	flex-direction: column;
 }
 
 .main-footer-top,
-.main-footer-middle,
-.main-footer-bottom {
+.main-footer-middle {
 	display: flex;
 	justify-content: space-between;
 	/* --- TEMPORARY FOR GRID --- */
@@ -1271,43 +1271,79 @@ a.categories-item-copters::after {
 	/* -------------------------- */
 }
 
-.main-footer-logo,
-.main-footer-top .right-column {
+.main-footer-top {
+	margin-bottom: 30px;
+}
+
+.main-footer-middle {
+	min-height: 40px;
+	margin-bottom: 58px;
+}
+
+.main-footer-bottom {
+	min-height: 36px;
+	display: flex;
+	justify-content: space-between;
 	/* --- TEMPORARY FOR GRID --- */
-	box-shadow: inset 0 0 0 1px red;
+	box-shadow: inset 0 0 0 1px orange;
 	/* -------------------------- */
 }
 
+/*.main-footer-bottom .right-column*/
+
+.main-footer-logo {
+	margin-left: -1px; /* Логотип по макету на 1 полупрозрачный пиксель вылезает слева */
+	display: block;
+	width: 163px;
+	height: 36px;
+}
+
+.main-footer-logo:hover,
+.main-footer-logo:focus {
+	opacity: .6;
+}
+
+.main-footer-logo:active {
+	opacity: .3;
+}
+
 .main-footer-top .right-column {
 	display: flex;
 	justify-content: space-between;
+	margin-top: -5px;
 }
 
-.main-footer-goods-actions {
-	display: flex;
-	justify-content: space-between;
-}
-
-.main-footer-goods-actions li {
-	padding-left: 38px;
+.main-footer-site-navigation,
+.main-footer-user-navigation,
+.main-footer-goods-actions,
+.main-footer-social {
+	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
 .main-footer-user-navigation,
 .main-footer-goods-actions {
+	line-height: 36px;
+	letter-spacing: .2em;
 	/* --- TEMPORARY FOR GRID --- */
 	box-shadow: inset 0 0 0 1px green;
 	/* -------------------------- */
 }
 
 .main-footer-goods-actions {
+	display: flex;
+	justify-content: space-between;
 	width: 230px;
 }
-.main-footer-user-navigation {
-	width: 260px;
+
+.main-footer-goods-actions li {
+	padding-left: 38px;
 }
 
 .main-footer-user-navigation {
 	display: flex;
+	width: 260px;
 }
 
 .main-footer-user-navigation li {
@@ -1315,29 +1351,11 @@ a.categories-item-copters::after {
 	padding-right: 26px;
 }
 
-
-
-
-.main-footer-site-navigation a:hover,
-.main-footer-site-navigation a:focus {
-	color: rgba(255, 255, 255, .6);
-}
-
-.main-footer-site-navigation a:active {
-	color: rgba(255, 255, 255, .3);
-}
-
 .main-footer-user-navigation a,
 .main-footer-goods-actions a {
 	color: rgba(255, 255, 255, .7);
 	letter-spacing: .01em;
 }
-
-/*.main-footer-user-navigation {
-	display: flex;
-	flex-direction: flex-end;
-	width: 260px;
-}*/
 
 .main-footer-user-navigation a:hover,
 .main-footer-user-navigation a:focus,
@@ -1351,23 +1369,33 @@ a.categories-item-copters::after {
 	color: rgba(255, 255, 255, .7);
 }
 
-
-.main-footer-logo:hover,
-.main-footer-logo:focus {
-	opacity: .6;
-}
-
-.main-footer-logo:active {
-	opacity: .3;
-}
-
-.main-footer-site-navigation,
-.main-footer-user-navigation,
-.main-footer-goods-actions,
-.main-footer-external-links .social {
-	list-style: none;
+.main-footer-middle p {
+	width: 260px;
 	margin: 0;
-	padding: 0;
+	background-color: rgba(255, 0, 0, .2);
+}
+
+.main-footer-middle *:last-child {
+	text-align: right;
+}
+
+.main-footer-site-navigation a:hover,
+.main-footer-site-navigation a:focus {
+	color: rgba(255, 255, 255, .6);
+}
+
+.main-footer-site-navigation a:active {
+	color: rgba(255, 255, 255, .3);
+}
+
+.main-footer-site-navigation {
+	display: flex;
+	width: 461px;
+	padding-top: 7px;
+
+	justify-content: space-around;
+	background-color: rgba(255, 0, 0, .2);
+/*	align-items: baseline;*/
 }
 
 .main-footer-site-navigation {
@@ -1377,6 +1405,16 @@ a.categories-item-copters::after {
 	letter-spacing: .2em;
 	text-transform: uppercase;
 }
+
+/*.main-footer-bottom*/
+
+.main-footer-copyright-logo {
+	display: block;
+	width: 80px;
+	height: 36px;
+	background-color: rgba(0, 200, 0, .2);
+}
+
 
 /*.main-footer-copyright-logo svg {
 	fill: #ffc600;
@@ -1388,6 +1426,38 @@ a.categories-item-copters::after {
 
 .main-footer-copyright-logo:active {
 	opacity: .3;
+}
+
+.main-footer-bottom .right-column {
+	display: flex;
+}
+
+.main-footer-social {
+	display: flex;
+	align-items: center;
+}
+
+.main-footer-social a {
+	display: block;
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+}
+
+/*.social-button-facebok svg{
+	width: 32px;
+	height: 32px;
+	transform: translate(-1px, -3px);
+}*/
+
+.main-footer-bottom::before {
+	display: block;
+	content: "";
+	margin-top: 15px;
+	margin-bottom: 14px;
+	width: 80px;
+	height: 8px;
+	background-color: #ffc600;
 }
 /* ============== MODAL ============== */
 

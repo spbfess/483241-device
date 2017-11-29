@@ -67,168 +67,172 @@
 			</div>
 			<!-- Переделал всю структуру отсюда до хэдера, должно упростить построение сетки, но на мой взгляд логически ужасно по сравнению с предыдущим вариантом, в котором однако построение сетки может стать реальной болью. Если будет время попробую сверстать оба варианта, пока пойду с этим  -->
 
-			<section class="filter">
-				<h2 class="filter-header">Фильтр</h2>		
+			<div class="inner-content">
+				<section class="filter">
+					<div class="filter-header-container">
+						<h2 class="filter-header">Фильтр:</h2>
+					</div>		
 
-				<form class="filter-body" action="https://echo.htmlacademy.ru" method="get" oninput="lower_cost_output.value=lower_cost_set.value;upper_cost_output.value=upper_cost_set.value;">
-					
-					<h3>Стоимость</h3>
+					<form class="filter-body" action="https://echo.htmlacademy.ru" method="get" oninput="lower_cost_output.value=lower_cost_set.value;upper_cost_output.value=upper_cost_set.value;">
+						
+						<h3>Стоимость</h3>
 
-					<!-- хз как его делать, поэтому буду думать о сугубо графическом его воплощении. ul как контейнер всего этого безобразия, два li - ручки левая и правая, перед левой ручкой псевдоэлементом будет "неактивная полоса", перед правой (или после левой) - активная, после правой - неактивная. Ручка = сам ползунок(в виде бэкграунда к лейблу инпута) + подпись от или до, содержащая аутпут выставленного значения. Отправляеются два скрытых инпута, с дефолтными значениями. Смена значений равно как и оживление такого слйдера, видимо только через js -->
+						<!-- хз как его делать, поэтому буду думать о сугубо графическом его воплощении. ul как контейнер всего этого безобразия, два li - ручки левая и правая, перед левой ручкой псевдоэлементом будет "неактивная полоса", перед правой (или после левой) - активная, после правой - неактивная. Ручка = сам ползунок(в виде бэкграунда к лейблу инпута) + подпись от или до, содержащая аутпут выставленного значения. Отправляеются два скрытых инпута, с дефолтными значениями. Смена значений равно как и оживление такого слйдера, видимо только через js -->
 
-					<ul class="filter-cost">
-						<li class="filter-cost-left-lever">
-							<label tabindex="0" aria-label="Нижняя граница цены">
-								<input type="number" name="lower_cost_set" value="0">
-							</label>
-							<span>от <output name="lower_cost_output">0</output></span>
-							
-						</li>
-						<li class="filter-cost-right-lever">
-							<label tabindex="0" aria-label="Верхняя граница цены">
-								<input type="number" name="upper_cost_set" value="5000">	
-							</label>
-							<span>до <output name="upper_cost_output">5000</output></span>
-						</li>
-					</ul>
+						<ul class="filter-cost">
+							<li class="filter-cost-left-lever">
+								<label tabindex="0" aria-label="Нижняя граница цены">
+									<input type="number" name="lower_cost_set" value="0">
+								</label>
+								<span>от <output name="lower_cost_output">0</output></span>
+								
+							</li>
+							<li class="filter-cost-right-lever">
+								<label tabindex="0" aria-label="Верхняя граница цены">
+									<input type="number" name="upper_cost_set" value="5000">	
+								</label>
+								<span>до <output name="upper_cost_output">5000</output></span>
+							</li>
+						</ul>
 
-					<h3>Цвет</h3>
-					
-					<ul class="filter-color-list">
-						<li>
-							<label class="filter-color-black">
-								<input type="checkbox" name="color" value="black" checked>
-								<!-- Здесь и далее оставил подписи в виде спанов, поскольку они имеют смысловую нагрузку. Не уверен что можно использовать псевдоэлементы для подписи, ведь это уже стилизация, то есть оформление. Или нет? -->
-								<span>Черный</span>
-							</label>
-						</li>
-						<li>
-							<label class="filter-color-white">
-								<input type="checkbox" name="color" value="white">
-								<span>Белый</span>
-							</label>
-						</li>
-						<li>
-							<label class="filter-color-blue">
-								<input type="checkbox" name="color" value="blue" checked>
-								<span>Синий</span>
-							</label>
-						</li>
-						<li>
-							<label class="filter-color-red">
-								<input type="checkbox" name="color" value="red" checked>
-								<span>Красный</span>
-							</label>
-						</li>
-						<li>
-							<label class="filter-color-pink">
-								<input type="checkbox" name="color" value="pink">
-								<span>Розовый</span>
-							</label>
-						</li>
-					</ul>
-					
-					<h3>Bluetooth</h3>
+						<h3>Цвет</h3>
+						
+						<ul class="filter-color-list">
+							<li>
+								<label class="filter-color-black">
+									<input type="checkbox" name="color" value="black" checked>
+									<!-- Здесь и далее оставил подписи в виде спанов, поскольку они имеют смысловую нагрузку. Не уверен что можно использовать псевдоэлементы для подписи, ведь это уже стилизация, то есть оформление. Или нет? -->
+									<span>Черный</span>
+								</label>
+							</li>
+							<li>
+								<label class="filter-color-white">
+									<input type="checkbox" name="color" value="white">
+									<span>Белый</span>
+								</label>
+							</li>
+							<li>
+								<label class="filter-color-blue">
+									<input type="checkbox" name="color" value="blue" checked>
+									<span>Синий</span>
+								</label>
+							</li>
+							<li>
+								<label class="filter-color-red">
+									<input type="checkbox" name="color" value="red" checked>
+									<span>Красный</span>
+								</label>
+							</li>
+							<li>
+								<label class="filter-color-pink">
+									<input type="checkbox" name="color" value="pink">
+									<span>Розовый</span>
+								</label>
+							</li>
+						</ul>
+						
+						<h3>Bluetooth</h3>
 
-					<ul class="filter-bluetooth-list">
-						<li>
-							<label class="filter-bluetooth-yes">
-								<input type="radio" name="bluetooth" value="yes" checked>
-								<span>Есть</span>
-							</label>
-						</li>
-						<li>
-							<label class="filter-bluetooth-no">
-								<input type="radio" name="bluetooth" value="no">
-								<span>Нет</span>
-							</label>
-						</li>
-					</ul>
- 
-					<button class="button button-filter-submit" type="submit">Показать</button>
-				</form>
-			</section>
-			
-			<div class="output">
-				<section class="sort">
-					<h2>Сортировка</h2>
-					<!-- <div class="sort-block"> -->
-					<ul class="sort-by-option">
-						<li><a class="sort-by-option-current">По цене</a></li>
-						<li><a href="#">По типу</a></li>
-						<li><a href="#">По популярности</a></li>
-					</ul>
-					<ul class="sort-by-order">
-						<li><a class="sort-ascending sort-by-order-current">Сортировка по возрастанию</a></li>
-						<li><a class="sort-descending" href="#">Сортировка по убыванию</a></li>
-					</ul>
-					<!-- </div> -->
+						<ul class="filter-bluetooth-list">
+							<li>
+								<label class="filter-bluetooth-yes">
+									<input type="radio" name="bluetooth" value="yes" checked>
+									<span>Есть</span>
+								</label>
+							</li>
+							<li>
+								<label class="filter-bluetooth-no">
+									<input type="radio" name="bluetooth" value="no">
+									<span>Нет</span>
+								</label>
+							</li>
+						</ul>
+	 
+						<button class="button button-filter-submit" type="submit">Показать</button>
+					</form>
 				</section>
+				
+				<div class="output">
+					<section class="sort">
+						<h2>Сортировка:</h2>
+						<!-- <div class="sort-block"> -->
+						<ul class="sort-by-option">
+							<li><a class="sort-by-option-current">По цене</a></li>
+							<li><a href="#">По типу</a></li>
+							<li><a href="#">По популярности</a></li>
+						</ul>
+						<ul class="sort-by-order">
+							<li><a class="sort-ascending" href="#"><span class="visually-hidden">По возрастанию</span></a></li>
+							<li><a class="sort-descending sort-by-order-current"><span class="visually-hidden">По убыванию</span></a></li>
+						</ul>
+						<!-- </div> -->
+					</section>
 
-				<section class="goods">
-					<h2 class="visually-hidden">Список товаров</h2>
-					<ul class="goods-list">
-						<li>
-							<div class="goods-item-title">
-								<h3 class="goods-item-name"><a href="goods/monopods/rookie_selfipod.html">Любительская селфи-палка</a></h3>
-								<span class="goods-item-price">500 руб.</span>
-							</div>
-							<div class="goods-item-bar">
-								<img src="img/goods/monopods/rookie_selfipod.jpg" alt="Любительская селфи-палка" width="360" height="380">
-								<p class="goods-item-buttons">
-									<button type="button" class="button button-add-to-cart">В корзину</button>
-									<button type="button" class="button-add-to-comparison">Добавить к сравнению</button>
-								</p>
-							</div>
-						</li>
-						<li>
-							<div class="goods-item-title">
-								<h3 class="goods-item-name"><a href="goods/monopods/profi_selfipod.html">Профессиональная селфи-палка</a></h3>
-								<span class="goods-item-price">1500 руб.</span>
-							</div>
-							<div class="goods-item-bar">
-								<img src="img/goods/monopods/profi_selfipod.jpg" alt="Профессиональная селфи-палка" width="360" height="380">
-								<p class="goods-item-buttons">
-									<button type="button" class="button button-add-to-cart">В корзину</button>
-									<button type="button" class="button-add-to-comparison">Добавить к сравнению</button>
-								</p>
-							</div>
-						</li>
-						<li>
-							<div class="goods-item-title">
-								<h3 class="goods-item-name"><a href="goods/monopods/unsikable_selfipod.html">Непотопляемая селфи-палка</a></h3>
-								<span class="goods-item-price">2500 руб.</span>
-							</div>
-							<div class="goods-item-bar">
-								<img src="img/goods/monopods/unsikable_selfipod.jpg" alt="Непотопляемая селфи-палка" width="360" height="380">
-								<p class="goods-item-buttons">
-									<button type="button" class="button button-add-to-cart">В корзину</button>
-									<button type="button" class="button-add-to-comparison">Добавить к сравнению</button>
-								</p>
-							</div>
-						</li>
-						<li>
-							<div class="goods-item-title">
-								<h3 class="goods-item-name"><a href="goods/monopods/folow_me_selfipod.html">Селфи-палка «Следуй за мной»</a></h3>
-								<span class="goods-item-price">4900 руб.</span>
-							</div>
-							<div class="goods-item-bar">
-								<img src="img/goods/monopods/folow_me_selfipod.jpg" alt="Селфи-палка «Следуй за мной»" width="360" height="380">
-								<p class="goods-item-buttons">
-									<button type="button" class="button button-add-to-cart">В корзину</button>
-									<button type="button" class="button-add-to-comparison">Добавить к сравнению</button>
-								</p>
-							</div>
-						</li>
-					</ul>
-					<ul class="pagination-list" aria-label="Навигация по страницам">
-						<li class="pagination-item-prev"><a href="#">Назад</a></li>
-						<li class="pagination-item-current"><a>1</a></li>
-						<li><a href="#">2</a></li>
-						<li><a href="#">3</a></li>
-						<li class="pagination-item-next"><a href="#">Вперед</a></li>
-					</ul>
-				</section>
+					<section class="goods">
+						<h2 class="visually-hidden">Список товаров</h2>
+						<ul class="goods-list">
+							<li>
+								<div class="goods-item-title">
+									<h3 class="goods-item-name"><a href="goods/monopods/rookie_selfipod.html">Любительская селфи-палка</a></h3>
+									<span class="goods-item-price">500 руб.</span>
+								</div>
+								<div class="goods-item-bar">
+									<img src="img/goods/monopods/rookie_selfipod.jpg" alt="Любительская селфи-палка" width="360" height="380">
+									<p class="goods-item-buttons">
+										<button type="button" class="button button-add-to-cart">В корзину</button>
+										<button type="button" class="button-add-to-comparison">Добавить к сравнению</button>
+									</p>
+								</div>
+							</li>
+							<li>
+								<div class="goods-item-title">
+									<h3 class="goods-item-name"><a href="goods/monopods/profi_selfipod.html">Профессиональная селфи-палка</a></h3>
+									<span class="goods-item-price">1500 руб.</span>
+								</div>
+								<div class="goods-item-bar">
+									<img src="img/goods/monopods/profi_selfipod.jpg" alt="Профессиональная селфи-палка" width="360" height="380">
+									<p class="goods-item-buttons">
+										<button type="button" class="button button-add-to-cart">В корзину</button>
+										<button type="button" class="button-add-to-comparison">Добавить к сравнению</button>
+									</p>
+								</div>
+							</li>
+							<li>
+								<div class="goods-item-title">
+									<h3 class="goods-item-name"><a href="goods/monopods/unsikable_selfipod.html">Непотопляемая селфи-палка</a></h3>
+									<span class="goods-item-price">2500 руб.</span>
+								</div>
+								<div class="goods-item-bar">
+									<img src="img/goods/monopods/unsikable_selfipod.jpg" alt="Непотопляемая селфи-палка" width="360" height="380">
+									<p class="goods-item-buttons">
+										<button type="button" class="button button-add-to-cart">В корзину</button>
+										<button type="button" class="button-add-to-comparison">Добавить к сравнению</button>
+									</p>
+								</div>
+							</li>
+							<li>
+								<div class="goods-item-title">
+									<h3 class="goods-item-name"><a href="goods/monopods/folow_me_selfipod.html">Селфи-палка «Следуй за мной»</a></h3>
+									<span class="goods-item-price">4900 руб.</span>
+								</div>
+								<div class="goods-item-bar">
+									<img src="img/goods/monopods/folow_me_selfipod.jpg" alt="Селфи-палка «Следуй за мной»" width="360" height="380">
+									<p class="goods-item-buttons">
+										<button type="button" class="button button-add-to-cart">В корзину</button>
+										<button type="button" class="button-add-to-comparison">Добавить к сравнению</button>
+									</p>
+								</div>
+							</li>
+						</ul>
+						<ul class="pagination-list" aria-label="Навигация по страницам">
+							<li class="pagination-item-prev"><a href="#">Назад</a></li>
+							<li class="pagination-item-current"><a>1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li class="pagination-item-next"><a href="#">Вперед</a></li>
+						</ul>
+					</section>
+				</div>
 			</div>
 		</main>
 		<footer class="main-footer">

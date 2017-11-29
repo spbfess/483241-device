@@ -1772,8 +1772,12 @@ a.categories-item-copters::after {
 	width: 972px;
 }
 
-.sort {
+.sort-container {
 	background-color: #eeeeee;
+}
+
+.sort {
+	
 	display: flex;
 	min-height: 70px;
 	/*align-items: center;*/

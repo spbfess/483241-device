@@ -1246,6 +1246,7 @@ a.categories-item-copters::after {
 
 .main-footer {
 	margin-top: 30px;
+	padding-bottom: 65px;
 	min-height: 323px;
 
 	background-color: #464646;

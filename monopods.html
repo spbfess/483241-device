@@ -75,78 +75,69 @@
 
 					<form class="filter-body" action="https://echo.htmlacademy.ru" method="get" oninput="lower_cost_output.value=lower_cost_set.value;upper_cost_output.value=upper_cost_set.value;">
 						
-						<h3>Стоимость</h3>
+						<div class="filter-property-container">
+							<h3>Стоимость</h3>
 
 						<!-- хз как его делать, поэтому буду думать о сугубо графическом его воплощении. ul как контейнер всего этого безобразия, два li - ручки левая и правая, перед левой ручкой псевдоэлементом будет "неактивная полоса", перед правой (или после левой) - активная, после правой - неактивная. Ручка = сам ползунок(в виде бэкграунда к лейблу инпута) + подпись от или до, содержащая аутпут выставленного значения. Отправляеются два скрытых инпута, с дефолтными значениями. Смена значений равно как и оживление такого слйдера, видимо только через js -->
 
-						<ul class="filter-cost">
-							<li class="filter-cost-left-lever">
-								<label tabindex="0" aria-label="Нижняя граница цены">
-									<input type="number" name="lower_cost_set" value="0">
-								</label>
-								<span>от <output name="lower_cost_output">0</output></span>
-								
-							</li>
-							<li class="filter-cost-right-lever">
-								<label tabindex="0" aria-label="Верхняя граница цены">
-									<input type="number" name="upper_cost_set" value="5000">	
-								</label>
-								<span>до <output name="upper_cost_output">5000</output></span>
-							</li>
-						</ul>
 
-						<h3>Цвет</h3>
+							<ul class="filter-cost">
+								<li class="filter-cost-left-lever">
+									<label tabindex="0" aria-label="Нижняя граница цены">
+										<input type="number" name="lower_cost_set" value="0">
+									</label>
+									<span>от <output name="lower_cost_output">0</output></span>
+									
+								</li>
+								<li class="filter-cost-right-lever">
+									<label tabindex="0" aria-label="Верхняя граница цены">
+										<input type="number" name="upper_cost_set" value="5000">	
+									</label>
+									<span>до <output name="upper_cost_output">5000</output></span>
+								</li>
+							</ul>
+						</div>
 						
-						<ul class="filter-color-list">
-							<li>
-								<label class="filter-color-black">
-									<input type="checkbox" name="color" value="black" checked>
+						<div class="filter-property-container">
+							<h3>Цвет</h3>
+							<ul class="filter-color-list">
+								<li>
+									<input id="filter-color-black" type="checkbox" name="color" value="black" checked>
 									<!-- Здесь и далее оставил подписи в виде спанов, поскольку они имеют смысловую нагрузку. Не уверен что можно использовать псевдоэлементы для подписи, ведь это уже стилизация, то есть оформление. Или нет? -->
-									<span>Черный</span>
-								</label>
-							</li>
-							<li>
-								<label class="filter-color-white">
-									<input type="checkbox" name="color" value="white">
-									<span>Белый</span>
-								</label>
-							</li>
-							<li>
-								<label class="filter-color-blue">
-									<input type="checkbox" name="color" value="blue" checked>
-									<span>Синий</span>
-								</label>
-							</li>
-							<li>
-								<label class="filter-color-red">
-									<input type="checkbox" name="color" value="red" checked>
-									<span>Красный</span>
-								</label>
-							</li>
-							<li>
-								<label class="filter-color-pink">
-									<input type="checkbox" name="color" value="pink">
-									<span>Розовый</span>
-								</label>
-							</li>
-						</ul>
+									<label for="filter-color-black">Черный</label>
+								</li>
+								<li>
+									<input id="filter-color-white" type="checkbox" name="color" value="white">
+									<label for="filter-color-white">Белый</label>
+								</li>
+								<li>
+									<input id="filter-color-blue" type="checkbox" name="color" value="blue" checked>
+									<label for="filter-color-blue">Синий</label>
+								</li>
+								<li>
+									<input id="filter-color-red" type="checkbox" name="color" value="red" checked>
+									<label for="filter-color-red">Красный</label>
+								</li>
+								<li>
+									<input id="filter-color-pink" type="checkbox" name="color" value="pink">
+									<label for="filter-color-pink">Розовый</label>
+								</li>
+							</ul>
+						</div>
 						
-						<h3>Bluetooth</h3>
-
-						<ul class="filter-bluetooth-list">
-							<li>
-								<label class="filter-bluetooth-yes">
-									<input type="radio" name="bluetooth" value="yes" checked>
-									<span>Есть</span>
-								</label>
-							</li>
-							<li>
-								<label class="filter-bluetooth-no">
-									<input type="radio" name="bluetooth" value="no">
-									<span>Нет</span>
-								</label>
-							</li>
-						</ul>
+						<div class="filter-property-container">
+							<h3>Bluetooth</h3>
+							<ul class="filter-bluetooth-list">
+								<li>
+									<input id="filter-bluetooth-yes" type="radio" name="bluetooth" value="yes" checked>
+									<label for="filter-bluetooth-yes">Есть</label>
+								</li>
+								<li>
+									<input id="filter-bluetooth-no" type="radio" name="bluetooth" value="no">
+									<label for="filter-bluetooth-no">Нет</label>
+								</li>
+							</ul>
+						</div>
 	 
 						<button class="button button-filter-submit" type="submit">Показать</button>
 					</form>

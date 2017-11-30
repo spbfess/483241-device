@@ -1849,6 +1849,16 @@ a.categories-item-copters::after {
 	background-color: #000000;
 }
 
+.filter-bluetooth-list input[type="radio"]:disabled + label::before,
+.filter-bluetooth-list input[type="radio"]:disabled + label::after {
+	opacity: .25;
+}
+
+.filter-bluetooth-list input[type="radio"]:disabled + label {
+	color: #a6a6a6;
+}
+
+
 .filter-color-list label:hover::before,
 .filter-bluetooth-list label:hover::before,
 .filter-bluetooth-list label:hover::after {

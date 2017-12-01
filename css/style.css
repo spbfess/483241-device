@@ -129,9 +129,10 @@ input[type="radio"].visually-hidden {
 .main-header-logo {
 	display: block;
 	margin-bottom: 18px;
-	margin-top: -19px;
-	width: 163px;
-	height: 34px;
+	margin-top: -20px;
+	margin-left: -1px;
+	width: 164px;
+	height: 36px;
 
 	/* --- TEMPORARY FOR GRID --- */
 	box-shadow: inset 0 0 0 1px;

@@ -117,18 +117,23 @@ input[type="radio"].visually-hidden {
 }
 
 .main-navigation {
-	min-height: 299px;
+	/*min-height: 299px;*/
 	/*min-height: 186px;*/
 	padding-top: 1px; /* this is necessary for negative margin of header logo to take effect */
 	padding-left: 60px;
 	padding-right: 60px;
+	padding-bottom: 164px;
 
 	background-color: #f7e296;
 }
 
+.main-navigation.inner-page {
+	padding-bottom: 51px;
+}
+
 .main-header-logo {
 	display: block;
-	margin-bottom: 18px;
+	margin-bottom: 17px;
 	margin-top: -20px;
 	margin-left: -1px;
 	width: 164px;
@@ -185,12 +190,22 @@ input[type="radio"].visually-hidden {
 	/* -------------------------- */
 }
 
+.user-navigation li {
+	padding-right: 20px;
+}
+
+.user-navigation .login,
+.user-navigation .profile {
+	padding-left: 27px;
+}
+
 .goods-actions {
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
 	width: 220px;
 	margin-left: auto;
+	padding-left: 7px;
 
 	/* --- TEMPORARY FOR GRID --- */
 	box-shadow: inset 0 0 0 1px blue;
@@ -205,13 +220,20 @@ input[type="radio"].visually-hidden {
 	/* -------------------------- */
 }
 
+.goods-actions .cart {
+	text-align: right;
+	padding-left: 24px;
+}
+
+.goods-actions .compare {
+	padding-left: 20px;
+}
+
 .user-navigation a,
 .goods-actions a {
-	display: block;
-	padding: 6px 0;
-
-	border-top: 2px solid transparent; /* это необходимо для того чтобы синкнуться по размерам и высоте бэйзлайна с search'ом */
-	border-bottom: 2px solid transparent;
+	/*padding: 0;*/
+	/*border-top: 2px solid transparent; /* это необходимо для того чтобы синкнуться по размерам и высоте бэйзлайна с search'ом */
+	/*border-bottom: 2px solid transparent;*/
 }
 
 .main-search {
@@ -224,13 +246,17 @@ input[type="radio"].visually-hidden {
 
 	/* --- TEMPORARY FOR GRID --- */
 	box-shadow: inset 0 0 0 1px blue;
+	min-height: 49px;
 	/* -------------------------- */
 }
 
 .main-search input[type="text"] {
 	display: block;
 	margin: 0;
-	padding: 6px 0;
+	padding: 0;
+	/*padding: 6px 0;*/
+	padding-top: 4.5px;
+	padding-bottom: 4.5px;
 	padding-left: 40px;
 
 	width: 355px;
@@ -245,6 +271,7 @@ input[type="radio"].visually-hidden {
 	border: 0;
 	border-top: 2px solid transparent;
 	border-bottom: 2px solid transparent;
+	
 	background-color: transparent;
 }
 
@@ -319,9 +346,14 @@ input[type="radio"].visually-hidden {
 
 .main-search button[type="submit"] {
 	margin: 0;
+	padding: 0;
 	min-width: 85px;
 	/*height: 49px;*/
-	padding: 6px 20px;
+	padding: 4.5px 20px;
+/*	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 4.5px;
+	padding-bottom: 4.5px;*/
 	opacity: 0;
 
 	font-family: "opensanslight", Arial, sans-serif;
@@ -361,6 +393,7 @@ input[type="radio"].visually-hidden {
 
 .site-navigation {
 	display: flex;
+	/*min-height: 40px;*/
 
 	/* --- TEMPORARY FOR GRID --- */
 	box-shadow: inset 0 0 0 1px white;
@@ -370,11 +403,13 @@ input[type="radio"].visually-hidden {
 .site-navigation-item {
 	/* --- TEMPORARY FOR GRID --- */
 	box-shadow: inset 0 0 0 1px blue;
+	line-height: 22px;
 	/* -------------------------- */
+	/*padding-top: 4px;*/
 }
 
 .site-navigation-item a {
-	display: block; /* возможно имеет смысл вернуться к inline, поскольку явно блочного поведения в стилях макета нет */
+	/*display: block; /* возможно имеет смысл вернуться к inline, поскольку явно блочного поведения в стилях макета нет */
 
 	/* --- TEMPORARY FOR GRID --- */
 	background-color: rgba(0, 0, 255, .2);
@@ -382,6 +417,7 @@ input[type="radio"].visually-hidden {
 	/* -------------------------- */
 }
 
+/*.site-navigation-item > a {*/
 .site-navigation-item > a {
 	font-family: "gilroyextrabold", Arial, sans-serif;
 	font-size: 18px;
@@ -393,7 +429,8 @@ input[type="radio"].visually-hidden {
 
 .site-navigation-delivery {
 	width: 140px;
-	margin-right: 20px;
+	margin-right: 19px;
+	margin-left: auto;
 }
 
 .site-navigation-warranty {
@@ -402,13 +439,13 @@ input[type="radio"].visually-hidden {
 
 .site-navigation-contacts {
 	width: 140px;
-	margin-left: auto;
+	margin-left: 61px;
 	text-align: right;
 	margin-right: -.2em;
 }
 
 .site-navigation-catalog {
-	width: 300px;
+	/*width: 300px;*/
 	margin-right: 240px;
 	position: relative;
 }
@@ -418,7 +455,7 @@ input[type="radio"].visually-hidden {
 	/*margin-bottom: 22px;*/
 	position: relative;
 	width: 248px;
-	padding-right: 28px;
+	padding-right: 29px;
 
 	/*vertical-align: top;*/
 }
@@ -428,7 +465,7 @@ input[type="radio"].visually-hidden {
 	z-index: 1;
 	position: absolute;
 	width: 1160px;
-	top: 21px;
+	top: 100%;
 	left: -60px;
 	padding: 0 60px;
 	padding-top: 22px;
@@ -437,6 +474,7 @@ input[type="radio"].visually-hidden {
 	visibility: hidden;
 
 	letter-spacing: .01em;
+	line-height: 36px;
 	/*background-color: #f7e296;*/
 	/*background-color: #f7e184;*/
 	background-color: #f7e296;
@@ -447,11 +485,9 @@ input[type="radio"].visually-hidden {
 }
 
 .catalog-menu a {
-	display: block; /* возможно это лишнее */
-
 	/* --- TEMPORARY FOR GRID --- */
 	/*	box-shadow:  inset 0 0 0 1px black; */
-	background-color: rgba(0 ,0 ,0, .1);
+	/*background-color: rgba(0 ,0 ,0, .1);*/
 	/* -------------------------- */
 }
 
@@ -490,21 +526,27 @@ input[type="radio"].visually-hidden {
 	position: relative;
 }*/
 
+/* вариант с двумя блоками под 90 градусов не проканал, прозрачность при пересечении дает другой цвет */
+
 .site-navigation a.catalog::before {
+	/*content: url("data:image/svg+xml; utf8, <svg enable-background='new 0 0 16 16' version='1.1' viewBox='0 0 16 16' xml:space='preserve' xmlns='http://www.w3.org/2000/svg'><polygon points='16 7 9 7 9 0 7 0 7 7 0 7 0 9 7 9 7 16 9 16 9 9 16 9' fill='#272525'/></svg>");*/
 	content: "";
+	display: block;
 	position: absolute;
 	right: 0;
 	top: 50%;
 	margin-top: -8px;
-	display: block;
-	vertical-align: center;
-	background-image: url("../img/icons/catalog_icon2.png");
-	opacity: .3;
-	background-position: center;
-	background-repeat: no-repeat;
 	width: 16px;
 	height: 16px;
+	
+	background-image: url("../img/icons/catalog_icon.svg");
+	opacity: .3;
 }
+
+/*.site-navigation a.catalog::after {
+	transform: rotate(90deg);
+}*/
+
 
 /*  TODO: текущая реализация кнопок из рук вон плоха:
 не выдерживают переполнения, всегда центруют текст (не нужно в сервисах), 

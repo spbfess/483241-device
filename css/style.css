@@ -438,8 +438,8 @@ input[type="radio"].visually-hidden {
 
 	letter-spacing: .01em;
 	/*background-color: #f7e296;*/
-	background-color: #f7e184;
-	
+	/*background-color: #f7e184;*/
+	background-color: #f7e296;
 	/* --- TEMPORARY FOR GRID --- */
 	/*box-shadow: inset 0 0 0 1px;*/
 	/*background-color: rgba(0, 0, 0, .1);*/

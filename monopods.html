@@ -76,13 +76,33 @@
 					<form class="filter-body" action="https://echo.htmlacademy.ru" method="get" oninput="lower_cost_output.value=lower_cost_set.value;upper_cost_output.value=upper_cost_set.value;">
 						
 						<div class="filter-property-container">
-							<h3>Стоимость</h3>
+							
 
 						<!-- хз как его делать, поэтому буду думать о сугубо графическом его воплощении. ul как контейнер всего этого безобразия, два li - ручки левая и правая, перед левой ручкой псевдоэлементом будет "неактивная полоса", перед правой (или после левой) - активная, после правой - неактивная. Ручка = сам ползунок(в виде бэкграунда к лейблу инпута) + подпись от или до, содержащая аутпут выставленного значения. Отправляеются два скрытых инпута, с дефолтными значениями. Смена значений равно как и оживление такого слйдера, видимо только через js -->
 
 
-							<ul class="filter-cost">
-								<li class="filter-cost-left-lever">
+							<div class="filter-cost">
+								<h3>Стоимость</h3>
+								<div class="filter-cost-controls">
+									<div class="scale">
+										<div class="bar"></div>
+									</div>
+									<div class="toggle toggle-min" tabindex="0"></div>
+            						<div class="toggle toggle-max" tabindex="0"></div>
+								</div>
+								
+
+								<div class="filter-cost-values">
+									<label class="min-price" >
+										от <input name="min-price" type="text" value="0">
+									</label>
+            						<label class="max-price" tabindex="0">
+            							до <input name="max-price" type="text" value="5000">
+            						</label>
+								</div>
+							</div>		
+
+								<!-- <li class="filter-cost-left-lever">
 									<label tabindex="0" aria-label="Нижняя граница цены">
 										<input type="number" name="lower_cost_set" value="0">
 									</label>
@@ -94,8 +114,8 @@
 										<input type="number" name="upper_cost_set" value="5000">	
 									</label>
 									<span>до <output name="upper_cost_output">5000</output></span>
-								</li>
-							</ul>
+								</li> -->
+							
 						</div>
 						
 						<div class="filter-property-container">

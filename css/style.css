@@ -477,6 +477,7 @@ input[type="radio"].visually-hidden {
 	/*width: 300px;*/
 	margin-right: 240px;
 	position: relative;
+	/*height: 21.6px;*/
 }
 
 .site-navigation-catalog .catalog {
@@ -1880,14 +1881,9 @@ a.categories-item-copters::after {
 
 .filter-property-container {
 	padding-top: 13px;
-	padding-bottom: 31px;
+	margin-bottom: 31px;
 
 	border-top: 2px solid #000000;
-}
-
-.filter-property-container:first-of-type {
-/* --- TEMPORARY FOR GRID --- */
-	height: 140px;
 }
 
 .filter-body h3 {
@@ -1900,21 +1896,128 @@ a.categories-item-copters::after {
 	letter-spacing: .01em;
 }
 
+.filter-cost {
+	padding-bottom: 4px;
+}
+
+.filter-cost h3 {
+	margin-bottom: 26px;
+}
+.filter-cost-controls {
+	position: relative;
+	/*height: 10px;*/
+	padding: 9px 0;
+	margin-bottom: 2px;
+}
+
+.filter-cost-controls .toggle {
+	position: absolute;
+	content: "";
+	top: 0;
+	/*margin-top: 1px;*/
+	width: 20px;
+	height: 20px;
+	padding: 0;
+
+	border: 8px solid #ffffff;
+	background-color: #ababab;
+	border-radius: 50%;
+	box-shadow: 0 2px 1px 0 rgba(171, 171, 171, .3);
+	cursor: pointer;
+}
+
+.filter-cost-controls .toggle-min {
+	left: 0;
+	margin-left: -5px;
+}
+
+
+.filter-cost-controls .toggle-max {
+	left: 110px;
+	margin-left: -2px;
+}
+
+.filter-cost-controls,
+.filter-cost-values {
+	box-shadow: inset 0 0 0 1px;
+}
+
+.filter-cost-values {
+	position: relative;
+
+	/* Это (margin-left: 5px) сделано для синхронизации начала лейбла и начала шкалы 
+	для "общей системы координат" ручек, лейблов и бара относительно шкалы в случае 
+	реализации оживления элемента на js */
+	margin-left: 5px; 
+	
+	font-size: 0; 
+
+	/* к сожалению такая высота задана в макете :( делаю высоты контейнера и строки внутри одинаковыми */
+	line-height: 22.27px; 
+	height: 22.27px;
+}
+
+.filter-cost-values label {
+	position: absolute;
+	display: inline-block;
+	font-family: "gilroylight", Arial, sans-serif;
+	font-size: 14px;
+	color: rgba(0 ,0 ,0, .2);
+}
+
+.filter-cost-values .min-price {
+	left: 0;
+
+	/* возвращаем позаимстоваанные 5 пикселей сверху, так как первый лейбл
+	спозиционирован на 5px левее начала шкалы по макету */
+	margin-left: -5px; 
+}
+
+.filter-cost-values .max-price {
+	/* вторая ручка сдвинута на 25 пикселей назад по умолчанию 
+	относительно "начала кординат" */
+	margin-left: -25px; 
+
+	/* теперь тут можно тупо указывать текущего размер прогресс бара */
+	left: 110px; 
+}
+
+.filter-cost-values input {
+	padding: 0;
+	font: inherit;
+	color: inherit;
+	border: none;
+	width: 44px;
+	background-color: transparent;
+}
+
+.filter-cost .scale {
+	margin-left: 5px;
+	height: 2px;
+	background-color: #dbdbdb;
+}
+
+.filter-cost .bar {
+  width: 110px; /* текущий прогресс бар, активная его часть зеленого цвета */
+  height: 2px;
+
+  background: #91c92f;
+}
+
 .filter-body input[type="checkbox"]:disabled + span,
 .filter-body input[type="radio"]:disabled +span {
 	color: rgb(166, 166, 166);
 }
 
 
-.filter-cost-left-lever span,
+/*.filter-cost-left-lever span,
 .filter-cost-right-lever span {
 	font-family: "gilroylight", Arial, sans-serif;
 	font-size: 14px;
 	line-height: 22.27px;
 	color: rgba(0 ,0 ,0, .2);
 }
-
-.filter-cost,
+*/
 .filter-color-list,
 .filter-bluetooth-list {
 	list-style: none;

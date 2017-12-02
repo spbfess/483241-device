@@ -60,21 +60,9 @@
 				<section class="promo">
 					<h2 class="visually-hidden">Интересные предложения</h2>
 					
-					<!-- слайдер на радиобаттанах, его разметка еще местами под вопроcом -->
-					<input id="promo-1st-switch" type="radio" name="promo-number" checked>
-					<input id="promo-2nd-switch" type="radio" name="promo-number">
-					<input id="promo-3rd-switch" type="radio" name="promo-number">
-					
-					<!-- TODO: подумать на тему абсолютного позиционирования блока переключателей, 
-					возможно понадобится еще один "оберточный" div списка слайдов.
-						Другим подходом может быть отрисовка блока переключателей в каждом слайде, 
-					но оверхедом будет лишний код, плюс отрисовка при переключении возможно будет 
-					с "мельканием" элементов управления. 
-					-->
-
-					<!-- <label class="label1" for="promo-1st-switch" tabindex="0">Промо 1</label>
-					<label class="label2" for="promo-2nd-switch" tabindex="0">Промо 2</label>
-					<label class="label3" for="promo-3rd-switch" tabindex="0">Промо 3</label>-->
+					<input class="promo-switch-one" id="promo-1st-switch" type="radio" name="promo-number" checked>
+					<input class="promo-switch-two" id="promo-2nd-switch" type="radio" name="promo-number">
+					<input class="promo-switch-three" id="promo-3rd-switch" type="radio" name="promo-number">
 
 					<ul class="promo-slider-controls">
 							<li><label class="label1" for="promo-1st-switch" tabindex="0">Промо 1</label></li>
@@ -88,7 +76,6 @@
 							<p class="promo-item-image"><img src="img/promo/8-meters_monopod.png" alt="8-ми метровый монопод" width="384" height="486"></p>
 							<div class="promo-info">
 								<p class="promo-slogan">Делай селфи,</br> как Бен Стиллер!</p>
-								<!-- <span class="promo-number">01</span> -->
 								<p class="promo-desc">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
 								<a class="button button-promo-details" href="#">Подробнее</a>
 								<table class="promo-spec">
@@ -110,7 +97,6 @@
 							<p class="promo-item-image"><img src="img/promo/motivating_fitband.png" alt="Мотивирующий фитнес-браслет" width="345" height="485"></p>
 							<div class="promo-info">
 								<p class="promo-slogan">Худеем</br> правильно!</p>
-								<!-- <span class="promo-number">02</span> -->
 								<p class="promo-desc">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
 								<a class="button button-promo-details" href="#">Подробнее</a>
 								<table class="promo-spec">
@@ -128,9 +114,7 @@
 							<p class="promo-item-image"><img src="img/promo/laser_copter.png" alt="Квадрокоптер с лазером" width="526" height="334"></p>
 							<div class="promo-info">
 								<p class="promo-slogan">Порхает как бабочка, жалит как пчела!</p>
-								<!-- <span class="promo-number">03</span> -->
 								<p class="promo-desc">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
-								<!-- Предполагаю, что тут должна открываться карточка товара в отдельной странице (которая вертастаться не будет, не задана в макете), поэтому это ссылка. -->
 								<a class="button button-promo-details" href="#">Подробнее</a>
 								<table class="promo-spec">
 									<tr class="promo-spec-data">
@@ -163,10 +147,10 @@
 			<section  class="services">
 				<div class="services-container wrapper">
 					<h2 class="visually-hidden">Сервисы</h2>
-					<!-- TODO: слайдер на радиобаттанах, пока альфа-версия разметки -->
-					<input id="services-delivery" type="radio" name="service" checked>
-					<input id="services-warranty" type="radio" name="service">
-					<input id="services-credit"   type="radio" name="service">	
+
+					<input class="services-delivery-switch" id="services-delivery" type="radio" name="service" checked>
+					<input class="services-warranty-switch" id="services-warranty" type="radio" name="service">
+					<input class="services-credit-switch" id="services-credit" type="radio" name="service">	
 				
 					<ul class="services-controls-list">
 						<li class="services-controls-delivery">
@@ -204,7 +188,7 @@
 					<li>
 						<!-- Сделать изображение контентным (логотип же!) и при этом эффект перекатывания на CSS невозможно, либо с ипользованием фоновых изображений что нарушает концепцию логотипа как контента, либо джава скрипт, что так или иначе аффектит деградейшн при выключенном javascript. Если наставник одобрит, запилю подключаемый джава скрипт, согласно спеке, а не инлайн вариант 
 
-						UPD:  сделал двумя картинками. Сем плохо? стили не подгрузятся, будем иметь обе картинки сразу. Вариант с джавоскриптом кмк тут луше - джаваскрипт выключен, будет иметь дефолтноый серый логотип без анимации. Но веротяно не удовлетворяет критериям..-->
+						UPD:  сделал двумя картинками. Чем плохо? стили не подгрузятся, будем иметь обе картинки сразу. Вариант с джавоскриптом кмк тут луше - джаваскрипт выключен, будет иметь дефолтноый серый логотип без анимации. Но веротяно не удовлетворяет критериям..-->
 
 						<!-- <a href="https://www.dji.com"><img src="img/brands/dji_logo_inactive.jpg" alt="логотип бренда DJI" width="260" height="100" onmouseover="this.src='img/brands/dji_logo.jpg';" onmouseout="this.src='img/brands/dji_logo_inactive.jpg';"></a> -->
 
@@ -342,9 +326,7 @@
 	      <h2 class="visually-hidden">Как до нас добраться</h2>
 	      <div style="position: relative;"class="map-container">
 	      	<button type="button" class="modal-close">Закрыть</button>
-	      	<button type="button" class="test-modal-close">Закрыть</button>
-	      	<!-- <button style="position: absolute;" type="button" class="modal-close">Закрыть</button>
-	      	<button style="position: absolute; opacity: .2" type="button" class="test-modal-close">Закрыть</button> -->
+	    <!--   	<button type="button" class="test-modal-close">Закрыть</button> -->
 	      </div>
 	    </section>
 	</body>

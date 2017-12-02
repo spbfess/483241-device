@@ -696,7 +696,8 @@ input[type="radio"].visually-hidden {
 	margin: 0;
 }
 
-.promo-slider-controls label {
+
+/*.promo-slider-controls label {
 	display: block;
 	width: 12px;
 	height: 12px;
@@ -715,6 +716,46 @@ input[type="radio"].visually-hidden {
 #promo-3rd-switch:checked ~ .promo-slider-controls label[for="promo-3rd-switch"] {
 	background-image: url("../img/promo/slider_button.svg");
 }
+
+*/
+
+
+.promo-slider-controls label {
+	position: relative;
+	display: block;
+	width: 12px;
+	height: 12px;
+
+	font-size: 0;
+	border: 1px solid #000000;
+	border-radius: 50%;
+
+	cursor: pointer;
+}
+
+#promo-1st-switch:checked ~ .promo-slider-controls label[for="promo-1st-switch"]::before,
+#promo-2nd-switch:checked ~ .promo-slider-controls label[for="promo-2nd-switch"]::before,
+#promo-3rd-switch:checked ~ .promo-slider-controls label[for="promo-3rd-switch"]::before {
+	position: absolute;
+	content: "";
+
+	top: 50%;
+	left: 50%;
+	
+	/* 
+	margin-top: -2.3px;
+	margin-left: -2.3px;
+	width: 4.6px;
+	height: 4.6px;
+	*/
+
+	transform: translate(-50%, -50%);
+	width: 4.5px;
+	height: 4.5px;
+	border: 1px solid #000000;
+	border-radius: 50%;
+}
+
 
 #promo-1st-switch:checked ~ .promo-list li:nth-of-type(1) {
 	display: flex;

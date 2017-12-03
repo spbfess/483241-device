@@ -31,8 +31,6 @@
 					<ul class="site-navigation">
 						<li class="site-navigation-item site-navigation-catalog">
 							<a class="catalog" href="catalog.html">Каталог товаров</a>
-							<!-- Так адресовал проблему разметки каталога по столбцам: решил зачем дивянничать, - был список, списком и останется, каждый элемент - столбец, внутри пихаем ссылки сколько душе угодно, их сделаем блочными, классифицировать ничего не надо, здесь псевдо-класссы по номеру чайлда то что нужно, поскольку ссылки сгруппированы явно нелогически -->
-		
 							<ul class="catalog-menu">
 								<li>
 									<a href="vr.html">Виртуальная реальность</a>
@@ -65,8 +63,6 @@
 					<li class="breadcrumbs-current">Моноподы для селфи</li>
 				</ul>
 			</div>
-			<!-- Переделал всю структуру отсюда до хэдера, должно упростить построение сетки, но на мой взгляд логически ужасно по сравнению с предыдущим вариантом, в котором однако построение сетки может стать реальной болью. Если будет время попробую сверстать оба варианта, пока пойду с этим  -->
-
 			<div class="inner-content">
 				<section class="filter">
 					<div class="filter-header-container">
@@ -75,12 +71,7 @@
 
 					<form class="filter-body" action="https://echo.htmlacademy.ru" method="get" oninput="lower_cost_output.value=lower_cost_set.value;upper_cost_output.value=upper_cost_set.value;">
 						
-						<div class="filter-property-container">
-							
-
-						<!-- хз как его делать, поэтому буду думать о сугубо графическом его воплощении. ul как контейнер всего этого безобразия, два li - ручки левая и правая, перед левой ручкой псевдоэлементом будет "неактивная полоса", перед правой (или после левой) - активная, после правой - неактивная. Ручка = сам ползунок(в виде бэкграунда к лейблу инпута) + подпись от или до, содержащая аутпут выставленного значения. Отправляеются два скрытых инпута, с дефолтными значениями. Смена значений равно как и оживление такого слйдера, видимо только через js -->
-
-
+						<div class="filter-property-container">							
 							<div class="filter-cost">
 								<h3>Стоимость</h3>
 								<div class="filter-cost-controls">
@@ -108,7 +99,6 @@
 							<ul class="filter-color-list">
 								<li>
 									<input id="filter-color-black" type="checkbox" name="color" value="black" checked>
-									<!-- Здесь и далее оставил подписи в виде спанов, поскольку они имеют смысловую нагрузку. Не уверен что можно использовать псевдоэлементы для подписи, ведь это уже стилизация, то есть оформление. Или нет? -->
 									<label for="filter-color-black" tabindex="0">Черный</label>
 								</li>
 								<li>
@@ -152,7 +142,6 @@
 					<div class="sort-container">
 						<section class="sort">
 							<h2>Сортировка:</h2>
-							<!-- <div class="sort-block"> -->
 							<ul class="sort-by-option">
 								<li><a class="sort-by-option-current">По цене</a></li>
 								<li><a href="#">По типу</a></li>
@@ -162,7 +151,6 @@
 								<li><a class="sort-ascending" href="#"><span class="visually-hidden">По возрастанию</span></a></li>
 								<li><a class="sort-descending sort-by-order-current"><span class="visually-hidden">По убыванию</span></a></li>
 							</ul>
-							<!-- </div> -->
 						</section>
 					</div>
 

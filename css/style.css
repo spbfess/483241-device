@@ -2039,7 +2039,8 @@ a.categories-item-copters::after {
 	font: inherit;
 	color: inherit;
 	border: none;
-	width: 44px;
+	width: 54px;
+
 	background-color: transparent;
 }
 
@@ -2395,6 +2396,7 @@ a.sort-by-order-current:active::before {
 	height: 60px;
 	padding-top: 21px;
 	padding-bottom: 22px;
+
 
 	text-align: center;
 	font-family: "gilroyextrabold", Arial, sans-serif;

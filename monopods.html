@@ -69,8 +69,7 @@
 						<h2 class="filter-header">Фильтр:</h2>
 					</div>		
 
-					<form class="filter-body" action="https://echo.htmlacademy.ru" method="get" oninput="lower_cost_output.value=lower_cost_set.value;upper_cost_output.value=upper_cost_set.value;">
-						
+					<form class="filter-body" action="https://echo.htmlacademy.ru" method="get">
 						<div class="filter-property-container">							
 							<div class="filter-cost">
 								<h3>Стоимость</h3>
@@ -85,10 +84,10 @@
 
 								<div class="filter-cost-values">
 									<label class="min-price" >
-										от <input name="min-price" type="text" value="0">
+										от <input name="min-price" type="number" value="0">
 									</label>
             						<label class="max-price">
-            							до <input name="max-price" type="text" value="5000">
+            							до <input name="max-price" type="number" value="5000">
             						</label>
 								</div>
 							</div>		

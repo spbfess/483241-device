@@ -2384,6 +2384,28 @@ a.sort-by-order-current:active::before {
 	height: 380px;
 }
 
+.goods-item-new .goods-item-bar::after {
+	position: absolute;
+	content: "New";
+	text-transform: uppercase;
+	display: inline-block;
+	top: 28px;
+	right: 27px;
+	width: 60px;
+	height: 60px;
+	padding-top: 21px;
+	padding-bottom: 22px;
+
+	text-align: center;
+	font-family: "gilroyextrabold", Arial, sans-serif;
+	font-size: 14px;
+	line-height: 1.2; ;
+	letter-spacing: .05em;
+	color: rgba(0, 0, 0, .2);
+	border: 2px solid rgba(0, 0, 0, .1);
+	border-radius: 50%;
+
+}
 .goods-item-bar:hover {
 	cursor: pointer;
 }
@@ -2395,6 +2417,7 @@ a.sort-by-order-current:active::before {
 .goods-item-buttons {
 	display: none;
 	position: absolute;
+	z-index: 1;
 	flex-direction: column;
 	align-items: center;
 	width: 100%;

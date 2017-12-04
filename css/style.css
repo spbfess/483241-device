@@ -1809,6 +1809,17 @@ a.categories-item-copters::after {
 	margin-top: -279.5px;
 }
 
+/*.map-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 960px;
+	height: 559px;
+
+	z-index: -1;
+}*/
+
+
 .modal-close {
 	position: absolute;
 	top: 22px;

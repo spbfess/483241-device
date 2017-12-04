@@ -1559,6 +1559,39 @@ a.categories-item-copters::after {
 }
 /* ============== MODAL ============== */
 
+@keyframes modal-appear {
+  0% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(20%);
+  }
+
+  90% {
+    transform: scale(90%);
+  }
+
+  100% {
+    transform: scale(100%);
+  }
+}
+
+@keyframes modal-fail {
+  30% {
+  	transform: scale(0);
+  }
+
+
+  50%,70%,90% {
+  	transform: scale(20%);
+  }
+
+  60%,80%,100% {
+  	transform: scale(100%);
+  }
+}
+
 .modal {
 	display: none;
 	position: fixed;
@@ -1586,6 +1619,15 @@ a.categories-item-copters::after {
 	
 	box-sizing: border-box;
 	cursor: pointer;
+}
+
+.modal-show {
+	display: block;
+	animation: modal-appear 800ms;
+}
+
+.modal-error {
+	animation: modal-fail 1s;
 }
 
 /* --------------кнопка modal-close------------*/

@@ -1296,6 +1296,11 @@ a.categories-item-copters::after {
 	color: #ffffff;
 }
 
+.main-footer svg {
+	display: block;
+}
+
+
 .main-footer a {
 	color: #ffffff;
 }

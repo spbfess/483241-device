@@ -1581,15 +1581,6 @@ a.categories-item-copters::after {
   30% {
   	transform: scale(0);
   }
-
-
-  50%,70%,90% {
-  	transform: scale(20%);
-  }
-
-  60%,80%,100% {
-  	transform: scale(100%);
-  }
 }
 
 .modal {

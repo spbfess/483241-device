@@ -1563,6 +1563,30 @@ a.categories-item-copters::after {
 }
 /* ============== MODAL ============== */
 
+@keyframes modal-appear {
+  0% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(20%);
+  }
+
+  90% {
+    transform: scale(90%);
+  }
+
+  100% {
+    transform: scale(100%);
+  }
+}
+
+@keyframes modal-fail {
+  30% {
+  	transform: scale(0);
+  }
+}
+
 .modal {
 	display: none;
 	position: fixed;
@@ -1590,6 +1614,15 @@ a.categories-item-copters::after {
 	
 	box-sizing: border-box;
 	cursor: pointer;
+}
+
+.modal-show {
+	display: block;
+	animation: modal-appear 800ms;
+}
+
+.modal-error {
+	animation: modal-fail 1s;
 }
 
 /* --------------кнопка modal-close------------*/
@@ -1779,6 +1812,17 @@ a.categories-item-copters::after {
 	margin-left: -480px;
 	margin-top: -279.5px;
 }
+
+/*.map-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 960px;
+	height: 559px;
+
+	z-index: -1;
+}*/
+
 
 .modal-close {
 	position: absolute;

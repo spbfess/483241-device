@@ -452,7 +452,6 @@ input[type="radio"].visually-hidden {
 }
 
 .site-navigation-catalog {
-	margin-right: 240px;
 	position: relative;
 }
 
@@ -885,24 +884,32 @@ input[type="radio"].visually-hidden {
 /* ============== INDEX CATEGORIES ============== */
 
 .categories {
-	margin-bottom: 185px;
+	/*margin-bottom: 145px;*/
 }
 
 .categories-list {
 	display: flex;
-	justify-content: space-between;
+	flex-wrap: wrap;
 
 	margin: 0;
 	padding: 0;
-	padding-top: 200px;
 
 	list-style: none;
+}
+
+.categories-list li {
+	margin-bottom: 40px;
+}
+
+.categories-list li:not(:nth-of-type(6n+6)) {
+	margin-right: 40px;
 }
 
 .categories-list a {
 	display: block;
 	position: relative;
 	padding: 0;
+	padding-top: 200px;
 	width: 160px;
 
 	font-family: "gilroyextrabold", Arial, sans-serif;
@@ -919,9 +926,10 @@ input[type="radio"].visually-hidden {
 .categories-list a::before {
 	display: block;
 	position: absolute;
-	top: -200px;
-	left: 0;
 	content: "";
+	
+	top: 0;
+	left: 0;
 
 	width: 160px;
 	height: 160px;
@@ -934,10 +942,10 @@ input[type="radio"].visually-hidden {
 .categories-list a::after {
 	display: block;
 	position: absolute;
-	top: -200px;
-	left: 0;
-	display: block;
 	content: "";
+
+	top: 0;
+	left: 0;
 
 	width: 160px;
 	height: 160px;
@@ -961,7 +969,6 @@ a.categories-item-vr::after {
 }
 
 a.categories-item-monopods::after {
-	/* TODO: поразмыслить как паддингом можно сделать перевод строки без неразравного пробела, не ломая сетку */
 	background-image: url("../img/icons/monopods_icon.svg");
 	background-position: center bottom;
 }
@@ -988,9 +995,10 @@ a.categories-item-copters::after {
 	padding-top: 1px; /* this is a dirty hack for negative margin purposes, until I sort a gradient usage out */
 	margin-bottom: 94px;
 	min-height: 288px;
-
+	padding-top: 146px;
 	letter-spacing: .01em;
 	background-color: #e5e5e5;
+	background-clip: content-box;
 	/* --- TEMPORARY FOR GRID --- */
 	/*box-shadow: inset 0 0 0 1px orange;*/
 	/* -------------------------- */
@@ -1038,9 +1046,9 @@ a.categories-item-copters::after {
 	height: 100%;
 }
 
-.services-delivery-switch:checked ~ .services-decription-list .services-decription-item-delivery,
-.services-warranty-switch:checked ~ .services-decription-list .services-decription-item-warranty,
-.services-credit-switch:checked ~ .services-decription-list .services-decription-item-credit {
+.services-delivery-switch:checked ~ .services-description-list .services-description-item-delivery,
+.services-warranty-switch:checked ~ .services-description-list .services-description-item-warranty,
+.services-credit-switch:checked ~ .services-description-list .services-description-item-credit {
 	display: block;
 }
 
@@ -1051,7 +1059,7 @@ a.categories-item-copters::after {
 }
 
 .services-controls-list,
-.services-decription-list {
+.services-description-list {
 	list-style: none;
 	margin: 0;
 	padding: 0;
@@ -1068,18 +1076,17 @@ a.categories-item-copters::after {
 	margin-bottom: 24px;
 }
 
-.services-decription-list {
+.services-description-list {
 	width: 760px;
 	padding-top: 69px;
 	padding-bottom: 70px;
 }
 
-.services-decription-list p {
+.services-description-list p {
 	margin: 0;
-	padding: 0;
 }
 
-.services-decription-item {
+.services-description-item {
 	position: relative;
 	display: none;
 	padding-right: 325px;
@@ -1089,7 +1096,7 @@ a.categories-item-copters::after {
 	/* -------------------------- */
 }
 
-.services-decription-item::before {
+.services-description-item::before {
 	position: absolute;
 	display: block;
 	content: "";
@@ -1097,7 +1104,7 @@ a.categories-item-copters::after {
 	background-position: 0 0; 
 }
 
-.services-decription-item-delivery::before {
+.services-description-item-delivery::before {
 	width: 136px;
 	height: 164px;
 	top: 15.5px;
@@ -1106,7 +1113,7 @@ a.categories-item-copters::after {
 	background-image: url("../img/icons/delivery_icon.svg");
 }
 
-.services-decription-item-warranty::before {
+.services-description-item-warranty::before {
 	width: 171px;
 	height: 195px;
 	top: -8.5px;
@@ -1115,7 +1122,7 @@ a.categories-item-copters::after {
 	background-image: url("../img/icons/warranty_icon.svg");
 }
 
-.services-decription-item-credit::before {
+.services-description-item-credit::before {
 	width: 156px;
 	height: 188px;	
 	top: -8.5px;
@@ -1295,7 +1302,7 @@ a.categories-item-copters::after {
 
 .main-footer {
 	margin-top: 30px;
-	padding-bottom: 65px;
+	padding: 65px 0;
 	min-height: 323px;
 
 	background-color: #464646;
@@ -1311,7 +1318,6 @@ a.categories-item-copters::after {
 }
 
 .main-footer-container {
-	padding-top: 65px;
 	display: flex;
 	flex-direction: column;
 }
@@ -1611,8 +1617,7 @@ a.categories-item-copters::after {
 	background-position: center center;
 	background-repeat: no-repeat;
 	opacity: .5;
-	
-	box-sizing: border-box;
+
 	cursor: pointer;
 }
 
@@ -1859,7 +1864,6 @@ a.categories-item-copters::after {
 	padding-left: 60px;
 	display: flex;
 	align-items: baseline;
-	box-sizing: border-box;
 }
 
 .breadcrumbs a {
@@ -1869,12 +1873,13 @@ a.categories-item-copters::after {
 .breadcrumbs li {
 	margin: 0;
 	padding: 0;
-	box-sizing: border-box;
 }
+
 .breadcrumbs a {
 	position: relative;
 	box-sizing: border-box;
 }
+
 .breadcrumbs a::after {
 	content: "";
 	display: block;
@@ -1887,7 +1892,6 @@ a.categories-item-copters::after {
 	background-image: url("../img/nav-arrow.svg");
 	background-position: center;
 	background-repeat: no-repeat;
-	box-sizing: border-box;
 }
 
 .breadcrumbs li:first-of-type a::after {
@@ -1924,7 +1928,7 @@ a.categories-item-copters::after {
 .filter {
 	width: 348px;
 	flex-grow: 1;
-	align-items: flex-end;
+	/*align-items: flex-end;*/
 	background-color: #eeeeee;
 }
 

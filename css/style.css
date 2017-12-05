@@ -114,9 +114,9 @@ input[type="radio"].visually-hidden {
 
 .main-navigation {
 	padding-top: 1px; /* this is necessary for negative margin of header logo to take effect */
-	padding-left: 60px;
+	padding-left: 59px;
 	padding-right: 60px;
-	padding-bottom: 163px;
+	padding-bottom: 162px;
 
 	background-color: #f7e296;
 }
@@ -129,7 +129,7 @@ input[type="radio"].visually-hidden {
 	display: block;
 	margin-bottom: 17px;
 	margin-top: -20px;
-	margin-left: -1px;
+	/*margin-left: -1px;*/
 	width: 164px;
 	height: 36px;
 }
@@ -137,7 +137,7 @@ input[type="radio"].visually-hidden {
 .main-navigation .wrapper-top {
 	display: flex;
 	align-items: baseline;
-	margin-bottom: 31px;
+	margin-bottom: 32px;
 
 	/* --- TEMPORARY FOR GRID --- */
 	/*box-shadow: inset 0 0 0 1px white;*/
@@ -260,7 +260,7 @@ input[type="radio"].visually-hidden {
 	position: relative;
 	
 	width: 500px;
-	margin-right: 40px;
+	margin-right: 41px;
 
 	/* --- TEMPORARY FOR GRID --- */
 	/*box-shadow: inset 0 0 0 1px blue;*/
@@ -271,11 +271,11 @@ input[type="radio"].visually-hidden {
 	display: block;
 	margin: 0;
 	padding-right: 0;
-	padding-top: 4.5px;
-	padding-bottom: 4.5px;
-	padding-left: 38px;
+	padding-top: 3.5px;
+	padding-bottom: 5.5px;
+	padding-left: 39px;
 
-	width: 355px;
+	width: 356px;
 
 	font-family: "opensanslight", Arial, sans-serif;
 	font-size: 15px;
@@ -350,7 +350,7 @@ input[type="radio"].visually-hidden {
 	display: block;
 	width: 16px;
 	height: 16px;
-	left: 3px;
+	left: 4px;
 	top: 50%;
 	margin-top: -8px;
 	background-image: url("../img/icons/search_icon.svg");
@@ -361,7 +361,11 @@ input[type="radio"].visually-hidden {
 
 .main-search button[type="submit"] {
 	margin: 0;
-	padding: 4.5px 20px;
+	/*padding: 4.5px 20px;*/
+	padding-top: 3.5px;
+	padding-bottom: 5.5px;
+	padding-left: 18px;
+	padding-right: 18px;
 	min-width: 85px;
 	opacity: 0;
 
@@ -453,7 +457,7 @@ input[type="radio"].visually-hidden {
 
 .site-navigation-catalog {
 	position: relative;
-	margin-left: -1px;
+	/*margin-left: -1px;*/
 }
 
 .site-navigation-catalog .catalog {
@@ -471,8 +475,8 @@ input[type="radio"].visually-hidden {
 	left: -59px;
 	padding-left: 61px;
 	padding-right: 60px;
-	padding-top: 22px;
-	padding-bottom: 33px;
+	padding-top: 20px;
+	padding-bottom: 34px;
 
 	visibility: hidden;
 

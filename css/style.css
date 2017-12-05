@@ -1535,9 +1535,18 @@ a.categories-item-copters::after {
 
 .main-footer-social {
 	display: flex;
-	justify-content: space-between;
+	flex-wrap: wrap;
+	justify-content: center;
 	align-items: center;
-	width: 140px;
+	width: 248px;
+}
+
+.main-footer-social li {
+	margin-bottom: 5px;
+}
+
+.main-footer-social li:not(:nth-of-type(5n+5)):not(:last-of-type) {
+	margin-right: 22px;
 }
 
 .main-footer-social a {

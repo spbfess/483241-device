@@ -116,7 +116,7 @@ input[type="radio"].visually-hidden {
 	padding-top: 1px; /* this is necessary for negative margin of header logo to take effect */
 	padding-left: 60px;
 	padding-right: 60px;
-	padding-bottom: 164px;
+	padding-bottom: 163px;
 
 	background-color: #f7e296;
 }
@@ -137,7 +137,7 @@ input[type="radio"].visually-hidden {
 .main-navigation .wrapper-top {
 	display: flex;
 	align-items: baseline;
-	margin-bottom: 30px;
+	margin-bottom: 31px;
 
 	/* --- TEMPORARY FOR GRID --- */
 	/*box-shadow: inset 0 0 0 1px white;*/
@@ -191,7 +191,7 @@ input[type="radio"].visually-hidden {
 	display: inline-block;
 	width: 13px;
 	height: 12px;
-	margin-right: 14px;
+	margin-right: 13px;
 	
 	background-image: url("../img/icons/user_icon.svg");
 	background-repeat: no-repeat;
@@ -235,7 +235,7 @@ input[type="radio"].visually-hidden {
 	display: inline-block;
 	width: 12px;
 	height: 12px;
-	margin-right: 12px;
+	margin-right: 11px;
 	
 	background-image: url("../img/icons/cart_icon.svg");
 	background-repeat: no-repeat;
@@ -273,7 +273,7 @@ input[type="radio"].visually-hidden {
 	padding-right: 0;
 	padding-top: 4.5px;
 	padding-bottom: 4.5px;
-	padding-left: 40px;
+	padding-left: 38px;
 
 	width: 355px;
 
@@ -350,7 +350,7 @@ input[type="radio"].visually-hidden {
 	display: block;
 	width: 16px;
 	height: 16px;
-	left: 4px;
+	left: 3px;
 	top: 50%;
 	margin-top: -8px;
 	background-image: url("../img/icons/search_icon.svg");
@@ -436,7 +436,7 @@ input[type="radio"].visually-hidden {
 
 .site-navigation-delivery {
 	width: 140px;
-	margin-right: 19px;
+	margin-right: 18px;
 	margin-left: auto;
 }
 
@@ -446,19 +446,20 @@ input[type="radio"].visually-hidden {
 
 .site-navigation-contacts {
 	width: 140px;
-	margin-left: 61px;
+	margin-left: 65px;
 	text-align: right;
 	margin-right: -.2em;
 }
 
 .site-navigation-catalog {
 	position: relative;
+	margin-left: -1px;
 }
 
 .site-navigation-catalog .catalog {
 	position: relative;
 	width: 248px;
-	padding-right: 29px;
+	padding-right: 28px;
 }
 
 .catalog-menu {
@@ -467,10 +468,11 @@ input[type="radio"].visually-hidden {
 	position: absolute;
 	width: 1160px;
 	top: 100%;
-	left: -60px;
-	padding: 0 60px;
+	left: -59px;
+	padding-left: 61px;
+	padding-right: 60px;
 	padding-top: 22px;
-	padding-bottom: 34px;
+	padding-bottom: 33px;
 
 	visibility: hidden;
 
@@ -492,7 +494,7 @@ input[type="radio"].visually-hidden {
 }
 
 .catalog-menu li:not(:last-of-type){
-	margin-right: 20px;
+	margin-right: 19px;
 }
 
 .catalog-menu li:first-of-type {

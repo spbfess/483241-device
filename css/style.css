@@ -1037,12 +1037,12 @@ a.categories-item-copters::after {
 /* ============== INDEX BRANDS ============== */
 
 .brands {
-	margin-bottom: 93px;
+	margin-bottom: 73px;
 }
 
 .brands-list {
 	display: flex;
-	justify-content: space-between;
+	flex-wrap: wrap;
 	margin: 0;
 	padding: 0;
 	
@@ -1053,15 +1053,21 @@ a.categories-item-copters::after {
 	display: block;
 	width: 260px;
 	height: 100px;
-
 	/* на случай если картинка не подгрузится */
 	background-color: rgba(216,216,216, .2);
+}
+
+.brands-list li {
+	margin-bottom: 20px;
+}
+
+.brands-list li:not(:nth-of-type(4n+4)) {
+	margin-right: 40px;
 }
 
 .brands-item img {
 	display: block;
 }
-
 
 .brands-item img.colored {
 	display: none;

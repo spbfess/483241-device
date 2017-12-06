@@ -59,10 +59,6 @@ body {
 	color: #464646;
 
 	background-color: #ffffff;
-
-	/* --- TEMPORARY FOR GRID --- */
-	/*box-shadow: inset 0 0 0 1px red;*/
-	/* -------------------------- */
 }
 
 img {
@@ -78,10 +74,6 @@ a {
 	margin: 0 auto;
 	padding: 0 20px;
 	width: 1200px;
-	
-	/* --- TEMPORARY FOR GRID --- */
-	/*box-shadow: inset 0 0 0 1px green;*/
-	/* -------------------------- */	
 }
 
 .visually-hidden:not(:focus):not(:active),
@@ -108,7 +100,6 @@ input[type="radio"].visually-hidden {
 	padding-top: 40px;
 
 	line-height: 36px;
-	/*letter-spacing: .01em;*/
 	color: #000000;	
 }
 
@@ -129,7 +120,6 @@ input[type="radio"].visually-hidden {
 	display: block;
 	margin-bottom: 17px;
 	margin-top: -20px;
-	/*margin-left: -1px;*/
 	width: 164px;
 	height: 36px;
 }
@@ -138,10 +128,6 @@ input[type="radio"].visually-hidden {
 	display: flex;
 	align-items: baseline;
 	margin-bottom: 32px;
-
-	/* --- TEMPORARY FOR GRID --- */
-	/*box-shadow: inset 0 0 0 1px white;*/
-	/* -------------------------- */
 }
 
 
@@ -175,10 +161,6 @@ input[type="radio"].visually-hidden {
 	display: flex;
 	flex-wrap: wrap;
 	width: 260px;
-
-	/* --- TEMPORARY FOR GRID --- */
-	/*box-shadow: inset 0 0 0 1px blue;*/
-	/* -------------------------- */
 }
 
 .user-navigation li {
@@ -209,17 +191,6 @@ input[type="radio"].visually-hidden {
 	width: 220px;
 	margin-left: auto;
 	padding-left: 7px;
-
-	/* --- TEMPORARY FOR GRID --- */
-	/*box-shadow: inset 0 0 0 1px blue;*/
-	/* -------------------------- */
-}
-
-.goods-actions li {
-	/*min-width: 100px;*/
-	/* --- TEMPORARY FOR GRID --- */
-	/*box-shadow: inset 0 0 0 1px brown;*/
-	/* -------------------------- */
 }
 
 .goods-actions li:not(:last-of-type) {
@@ -261,10 +232,6 @@ input[type="radio"].visually-hidden {
 	
 	width: 500px;
 	margin-right: 41px;
-
-	/* --- TEMPORARY FOR GRID --- */
-	/*box-shadow: inset 0 0 0 1px blue;*/
-	/* -------------------------- */
 }
 
 .main-search input[type="text"] {
@@ -331,7 +298,6 @@ input[type="radio"].visually-hidden {
 
 .main-search button[type="submit"] {
 	margin: 0;
-	/*padding: 4.5px 20px;*/
 	padding-top: 3.5px;
 	padding-bottom: 5.5px;
 	padding-left: 18px;
@@ -378,26 +344,12 @@ input[type="radio"].visually-hidden {
 	display: flex;
 	align-items: center;
 	min-height: 22px;
-	/* --- TEMPORARY FOR GRID --- */
-	/*box-shadow: inset 0 0 0 1px white;*/
-	/* -------------------------- */
 }
 
 .site-navigation-item {
 	min-height: 21.6px;
 	line-height: 21.6px;
-	/* --- TEMPORARY FOR GRID --- */
-	/*box-shadow: inset 0 0 0 1px blue;*/
-	/* -------------------------- */
 }
-
-
-/* --- TEMPORARY FOR GRID --- */
-/*.site-navigation-item a {
-	background-color: rgba(0, 0, 255, .2);
-	box-shadow: inset 0 0 0 1px;	
-}*/
-/* -------------------------- */
 
 .site-navigation-item > a {
 	font-family: "gilroyextrabold", Arial, sans-serif;
@@ -427,7 +379,6 @@ input[type="radio"].visually-hidden {
 
 .site-navigation-catalog {
 	position: relative;
-	/*margin-left: -1px;*/
 }
 
 .site-navigation-catalog .catalog {
@@ -454,10 +405,6 @@ input[type="radio"].visually-hidden {
 	line-height: 36px;
 
 	background-color: #f7e296;
-	/* --- TEMPORARY FOR GRID --- */
-	/*box-shadow: inset 0 0 0 1px;*/
-	/*background-color: rgba(0, 0, 0, .1);*/
-	/* -------------------------- */
 }
 
 .catalog-menu li {
@@ -492,7 +439,6 @@ input[type="radio"].visually-hidden {
 /* вариант с двумя блоками под 90 градусов не проканал, прозрачность при пересечении дает другой цвет */
 
 .site-navigation a.catalog::before {
-	/*content: url("data:image/svg+xml; utf8, <svg enable-background='new 0 0 16 16' version='1.1' viewBox='0 0 16 16' xml:space='preserve' xmlns='http://www.w3.org/2000/svg'><polygon points='16 7 9 7 9 0 7 0 7 7 0 7 0 9 7 9 7 16 9 16 9 9 16 9' fill='#272525'/></svg>");*/
 	content: "";
 	display: block;
 	position: absolute;
@@ -506,32 +452,15 @@ input[type="radio"].visually-hidden {
 	opacity: .3;
 }
 
-/*.site-navigation a.catalog::after {
-	transform: rotate(90deg);
-}*/
-
-
-/* 2 варианта для стилей кнопок - флекс и инлайн-блоки */
 .button {
-	/* вариант на флексах */
-	
-	/*display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	padding: 0 10px;*/
-	/* ------------------------ */
-
-	/* вариант на инлайн блоках */
-
 	display: inline-block;
-	text-align: center;
+	position: relative;
 	padding-left: 13px;
 	padding-right: 10px;
 	padding-top: 10px;
 	padding-bottom: 9px;
-	/* ------------------------ */
 
-	position: relative;
+	
 	min-width: 260px;
 	max-width: 100%;
 	min-height: 40px;
@@ -542,7 +471,7 @@ input[type="radio"].visually-hidden {
 	font-size: 18px;
 	line-height: 1.2;
 	letter-spacing: .2em;
-
+	text-align: center;
 	color: rgb(0, 0, 0);
 	text-transform: uppercase;
 
@@ -621,59 +550,13 @@ input[type="radio"].visually-hidden {
 	top: 341px;
 	right: 83px;
 	z-index: 1;
-	
-	/* --- TEMPORARY FOR GRID --- */
-	/*box-shadow: inset 0 0 0 1px blue;*/
-	/* -------------------------- */
 }
 
 .promo-slider-controls li {
 	display: inline-block;	
 	width: 12px;
 	margin: 0;
-
-	/* --- TEMPORARY FOR GRID --- */
-	/*box-shadow: inset 0 0 0 1px red;*/
-	/* -------------------------- */
 }
-
-/* нарисовал окружности в css, просто ужас! на маленьких размерах да при масштабировании
-ездят вправо влево так-сяк и наперекосяк, меняют форму. Оставляю стили тут, но ввыбираю svg
-картинки */
-
-/*
-
-.promo-slider-controls label {
-	position: relative;
-	display: block;
-	width: 12px;
-	height: 12px;
-
-	font-size: 0;
-	border: 1px solid #000000;
-	border-radius: 50%;
-
-	cursor: pointer;
-}
-
-.promo-switch-one:checked ~ .promo-slider-controls label[for="promo-1st-switch"]::before,
-.promo-switch-two:checked ~ .promo-slider-controls label[for="promo-2nd-switch"]::before,
-.promo-switch-three:checked ~ .promo-slider-controls label[for="promo-3rd-switch"]::before {
-	position: absolute;
-	content: "";
-
-	top: 50%;
-	left: 50%;
-
-	transform: translate(-50%, -50%);
-	width: 4.5px;
-	height: 4.5px;
-	border: 1px solid #000000;
-	border-radius: 50%;
-}
-
-*/
-
 
 .promo-slider-controls label {
 	display: block;
@@ -712,10 +595,6 @@ input[type="radio"].visually-hidden {
 	position: relative;
 	display: none;
 	justify-content: space-between;
-
-	/* --- TEMPORARY FOR GRID --- */
-	/*box-shadow: inset 0 0 0 1px purple;*/
-	/* -------------------------- */
 }
 
 .promo-info {
@@ -724,8 +603,6 @@ input[type="radio"].visually-hidden {
 	padding-top: 94px;
 }
 
-
-/* Циферка с номером слайда, вынес в декоративный псевдо-элемент */
 .promo-item::before {
 	position: absolute;
 
@@ -766,28 +643,18 @@ input[type="radio"].visually-hidden {
 	background-color: #ffffff;
 }
 
-/* Дефолты для контейнера промо картинок */
-
 .promo-item-image {
 	position: relative;
 	margin: 0;
 	padding: 0;
 	width: 560px;
 	height: 512px;
-
-	/* --- TEMPORARY FOR GRID --- */
-	/*box-shadow: inset 0 0 0 1px;*/
-	/*background-color: rgb(0, 255, 0);*/
-	/* -------------------------- */
 }
 
 
 .promo-item-image img {
 	position: absolute;
 	display: block;
-	/* --- TEMPORARY FOR GRID --- */
-	/*box-shadow: inset 0 0 0 1px;*/
-	/* -------------------------- */
 }
 
 .promo-item-monopods img {
@@ -858,10 +725,6 @@ input[type="radio"].visually-hidden {
 .promo-spec td:nth-of-type(2) {
 	width: 138px;
 }
-
-/*.promo-spec td:not(:last-of-type) {
-	padding-right: 78px;
-}*/
 
 .promo-spec-data td {
 	padding-bottom: 9px;
@@ -1007,16 +870,13 @@ a.categories-item-copters::after {
 /* ============== INDEX SERVICES ============== */
 
 .services {
-	padding-top: 1px; /* this is a dirty hack for negative margin purposes, until I sort a gradient usage out */
+	padding-top: 1px; 
 	margin-bottom: 94px;
 	min-height: 288px;
 	padding-top: 144px;
 	
 	background-color: #e5e5e5;
 	background-clip: content-box;
-	/* --- TEMPORARY FOR GRID --- */
-	/*box-shadow: inset 0 0 0 1px orange;*/
-	/* -------------------------- */
 }
 
 .services h3 {
@@ -1058,11 +918,8 @@ a.categories-item-copters::after {
 .services-container {
 	display: flex;
 	justify-content: space-between;
-	margin-top: -100px; /* 1 extra pixel is because of 1px padding for .services. see comments there  */
+	margin-top: -100px;
 	padding-bottom: 69px;
-	/* --- TEMPORARY FOR GRID --- */
-	/*box-shadow: inset 0 0 0 1px purple;*/
-	/* -------------------------- */
 }
 
 .services-delivery-switch:checked ~ .services-controls-list label[for="services-delivery"],
@@ -1071,6 +928,7 @@ a.categories-item-copters::after {
 	color: #f7e184;
 }
 
+/*
 .services-delivery-switch:checked ~ .services-controls-list label[for="services-delivery"] {
 	padding-left: 19px;
 }
@@ -1082,6 +940,7 @@ a.categories-item-copters::after {
 .services-credit-switch:checked ~ .services-controls-list label[for="services-credit"] {
 	padding-left: 42px;
 }
+*/
 
 .services-delivery-switch:checked ~ .services-controls-list label[for="services-delivery"]::before,
 .services-warranty-switch:checked ~ .services-controls-list label[for="services-warranty"]::before,
@@ -1139,10 +998,6 @@ a.categories-item-copters::after {
 	position: relative;
 	display: none;
 	padding-right: 325px;
-
-	/* --- TEMPORARY FOR GRID --- */
-	/*box-shadow: inset 0 0 0 1px purple;*/
-	/* -------------------------- */
 }
 
 .services-description-item::before {
@@ -1193,11 +1048,6 @@ a.categories-item-copters::after {
 	padding: 0;
 	
 	list-style: none;
-
-	/* --- TEMPORARY FOR GRID --- */
-	/*box-shadow: inset 0 0 0 1px blue;*/
-	/* -------------------------- */
-
 }
 
 .brands-item {
@@ -1211,11 +1061,6 @@ a.categories-item-copters::after {
 
 .brands-item img {
 	display: block;
-
-	/* --- TEMPORARY FOR GRID --- */
-	/*outline: 1px solid red;
-	outline-offset: -1px;*/
-	/* -------------------------- */
 }
 
 
@@ -1243,21 +1088,13 @@ a.categories-item-copters::after {
 	justify-content: space-between;
 }
 
-/*.about-us,
-.contacts*/
 .main-info-container {
 	position: relative;
 	width: 560px;
 	padding-top: 48px;
 	padding-bottom: 52px;
-
-	/* --- TEMPORARY FOR GRID --- */
-	/*box-shadow: inset 0 0 0 1px purple;*/
-	/* -------------------------- */
 }
 
-/*.about-us::before,
-.contacts::before*/ 
 .main-info-container::before {
 	display: block;
 	position: absolute;
@@ -1270,10 +1107,7 @@ a.categories-item-copters::after {
 
 	background-color: black;
 }
-
-
-/*.about-us h2,
-.contacts h2*/ 
+ 
 .main-info-container h2 {
 	margin: 0;
 	margin-bottom: 39px;
@@ -1284,30 +1118,30 @@ a.categories-item-copters::after {
 	letter-spacing: .01em;
 	line-height: 1.2;
 	color: #000000;
-
-	/* --- TEMPORARY FOR GRID --- */
-	/*box-shadow: inset 0 0 0 1px;*/
-	/* -------------------------- */
-
 }
 
-/*.about-us p,
-.contacts p*/
+.about-us h2 {
+	margin-left: -2px;
+}
+
+.contacts h2 {
+	margin-left: -3px;
+}
+
 .main-info-container p {
 	margin: 0;
-	/*padding: 0;*/
 	padding-right: 85px;
-	/* --- TEMPORARY FOR GRID --- */
-	/*box-shadow: inset 0 0 0 1px;*/
-	/* -------------------------- */
 }
 
 .about-us p {
 	margin-bottom: 30px;
+	margin-left: -1px;
 }
 
 .contacts p {
 	margin-bottom: 39px;
+	padding-right: 50px;
+	margin-left: -2px;
 }
 
 .about-us-list {
@@ -1322,10 +1156,6 @@ a.categories-item-copters::after {
 	font-size: 16px;
 	line-height: 40px;
 	color: #000000;
-
-	/* --- TEMPORARY FOR GRID --- */
-	/*box-shadow: inset 0 0 0 1px;*/
-	/* -------------------------- */
 }
 
 .about-us-list li {
@@ -1384,9 +1214,6 @@ a.categories-item-copters::after {
 .main-footer-middle {
 	display: flex;
 	justify-content: space-between;
-	/* --- TEMPORARY FOR GRID --- */
-	/*box-shadow: inset 0 0 0 1px orange;*/
-	/* -------------------------- */
 }
 
 .main-footer-top {
@@ -1402,14 +1229,11 @@ a.categories-item-copters::after {
 	min-height: 36px;
 	display: flex;
 	justify-content: space-between;
-	/* --- TEMPORARY FOR GRID --- */
-	/*box-shadow: inset 0 0 0 1px orange;*/
-	/* -------------------------- */
 }
 
 
 .main-footer-logo {
-	margin-left: -1px; /* Логотип по макету на 1 полупрозрачный пиксель вылезает слева */
+	margin-left: -1px;
 	display: block;
 	width: 163px;
 	height: 36px;
@@ -1442,10 +1266,8 @@ a.categories-item-copters::after {
 .main-footer-goods-actions {
 	line-height: 36px;
 	letter-spacing: .2em;
-	/* --- TEMPORARY FOR GRID --- */
-	/*box-shadow: inset 0 0 0 1px green;*/
-	/* -------------------------- */
 }
+
 .main-footer-user-navigation {
 	margin-right: 25px;
 }
@@ -1535,9 +1357,6 @@ a.categories-item-copters::after {
 .main-footer-middle p {
 	width: 260px;
 	margin: 0;
-	/* --- TEMPORARY FOR GRID --- */
-	/*background-color: rgba(255, 0, 0, .2);*/
-	/* -------------------------- */
 }
 
 .main-footer-middle *:last-child {
@@ -1558,10 +1377,6 @@ a.categories-item-copters::after {
 	justify-content: space-around;
 	width: 461px;
 	padding-top: 8px;
-	
-	/* --- TEMPORARY FOR GRID --- */
-	/*background-color: rgba(255, 0, 0, .2);*/
-	/* -------------------------- */
 }
 
 .main-footer-site-navigation {
@@ -1675,8 +1490,6 @@ a.categories-item-copters::after {
 	box-shadow: 0 10px 20px 0 rgba(4, 6, 6, .2);
 }
 
-/* вариант на svg */
-
 .modal-close {
 	display: block;
 	width: 55px;
@@ -1703,40 +1516,6 @@ a.categories-item-copters::after {
 .modal-error {
 	animation: modal-fail 1s;
 }
-
-/* --------------кнопка modal-close------------*/
-/* вариант на css, с сожалением пришлось от него уйти, 
-перекрестие ка оказалось должно быть прозрачное, не только сам крест 
-но и фон под ним на кружке, вернулся к свг */
-
-/*.modal-close {
-	display: block;
-	position: relative;
-	width: 55px;
-	height: 55px;
-
-	border: 0;
-	outline: 0;
-	opacity: .5;
-	cursor: pointer; 
-	background-color: #f0c52e;
-	border-radius: 50%;
-}
-
-.modal-close::before,
-.modal-close::after {
-  content: "";
-  position: absolute;
-  height: 2px;
-  width: 30px;
-  top: 50%;
-  left: 50%;
-  margin-left: -15px;
-  margin-top: -1px;
-  background-color: white;
-  opacity: .5;
-}*/
-/* ----------------------------------------*/
 
 .modal-close::before {
   transform: rotate(43.8deg);
@@ -1875,8 +1654,8 @@ a.categories-item-copters::after {
 .modal-write-us-field input:focus:-ms-input-placeholder			{ color: rgba(70, 70, 70, 1); }
 
 .modal-write-us-field textarea[placeholder]:focus 					{ color: rgba(70, 70, 70, 1); }
-.modal-write-us-field textarea:focus::-webkit-input-placeholder	{ color: rgba(70, 70, 70, 1); }
-.modal-write-us-field textarea:focus::-moz-placeholder 			{ color: rgba(70, 70, 70, 1); }
+.modal-write-us-field textarea:focus::-webkit-input-placeholder		{ color: rgba(70, 70, 70, 1); }
+.modal-write-us-field textarea:focus::-moz-placeholder 				{ color: rgba(70, 70, 70, 1); }
 .modal-write-us-field textarea:focus:-moz-placeholder				{ color: rgba(70, 70, 70, 1); }
 .modal-write-us-field textarea:focus:-ms-input-placeholder			{ color: rgba(70, 70, 70, 1); }
 

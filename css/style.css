@@ -881,10 +881,6 @@ input[type="radio"].visually-hidden {
 
 /* ============== INDEX CATEGORIES ============== */
 
-.categories {
-	/*margin-bottom: 145px;*/
-}
-
 .categories-list {
 	display: flex;
 	flex-wrap: wrap;
@@ -896,7 +892,7 @@ input[type="radio"].visually-hidden {
 }
 
 .categories-list li {
-	margin-bottom: 40px;
+	margin-bottom: 41px;
 }
 
 .categories-list li:not(:nth-of-type(6n+6)) {
@@ -907,7 +903,7 @@ input[type="radio"].visually-hidden {
 	display: block;
 	position: relative;
 	padding: 0;
-	padding-top: 200px;
+	padding-top: 195px;
 	width: 160px;
 
 	font-family: "gilroyextrabold", Arial, sans-serif;
@@ -952,6 +948,43 @@ input[type="radio"].visually-hidden {
 	background-repeat: no-repeat;
 }
 
+a.categories-item-vr::after {
+	background-image: url("../img/icons/vr_icon.svg");
+	top: -1px;
+	left: -1px;
+}
+
+a.categories-item-monopods::after {
+	background-image: url("../img/icons/monopods_icon.svg");
+	background-position: center bottom;
+	top: -2px;
+	left: 1px;
+}
+
+a.categories-item-cameras::after {
+	background-image: url("../img/icons/cameras_icon.svg");
+	top: 1px;
+	left: 4px;
+}
+
+a.categories-item-fitbands::after {
+	background-image: url("../img/icons/fitbands_icon.svg");
+	top: 2px;
+	left: 1px;
+}
+
+a.categories-item-watches::after {
+	background-image: url("../img/icons/watches_icon.svg");
+	top: 1px;
+	left: 3px;
+}
+
+a.categories-item-copters::after {
+	background-image: url("../img/icons/copters_icon.svg");
+	top: 3px;
+	left: -1px;
+}
+
 .categories-list a:hover::before,
 .categories-list a:focus::before,
 .categories-list a:active::before {
@@ -962,30 +995,6 @@ input[type="radio"].visually-hidden {
 	opacity: .3;
 }
 
-a.categories-item-vr::after {
-	background-image: url("../img/icons/vr_icon.svg");
-}
-
-a.categories-item-monopods::after {
-	background-image: url("../img/icons/monopods_icon.svg");
-	background-position: center bottom;
-}
-
-a.categories-item-cameras::after {
-	background-image: url("../img/icons/cameras_icon.svg");
-}
-
-a.categories-item-fitbands::after {
-	background-image: url("../img/icons/fitbands_icon.svg");
-}
-
-a.categories-item-watches::after {
-	background-image: url("../img/icons/watches_icon.svg");
-}
-
-a.categories-item-copters::after {
-	background-image: url("../img/icons/copters_icon.svg");
-}
 
 /* ============== INDEX SERVICES ============== */
 
@@ -993,8 +1002,8 @@ a.categories-item-copters::after {
 	padding-top: 1px; /* this is a dirty hack for negative margin purposes, until I sort a gradient usage out */
 	margin-bottom: 94px;
 	min-height: 288px;
-	padding-top: 146px;
-	letter-spacing: .01em;
+	padding-top: 144px;
+	
 	background-color: #e5e5e5;
 	background-clip: content-box;
 	/* --- TEMPORARY FOR GRID --- */
@@ -1006,10 +1015,11 @@ a.categories-item-copters::after {
 	font-family: "gilroyextrabold", Arial, sans-serif;
 	font-size: 47px;
 	line-height: 1.2;
+	letter-spacing: .01em;
 	color: #000000;
 
 	margin: 0;
-	margin-bottom: 30px;
+	margin-bottom: 27px;
 	padding: 0;
 }
 
@@ -1024,8 +1034,8 @@ a.categories-item-copters::after {
 .services-container {
 	display: flex;
 	justify-content: space-between;
-	margin-top: -101px; /* 1 extra pixel is because of 1px padding for .services. see comments there  */
-
+	margin-top: -100px; /* 1 extra pixel is because of 1px padding for .services. see comments there  */
+	padding-bottom: 69px;
 	/* --- TEMPORARY FOR GRID --- */
 	/*box-shadow: inset 0 0 0 1px purple;*/
 	/* -------------------------- */
@@ -1064,10 +1074,10 @@ a.categories-item-copters::after {
 }
 
 .services-controls-list {
-	width: 316px;
+	width: 284px;
 	border-right: 7px solid #000000;
 	padding-top: 80px;
-	padding-bottom: 70px;
+	padding-bottom: 71px;
 }
 
 .services-controls-list li:not(:last-of-type) {
@@ -1082,6 +1092,7 @@ a.categories-item-copters::after {
 
 .services-description-list p {
 	margin: 0;
+	letter-spacing: .01em;
 }
 
 .services-description-item {
@@ -1197,7 +1208,7 @@ a.categories-item-copters::after {
 .main-info-container {
 	position: relative;
 	width: 560px;
-	padding-top: 53px;
+	padding-top: 48px;
 	padding-bottom: 52px;
 
 	/* --- TEMPORARY FOR GRID --- */
@@ -1225,7 +1236,7 @@ a.categories-item-copters::after {
 .contacts h2*/ 
 .main-info-container h2 {
 	margin: 0;
-	margin-bottom: 30px;
+	margin-bottom: 39px;
 	padding: 0;
 
 	font-family: "gilroyextrabold", Arial, sans-serif;
@@ -1244,7 +1255,6 @@ a.categories-item-copters::after {
 .contacts p*/
 .main-info-container p {
 	margin: 0;
-	margin-bottom: 37px;
 	/*padding: 0;*/
 	padding-right: 85px;
 	/* --- TEMPORARY FOR GRID --- */
@@ -1252,10 +1262,18 @@ a.categories-item-copters::after {
 	/* -------------------------- */
 }
 
+.about-us p {
+	margin-bottom: 30px;
+}
+
+.contacts p {
+	margin-bottom: 39px;
+}
+
 .about-us-list {
 	margin: 0;
 	padding: 0;
-	padding-top: 20px;
+	padding-top: 36px;
 	margin-bottom: 54px;
 
 	list-style: none;
@@ -1300,7 +1318,9 @@ a.categories-item-copters::after {
 
 .main-footer {
 	margin-top: 30px;
-	padding: 65px 0;
+	padding: 0;
+	padding-top: 65px;
+	padding-bottom: 62px;
 	min-height: 323px;
 
 	background-color: #464646;
@@ -1330,12 +1350,12 @@ a.categories-item-copters::after {
 }
 
 .main-footer-top {
-	margin-bottom: 30px;
+	margin-bottom: 29px;
 }
 
 .main-footer-middle {
 	min-height: 40px;
-	margin-bottom: 58px;
+	margin-bottom: 54px;
 }
 
 .main-footer-bottom {
@@ -1387,7 +1407,7 @@ a.categories-item-copters::after {
 	/* -------------------------- */
 }
 .main-footer-user-navigation {
-	margin-right: 24px;
+	margin-right: 25px;
 }
 
 .main-footer-goods-actions {
@@ -1424,7 +1444,7 @@ a.categories-item-copters::after {
 	display: inline-block;
 	width: 13px;
 	height: 12px;
-	margin-right: 14px;
+	margin-right: 13px;
 	
 	background-image: url("../img/icons/user_icon_footer.svg");
 	background-repeat: no-repeat;
@@ -1448,7 +1468,7 @@ a.categories-item-copters::after {
 	display: inline-block;
 	width: 12px;
 	height: 12px;
-	margin-right: 12px;
+	margin-right: 10px;
 	
 	background-image: url("../img/icons/cart_icon_footer.svg");
 	background-repeat: no-repeat;
@@ -1497,7 +1517,7 @@ a.categories-item-copters::after {
 	display: flex;
 	justify-content: space-around;
 	width: 461px;
-	padding-top: 7px;
+	padding-top: 8px;
 	
 	/* --- TEMPORARY FOR GRID --- */
 	/*background-color: rgba(255, 0, 0, .2);*/
@@ -1516,6 +1536,13 @@ a.categories-item-copters::after {
 	width: 80px;
 	height: 36px;
 	padding-left: 53px;
+}
+
+.main-footer-copyright-logo {
+	display: block;
+	width: 27px;
+	height: 35px;
+	margin-top: -2px;
 }
 
 .main-footer-copyright-logo:hover,
@@ -1568,10 +1595,10 @@ a.categories-item-copters::after {
 .main-footer-bottom::before {
 	display: block;
 	content: "";
-	margin-top: 15px;
-	margin-bottom: 14px;
+	margin-top: 13px;
+	margin-bottom: 12px;
 	width: 80px;
-	height: 8px;
+	height: 7px;
 	background-color: #ffc600;
 }
 /* ============== MODAL ============== */

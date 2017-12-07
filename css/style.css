@@ -344,11 +344,47 @@ input[type="radio"].visually-hidden {
 	display: flex;
 	align-items: center;
 	min-height: 22px;
+	flex-wrap: wrap;
 }
 
 .site-navigation-item {
 	min-height: 21.6px;
 	line-height: 21.6px;
+	margin-left: 25px;
+	margin-right: 25px;
+}
+
+.site-navigation-delivery {
+	width: 140px;
+	margin-left: auto;
+	margin-right: 18px;
+}
+
+.site-navigation-warranty {
+	width: 140px;
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.site-navigation-contacts {
+	width: 140px;
+	margin-left: 65px;
+	margin-right: -.2em;
+
+	text-align: right;
+}
+
+.site-navigation-catalog {
+	position: relative;
+	flex-shrink: 0;
+	margin-right: 30px;
+	margin-left: 0;
+}
+
+.site-navigation-catalog .catalog {
+	position: relative;
+	width: 248px;
+	padding-right: 28px;
 }
 
 .site-navigation-item > a {
@@ -360,44 +396,18 @@ input[type="radio"].visually-hidden {
 	text-transform: uppercase;
 }
 
-.site-navigation-delivery {
-	width: 140px;
-	margin-right: 18px;
-	margin-left: auto;
-}
-
-.site-navigation-warranty {
-	width: 140px;
-}
-
-.site-navigation-contacts {
-	width: 140px;
-	margin-left: 65px;
-	text-align: right;
-	margin-right: -.2em;
-}
-
-.site-navigation-catalog {
-	position: relative;
-}
-
-.site-navigation-catalog .catalog {
-	position: relative;
-	width: 248px;
-	padding-right: 28px;
-}
-
 .catalog-menu {
 	display: flex;
-	z-index: 1;
 	position: absolute;
+	z-index: 1;
+	flex-wrap: wrap;
 	width: 1160px;
 	top: 100%;
 	left: -59px;
 	padding-left: 61px;
 	padding-right: 60px;
 	padding-top: 20px;
-	padding-bottom: 34px;
+	padding-bottom: 20px;
 
 	visibility: hidden;
 
@@ -410,7 +420,9 @@ input[type="radio"].visually-hidden {
 .catalog-menu li {
 	display: flex;
 	flex-direction: column;
+	flex-shrink: 0;
 	margin: 0;
+	margin-bottom: 14px;
 	padding: 0;
 }
 
@@ -1384,9 +1396,7 @@ a.categories-item-copters::after {
 
 .main-footer-site-navigation {
 	display: flex;
-	/*justify-content: space-around;*/
 	flex-wrap: wrap;
-	/*width: 461px;*/
 	padding-top: 8px;
 
 	font-family: "gilroyextrabold", Arial, sans-serif;
@@ -1397,8 +1407,8 @@ a.categories-item-copters::after {
 }
 
 .main-footer-site-navigation li {
-	padding-right: 15px;
-	padding-left: 19px;
+	margin-right: 15px;
+	margin-left: 19px;
 }
 
 .main-footer-bottom .right-column {

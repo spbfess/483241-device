@@ -7,8 +7,20 @@ var writeUsLogin = writeUsPopup.querySelector("[name=name]");
 var writeUsEmail = writeUsPopup.querySelector("[name=email]");
 var writeUsMessage = writeUsPopup.querySelector("[name=text]");
 
-var writeUsLoginCached = localStorage.getItem("writeUsLogin");
-var writeUsEmailCached = localStorage.getItem("writeUsEmail");
+function localStorageIsOk() {
+	try {
+    	return 'localStorage' in window && window['localStorage'] !== null;
+} catch (e) {
+	return false;
+	}
+}
+ 
+if (localStorageIsOk()) {
+	var writeUsLoginCached = localStorage.getItem("writeUsLogin");
+	var writeUsEmailCached = localStorage.getItem("writeUsEmail");
+} else {
+	console.log("localStorage is not supported, will not use cached values");
+}
 
 var map = document.querySelector(".contacts .contacts-map");
 var mapPopup = document.querySelector(".modal-map");

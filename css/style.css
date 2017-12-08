@@ -2319,7 +2319,7 @@ a.sort-by-order-current:active::before {
 .button-add-to-cart {
 	min-width: 200px;
 	margin-top: 170px;
-	margin-bottom: 20px;
+	margin-bottom: 6px;
 }
 
 .button-add-to-comparison {

@@ -397,12 +397,13 @@ input[type="radio"].visually-hidden {
 }
 
 .site-navigation-catalog .catalog {
-	position: relative;
 	width: 248px;
 	padding-right: 28px;
 }
 
 .site-navigation-item > a {
+	position: relative;
+	z-index: 10;
 	font-family: "gilroyextrabold", Arial, sans-serif;
 	font-size: 18px;
 	line-height: 1.2;

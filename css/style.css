@@ -37,6 +37,7 @@
 }
 
 /* ============== GENERAL ============== */
+
 html {
   box-sizing: border-box;
 }
@@ -104,7 +105,7 @@ input[type="radio"].visually-hidden {
 }
 
 .main-navigation {
-	padding-top: 1px; /* this is necessary for negative margin of header logo to take effect */
+	padding-top: 1px;
 	padding-left: 59px;
 	padding-right: 60px;
 	padding-bottom: 162px;
@@ -461,8 +462,6 @@ input[type="radio"].visually-hidden {
 .site-navigation .catalog:focus ~ .catalog-menu {
 	visibility: visible;
 }
-
-/* вариант с двумя блоками под 90 градусов не проканал, прозрачность при пересечении дает другой цвет */
 
 .site-navigation a.catalog::before {
 	content: "";
@@ -953,20 +952,6 @@ a.categories-item-copters::after {
 	color: #f7e184;
 }
 
-/*
-.services-delivery-switch:checked ~ .services-controls-list label[for="services-delivery"] {
-	padding-left: 19px;
-}
-
-.services-warranty-switch:checked ~ .services-controls-list label[for="services-warranty"] {
-	padding-left: 28px;
-}
-
-.services-credit-switch:checked ~ .services-controls-list label[for="services-credit"] {
-	padding-left: 42px;
-}
-*/
-
 .services-delivery-switch:checked ~ .services-controls-list label[for="services-delivery"]::before,
 .services-warranty-switch:checked ~ .services-controls-list label[for="services-warranty"]::before,
 .services-credit-switch:checked ~ .services-controls-list label[for="services-credit"]::before  {
@@ -1079,7 +1064,7 @@ a.categories-item-copters::after {
 	display: block;
 	width: 260px;
 	height: 100px;
-	/* на случай если картинка не подгрузится */
+
 	background-color: rgba(216,216,216, .2);
 }
 
@@ -1527,7 +1512,7 @@ margin-top: 4px;
 .modal {
 	display: none;
 	position: fixed;
-	z-index: 100; /* большое значение на всякий случай, чтоб точно перекрыть контент боди */
+	z-index: 100;
 	width: 960px;
 	box-shadow: 0 10px 20px 0 rgba(4, 6, 6, .2);
 }
@@ -1712,7 +1697,7 @@ margin-top: 4px;
 	margin-top: -279.5px;
 }
 
-/*.map-container {
+.map-container {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -1720,8 +1705,7 @@ margin-top: 4px;
 	height: 559px;
 
 	z-index: -1;
-}*/
-
+}
 
 .modal-close {
 	position: absolute;
@@ -1739,8 +1723,8 @@ margin-top: 4px;
 	margin: 0;
 	margin-bottom: 14px;
 	padding: 0;
-	/*padding-top: 32px;*/
 	padding-left: 59px;
+
 	font-family: "gilroyextrabold", Arial, sans-serif;
 	font-size: 47px;
 	line-height: 1.2;
@@ -1763,19 +1747,27 @@ margin-top: 4px;
 .breadcrumbs li {
 	margin: 0;
 	padding: 0;
-}
-
-.breadcrumbs li:first-of-type a::after {
-	right: 18px;
-}
-
-.breadcrumbs li:nth-of-type(2) a::after {
-	right: 17px;
-}
-
-.breadcrumbs a {
 	position: relative;
 	padding-right: 37px;
+}
+
+.breadcrumbs li:not(:last-of-type)::after {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 50%;
+	width: 4px;
+	height: 8px;
+	margin-top: -4px;
+	right: 18px;
+
+	background-image: url("../img/nav-arrow.svg");
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.breadcrumbs li:nth-of-type(2)::after {
+	right: 16px;
 }
 
 .breadcrumbs a,
@@ -1786,20 +1778,6 @@ margin-top: 4px;
 	color: rgba(0, 0, 0, .3);
 }
 
-.breadcrumbs a::after {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 50%;
-	width: 4px;
-	height: 8px;
-	margin-top: -4px;
-
-	background-image: url("../img/nav-arrow.svg");
-	background-position: center;
-	background-repeat: no-repeat;
-}
-
 .breadcrumbs a:hover,
 .breadcrumbs a:focus {
 	color: rgba(0, 0, 0, .6);
@@ -1808,6 +1786,7 @@ margin-top: 4px;
 .breadcrumbs a:active {
 	color: rgba(0, 0, 0, .1);
 }
+
 /* ============== FILTER ============== */
 
 .inner-content {
@@ -1830,7 +1809,6 @@ margin-top: 4px;
 
 .filter-header {
 	display: flex;
-	/*align-items: center;*/
 	width: 200px;
 	min-height: 70px;
 	margin: 0;
@@ -1935,17 +1913,11 @@ margin-top: 4px;
 
 .filter-cost-values {
 	position: relative;
-
-	/* Это (margin-left: 5px) сделано для синхронизации начала лейбла и начала шкалы 
-	для "общей системы координат" ручек, лейблов и бара относительно шкалы в случае 
-	реализации оживления элемента на js */
-	margin-left: 5px; 
+	height: 22.27px;
+	margin-left: 5px;
 	
 	font-size: 0; 
-
-	/* к сожалению такая высота задана в макете :( делаю высоты контейнера и строки внутри одинаковыми */
 	line-height: 22.27px; 
-	height: 22.27px;
 }
 
 .filter-cost-values label {
@@ -1958,18 +1930,11 @@ margin-top: 4px;
 
 .filter-cost-values .min-price {
 	left: 0;
-
-	/* возвращаем позаимстоваанные 5 пикселей сверху, так как первый лейбл
-	спозиционирован на 5px левее начала шкалы по макету */
 	margin-left: -5px; 
 }
 
 .filter-cost-values .max-price {
-	/* вторая ручка сдвинута на 25 пикселей назад по умолчанию 
-	относительно "начала кординат" */
 	margin-left: -25px; 
-
-	/* теперь тут можно тупо указывать текущего размер прогресс бара */
 	left: 110px; 
 }
 
@@ -1990,7 +1955,7 @@ margin-top: 4px;
 }
 
 .filter-cost .bar {
-  width: 110px; /* текущий прогресс бар, активная его часть зеленого цвета */
+  width: 110px;
   height: 2px;
 
   background: #91c92f;
@@ -2036,13 +2001,6 @@ margin-top: 4px;
 	background-repeat: no-repeat;
 	background-position: center;	
 }
-
-/* на макете чекбокс только для розового смещен на 1 пиксель влево, либо ошибка дизайнера либо ... 
-мне не нравится, убираю */
-/*.filter-color-list label[for="filter-color-pink"]::before {
-	left: -1px;
-}
-*/
 
 .filter-color-list input[type="checkbox"]:checked + label::before {
 	width: 27px;
@@ -2182,11 +2140,6 @@ margin-top: 4px;
 	font-size: 14px;
 	line-height: 18px;
 	color: rgba(0, 0, 0, .3);
-
-	/* --- TEMPORARY FOR GRID --- */
-	/*box-shadow: inset 0 0 0 1px;*/
-	/*background-color: rgba(255, 0, 0, .2);*/
-	/* -------------------------- */
 }
 
 .sort-by-option a:hover,
@@ -2211,10 +2164,6 @@ a.sort-by-option-current:visited {
 	margin-left: auto;
 	width: 41px;
 	height: 70px;
-
-	/* --- TEMPORARY FOR GRID --- */
-	/*box-shadow: inset 0 0 0 1px;*/
-	/* -------------------------- */
 }
 
 .sort-by-order a {
@@ -2377,7 +2326,8 @@ a.sort-by-order-current:active::before {
 	background-color: transparent;
 }
 
-.button-add-to-comparison:hover {
+.button-add-to-comparison:hover,
+.button-add-to-comparison:focus {
 	color: rgba(0, 0, 0, 1);
 }
 
@@ -2493,53 +2443,4 @@ a.sort-by-order-current:active::before {
 .pagination-item-next a:hover,
 .pagination-item-next a:active {
 	background-color: rgba(0, 0, 0, .08);
-}
-
-/* ++++++++++++++++++++++++++++++++++++++++ */
-/* ++++++++++++++++ TEST ++++++++++++++++++ */
-.test-modal-close {
-	display: block;
-	position: relative;
-	width: 55px;
-	height: 55px;
-
-	font-size:0; /*!!переделать*/
-	border: 0;
-	outline: 0;
-	opacity: .5;
-	cursor: pointer; 
-	background-color: #f0c52e;
-	border-radius: 50%;
-}
-
-.test-modal-close::before,
-.test-modal-close::after {
-  content: "";
-  position: absolute;
-  height: 2px;
-  width: 30px;
-  top: 50%;
-  left: 50%;
-  margin-left: -15px;
-  margin-top: -1px;
-  /*background-color: black;*/
-  background-color: white;
-}
-
-.test-modal-close::before {
-  transform: rotate(43.8deg);
-}
-
-.test-modal-close::after {
-  transform: rotate(-43.8deg);
-  /*transform: rotate(90deg);*/
-} 
-
-.test-modal-close:hover,
-.test-modal-close:focus {
-	opacity: 1;
-}
-
-.test-modal-close:active {
-	opacity: .3;
 }

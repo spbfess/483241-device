@@ -3,8 +3,8 @@
 	<head>
 	    <meta charset="utf-8">
 	    <title>HTML Academy: "Device" by Dmitry Nefyodov</title>
-	    <link href="css/normalize.css" rel="stylesheet">
-  		<link href="css/style.css" rel="stylesheet">
+	    <link href="css/normalize.min.css" rel="stylesheet">
+  		<link href="css/style.min.css" rel="stylesheet">
  	</head>
 	<body>
 		<div class="wrapper">
@@ -30,8 +30,6 @@
 					<ul class="site-navigation">
 						<li class="site-navigation-item site-navigation-catalog">
 							<a class="catalog" href="catalog.html">Каталог товаров</a>
-							<!-- Так адресовал проблему разметки каталога по столбцам: решил зачем дивянничать, - был список, списком и останется, каждый элемент - столбец, внутри пихаем ссылки сколько душе угодно, их сделаем блочными, классифицировать ничего не надо, здесь псевдо-класссы по номеру чайлда то что нужно, поскольку ссылки сгруппированы явно нелогически -->
-		
 							<ul class="catalog-menu">
 								<li>
 									<a href="vr.html">Виртуальная реальность</a>
@@ -186,27 +184,15 @@
 				<h2 class="visually-hidden">Бренды</h2>
 				<ul class="brands-list">
 					<li>
-						<!-- Сделать изображение контентным (логотип же!) и при этом эффект перекатывания на CSS невозможно, либо с ипользованием фоновых изображений что нарушает концепцию логотипа как контента, либо джава скрипт, что так или иначе аффектит деградейшн при выключенном javascript. Если наставник одобрит, запилю подключаемый джава скрипт, согласно спеке, а не инлайн вариант 
-
-						UPD:  сделал двумя картинками. Чем плохо? стили не подгрузятся, будем иметь обе картинки сразу. Вариант с джавоскриптом кмк тут луше - джаваскрипт выключен, будет иметь дефолтноый серый логотип без анимации. Но веротяно не удовлетворяет критериям..-->
-
-						<!-- <a href="https://www.dji.com"><img src="img/brands/dji_logo_inactive.jpg" alt="логотип бренда DJI" width="260" height="100" onmouseover="this.src='img/brands/dji_logo.jpg';" onmouseout="this.src='img/brands/dji_logo_inactive.jpg';"></a> -->
-
 						<a class="brands-item brands-item-dji" href="https://www.dji.com"><img class="greyed" src="img/brands/dji_logo_inactive.jpg" alt="логотип бренда DJI" width="260" height="100"><img class="colored" src="img/brands/dji_logo.jpg" alt="логотип бренда DJI" width="260" height="100"></a>
 					</li>
 					<li>
-						<!-- <a href="https://www.sp-gadgets.com"><img src="img/brands/sp_gadgets_logo_inactive.jpg" alt="логотип бренда SP Gadgets" width="260" height="100" onmouseover="this.src='img/brands/sp_gadgets_logo.jpg';" onmouseout="this.src='img/brands/sp_gadgets_logo_inactive.jpg';"></a> -->
-
 						<a class="brands-item brands-item-spgadgets" href="https://www.sp-gadgets.com"><img class="greyed" src="img/brands/sp_gadgets_logo_inactive.jpg" alt="логотип бренда SP Gadgets" width="260" height="100"><img class="colored" src="img/brands/sp_gadgets_logo.jpg" alt="логотип бренда SP Gadgets" width="260" height="100"></a>
 					</li>
 					<li>
-						<!-- <a href="https://gopro.com/"><img src="img/brands/gopro_logo_inactive.jpg" alt="логотип бренда GoPro" width="260" height="100" onmouseover="this.src='img/brands/gopro_logo.jpg';" onmouseout="this.src='img/brands/gopro_logo_inactive.jpg';"></a> -->
-
 						<a class="brands-item brands-item-gopro" href="https://gopro.com/"><img class="greyed" src="img/brands/gopro_logo_inactive.jpg" alt="логотип бренда GoPro" width="260" height="100"><img class="colored" src="img/brands/gopro_logo.jpg" alt="логотип бренда GoPro" width="260" height="100"></a>
 					</li>
 					<li>
-						<!-- <a href="https://www.vive.com"><img src="img/brands/vive_logo_inactive.jpg" alt="логотип бренда Vive" width="260" height="100" onmouseover="this.src='img/brands/vive_logo.jpg';" onmouseout="this.src='img/brands/vive_logo_inactive.jpg';"></a> -->
-
 						<a class="brands-item brands-item-vive" href="https://www.vive.com"><img class="greyed" src="img/brands/vive_logo_inactive.jpg" alt="логотип бренда Vive" width="260" height="100"><img class="colored" src="img/brands/vive_logo.jpg" alt="логотип бренда Vive" width="260" height="100"></a>
 					</li>
 				</ul>
@@ -333,6 +319,6 @@
 	      <button type="button" class="modal-close">Закрыть</button>
 	    </section>
 
-		<script src="js/modal.js"></script>
+		<script src="js/modal.min.js"></script>
 	</body>
 </html>

@@ -6,7 +6,6 @@
          url("../fonts/gilroylight.woff") format("woff");
     font-weight: 300;
     font-style: normal;
-
 }
 
 @font-face {
@@ -15,7 +14,6 @@
          url("../fonts/gilroyextrabold.woff") format("woff");
     font-weight: 900;
     font-style: normal;
-
 }
 
 @font-face {
@@ -24,7 +22,6 @@
          url("../fonts/opensans.woff") format("woff");
     font-weight: 400;
     font-style: normal;
-
 }
 
 @font-face {
@@ -33,29 +30,27 @@
          url("../fonts/opensanslight.woff") format("woff");
     font-weight: 300;
     font-style: normal;
-
 }
 
 /* ============== GENERAL ============== */
 
 html {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+			box-sizing: border-box;
 }
 
 *,
 *::after,
 *::before {
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
+	-webkit-box-sizing: inherit;
+			box-sizing: inherit;
 }
-
 
 body {
 	margin: 0;
 	padding: 0;
 	min-width: 1200px;
-	
+
 	font-family: "opensans", Arial, sans-serif;
 	font-weight: 300;
 	font-size: 15px;
@@ -83,21 +78,19 @@ a {
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
-  position: absolute;
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
 
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
+	white-space: nowrap;
 
-  white-space: nowrap;
-
-  -webkit-clip-path: inset(100%);
-
-          clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+	-webkit-clip-path: inset(100%);
+			clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
 }
 
 /* ============== HEADER ============== */
@@ -141,11 +134,10 @@ input[type="radio"].visually-hidden {
 	display: -ms-flexbox;
 	display: flex;
 	-webkit-box-align: baseline;
-	    -ms-flex-align: baseline;
-	        align-items: baseline;
+	   -ms-flex-align: baseline;
+		  align-items: baseline;
 	margin-bottom: 32px;
 }
-
 
 .main-navigation a {
 	color: #000000;
@@ -172,7 +164,6 @@ input[type="radio"].visually-hidden {
 	padding: 0;
 }
 
-
 .user-navigation {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -188,20 +179,22 @@ input[type="radio"].visually-hidden {
 
 .user-profile {
 	width: 240px;
-	text-align: right;
 	margin-right: 13px;
 	padding-right: 9px;
+
+	text-align: right;
 }
 
 .user-login a::before,
 .user-profile a::before {
 	content: "";
 	display: inline-block;
-	vertical-align: baseline;
 	width: 13px;
 	height: 12px;
 	margin-right: 13px;
-	
+
+	vertical-align: baseline;
+
 	background-image: url("../img/icons/user_icon.svg");
 	background-repeat: no-repeat;
   	background-position: 0 0;
@@ -216,10 +209,10 @@ input[type="radio"].visually-hidden {
 	display: -ms-flexbox;
 	display: flex;
 	-webkit-box-pack: justify;
-	    -ms-flex-pack: justify;
-	        justify-content: space-between;
+	   -ms-flex-pack: justify;
+	justify-content: space-between;
 	-ms-flex-wrap: wrap;
-	    flex-wrap: wrap;
+		flex-wrap: wrap;
 	width: 220px;
 	margin-left: auto;
 	padding-left: 7px;
@@ -236,27 +229,29 @@ input[type="radio"].visually-hidden {
 .goods-cart a::before {
 	content: "";
 	display: inline-block;
-	vertical-align: baseline;
 	width: 12px;
 	height: 12px;
 	margin-right: 12px;
-	
+
+	vertical-align: baseline;
+
 	background-image: url("../img/icons/cart_icon.svg");
 	background-repeat: no-repeat;
-  	background-position: 0 0;
+	background-position: 0 0;
 }
 
 .goods-compare a::before {
 	content: "";
 	display: inline-block;
-	vertical-align: baseline;
 	width: 10px;
 	height: 10px;
 	margin-right: 10px;
-	
+
+	vertical-align: baseline;
+
 	background-image: url("../img/icons/compare_icon.svg");
 	background-repeat: no-repeat;
-  	background-position: 0 0;
+	background-position: 0 0;
 }
 
 .main-search {
@@ -266,9 +261,7 @@ input[type="radio"].visually-hidden {
 	-ms-flex-wrap: wrap;
 	    flex-wrap: wrap;
 	position: relative;
-	
 	width: 450px;
-	/*width: 500px;*/
 	margin-right: 15px;
 }
 
@@ -279,7 +272,6 @@ input[type="radio"].visually-hidden {
 	padding-top: 3.5px;
 	padding-bottom: 5.5px;
 	padding-left: 39px;
-
 	width: 356px;
 
 	font-family: "opensans", Arial, sans-serif;
@@ -292,34 +284,75 @@ input[type="radio"].visually-hidden {
 	border: 0;
 	border-top: 2px solid transparent;
 	border-bottom: 2px solid transparent;
-	
 	background-color: transparent;
 }
 
-
 .main-search input[type="text"]:focus {
-	border-bottom: 2px solid #000000;
 	color: rgb(0, 0, 0);
+
+	border-bottom: 2px solid #000000;
 	outline: none;
 }
 
-.main-search input::-webkit-input-placeholder 		{ color: rgba(0, 0, 0, .3); }
-.main-search input::-moz-placeholder 				{ color: rgba(0, 0, 0, .3); }
-.main-search input:-moz-placeholder 				{ color: rgba(0, 0, 0, .3); }
-.main-search input:-ms-input-placeholder 			{ color: rgba(0, 0, 0, .3); }
-.main-search input[placeholder] 					{ color: rgba(0, 0, 0, .3); }
+.main-search input::-webkit-input-placeholder { 
+	color: rgba(0, 0, 0, .3);
+}
 
-.main-search input:hover::-webkit-input-placeholder		{ color: rgba(0, 0, 0, .6); }
-.main-search input:hover::-moz-placeholder 				{ color: rgba(0, 0, 0, .6); }
-.main-search input:hover:-moz-placeholder				{ color: rgba(0, 0, 0, .6); }
-.main-search input:hover:-ms-input-placeholder			{ color: rgba(0, 0, 0, .6); }
-.main-search input[placeholder]:hover 					{ color: rgba(0, 0, 0, .6); }
+.main-search input::-moz-placeholder { 
+	color: rgba(0, 0, 0, .3);
+}
 
-.main-search input:focus::-webkit-input-placeholder		{ color: rgba(0, 0, 0, 1); }
-.main-search input:focus::-moz-placeholder 				{ color: rgba(0, 0, 0, 1); }
-.main-search input:focus:-moz-placeholder				{ color: rgba(0, 0, 0, 1); }
-.main-search input:focus:-ms-input-placeholder			{ color: rgba(0, 0, 0, 1); }
-.main-search input[placeholder]:focus 					{ color: rgba(0, 0, 0, 1); }
+.main-search input:-moz-placeholder {
+	color: rgba(0, 0, 0, .3);
+}
+
+.main-search input:-ms-input-placeholder { 
+	color: rgba(0, 0, 0, .3);
+}
+
+.main-search input[placeholder] {
+	color: rgba(0, 0, 0, .3);
+}
+
+.main-search input:hover::-webkit-input-placeholder {
+	color: rgba(0, 0, 0, .6);
+}
+
+.main-search input:hover::-moz-placeholder {
+	color: rgba(0, 0, 0, .6);
+}
+
+.main-search input:hover:-moz-placeholder {
+	color: rgba(0, 0, 0, .6);
+}
+
+.main-search input:hover:-ms-input-placeholder {
+	color: rgba(0, 0, 0, .6);
+}
+
+.main-search input[placeholder]:hover {
+	color: rgba(0, 0, 0, .6);
+}
+
+.main-search input:focus::-webkit-input-placeholder {
+	color: rgba(0, 0, 0, 1);
+}
+
+.main-search input:focus::-moz-placeholder {
+	color: rgba(0, 0, 0, 1);
+}
+
+.main-search input:focus:-moz-placeholder {
+	color: rgba(0, 0, 0, 1);
+}
+
+.main-search input:focus:-ms-input-placeholder {
+	color: rgba(0, 0, 0, 1);
+}
+
+.main-search input[placeholder]:focus {
+	color: rgba(0, 0, 0, 1);
+}
 
 .main-search label[for="main_search_input"] {
 	position: absolute;

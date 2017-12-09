@@ -1871,6 +1871,10 @@ margin-top: 4px;
 	margin-top: -279.5px;
 }
 
+.modal-map iframe {
+	border:0;
+} 
+
 .map-container {
 	position: absolute;
 	top: 0;

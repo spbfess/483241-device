@@ -1,19 +1,19 @@
 /* ============== FONTS ============== */
 
 @font-face {
-    font-family: "gilroylight";
+    font-family: "gilroy";
     src: url("../fonts/gilroylight.woff2") format("woff2"),
          url("../fonts/gilroylight.woff") format("woff");
-    font-weight: normal;
+    font-weight: 300;
     font-style: normal;
 
 }
 
 @font-face {
-    font-family: "gilroyextrabold";
+    font-family: "gilroy";
     src: url("../fonts/gilroyextrabold.woff2") format("woff2"),
          url("../fonts/gilroyextrabold.woff") format("woff");
-    font-weight: normal;
+    font-weight: 900;
     font-style: normal;
 
 }
@@ -22,16 +22,16 @@
     font-family: "opensans";
     src: url("../fonts/opensans.woff2") format("woff2"),
          url("../fonts/opensans.woff") format("woff");
-    font-weight: normal;
+    font-weight: 400;
     font-style: normal;
 
 }
 
 @font-face {
-    font-family: "opensanslight";
+    font-family: "opensans";
     src: url("../fonts/opensanslight.woff2") format("woff2"),
          url("../fonts/opensanslight.woff") format("woff");
-    font-weight: normal;
+    font-weight: 300;
     font-style: normal;
 
 }
@@ -56,7 +56,8 @@ body {
 	padding: 0;
 	min-width: 1200px;
 	
-	font-family: "opensanslight", Arial, sans-serif;
+	font-family: "opensans", Arial, sans-serif;
+	font-weight: 300;
 	font-size: 15px;
 	line-height: 30px;
 	color: #464646;
@@ -278,7 +279,8 @@ input[type="radio"].visually-hidden {
 
 	width: 356px;
 
-	font-family: "opensanslight", Arial, sans-serif;
+	font-family: "opensans", Arial, sans-serif;
+	font-weight: 300;
 	font-size: 15px;
 	line-height: 36px;
 	letter-spacing: .01em;
@@ -339,7 +341,8 @@ input[type="radio"].visually-hidden {
 	min-width: 85px;
 	opacity: 0;
 
-	font-family: "opensanslight", Arial, sans-serif;
+	font-family: "opensans", Arial, sans-serif;
+	font-weight: 300;
 	font-size: 15px;
 	line-height: 36px;
 	letter-spacing: .01em;
@@ -429,7 +432,8 @@ input[type="radio"].visually-hidden {
 .site-navigation-item > a {
 	position: relative;
 	z-index: 10;
-	font-family: "gilroyextrabold", Arial, sans-serif;
+	font-family: "gilroy", Arial, sans-serif;
+	font-weight: 900;
 	font-size: 18px;
 	line-height: 1.2;
 	letter-spacing: .2em;
@@ -526,7 +530,8 @@ input[type="radio"].visually-hidden {
 	
 	z-index: 1;	
 	
-	font-family: "gilroyextrabold", Arial, sans-serif;
+	font-family: "gilroy", Arial, sans-serif;
+	font-weight: 900;
 	font-size: 18px;
 	line-height: 1.2;
 	letter-spacing: .2em;
@@ -688,7 +693,8 @@ input[type="radio"].visually-hidden {
 .promo-item::before {
 	position: absolute;
 
-	font-family: "gilroyextrabold", Arial, sans-serif;
+	font-family: "gilroy", Arial, sans-serif;
+	font-weight: 900;
 	line-height: 1;
 	font-size: 179.2px;
 	letter-spacing: .01em;
@@ -759,7 +765,8 @@ input[type="radio"].visually-hidden {
 	padding: 0;
 	margin-bottom: 18px;
 
-	font-family: "gilroyextrabold", Arial, sans-serif;
+	font-family: "gilroy", Arial, sans-serif;
+	font-weight: 900;
 	font-size: 47px;
 	line-height: 1.2;
 	letter-spacing: .01em;
@@ -813,7 +820,8 @@ input[type="radio"].visually-hidden {
 }
 
 .promo-spec-data {
-	font-family: "gilroylight", Arial, sans-serif;
+	font-family: "gilroy", Arial, sans-serif;
+	font-weight: 300;
 	font-size: 36px;
 	line-height: 1.2;
 	color: #000000;
@@ -857,7 +865,8 @@ input[type="radio"].visually-hidden {
 	padding-top: 195px;
 	width: 160px;
 
-	font-family: "gilroyextrabold", Arial, sans-serif;
+	font-family: "gilroy", Arial, sans-serif;
+	font-weight: 900;
 	font-size: 18px;
 	line-height: 1.2;
 	letter-spacing: .01em;
@@ -965,7 +974,8 @@ a.categories-item-copters::after {
 }
 
 .services h3 {
-	font-family: "gilroyextrabold", Arial, sans-serif;
+	font-family: "gilroy", Arial, sans-serif;
+	font-weight: 900;
 	font-size: 47px;
 	line-height: 1.2;
 	letter-spacing: .01em;
@@ -1199,7 +1209,8 @@ a.categories-item-copters::after {
 	margin-bottom: 39px;
 	padding: 0;
 
-	font-family: "gilroyextrabold", Arial, sans-serif;
+	font-family: "gilroy", Arial, sans-serif;
+	font-weight: 900;
 	font-size: 47px;
 	letter-spacing: .01em;
 	line-height: 1.2;
@@ -1238,7 +1249,8 @@ a.categories-item-copters::after {
 
 	list-style: none;
 
-	font-family: "gilroyextrabold", Arial, sans-serif;
+	font-family: "gilroy", Arial, sans-serif;
+	font-weight: 900;
 	font-size: 16px;
 	line-height: 40px;
 	color: #000000;
@@ -1497,7 +1509,8 @@ margin-top: 4px;
 	    flex-wrap: wrap;
 	padding-top: 8px;
 
-	font-family: "gilroyextrabold", Arial, sans-serif;
+	font-family: "gilroy", Arial, sans-serif;
+	font-weight: 900;
 	font-size: 18px;
 	line-height: 1.2;
 	letter-spacing: .2em;
@@ -1759,7 +1772,8 @@ margin-top: 4px;
 .modal-write-us-field {
 	display: block;
 
-	font-family: "gilroyextrabold", Arial, sans-serif;
+	font-family: "gilroy", Arial, sans-serif;
+	font-weight: 900;
 	font-size: 18px;
 	line-height: 18px;
 	color: #000000;
@@ -1778,6 +1792,7 @@ margin-top: 4px;
 	padding-bottom: 17px;
 
 	font-family: "opensans", Arial, sans-serif;
+	font-weight: 400;
 	font-size: 14px;
 	line-height: 18px;
 	border: none;
@@ -1877,7 +1892,8 @@ margin-top: 4px;
 	padding: 0;
 	padding-left: 59px;
 
-	font-family: "gilroyextrabold", Arial, sans-serif;
+	font-family: "gilroy", Arial, sans-serif;
+	font-weight: 900;
 	font-size: 47px;
 	line-height: 1.2;
 	letter-spacing: .01em;
@@ -1981,7 +1997,8 @@ margin-top: 4px;
 	padding-top: 25px;
 	padding-bottom: 26px;
 
-	font-family: "gilroyextrabold", Arial, sans-serif;
+	font-family: "gilroy", Arial, sans-serif;
+	font-weight: 900;
 	font-size: 16px;
 	line-height: 1.2;
 	color: #000000;
@@ -2014,7 +2031,8 @@ margin-top: 4px;
 .filter-body h3 {
 	margin: 0;
 	margin-bottom: 19px;
-	font-family: "gilroyextrabold", Arial, sans-serif;
+	font-family: "gilroy", Arial, sans-serif;
+	font-weight: 900;
 	font-size: 18px;
 	line-height: 1.2;
 	color: #000000;
@@ -2090,7 +2108,8 @@ margin-top: 4px;
 .filter-cost-values label {
 	position: absolute;
 	display: inline-block;
-	font-family: "gilroylight", Arial, sans-serif;
+	font-family: "gilroy", Arial, sans-serif;
+	font-weight: 300;
 	font-size: 14px;
 	color: rgba(0 ,0 ,0, .2);
 }
@@ -2283,7 +2302,8 @@ margin-top: 4px;
 	margin-right: 20px;
 	width: 180px;
 	
-	font-family: "gilroyextrabold", Arial, sans-serif;
+	font-family: "gilroy", Arial, sans-serif;
+	font-weight: 900;
 	font-size: 16px;
 	line-height: 1.2;
 	padding: 25px 0;
@@ -2323,6 +2343,7 @@ margin-top: 4px;
 
 .sort-by-option a {
 	font-family: "opensans", Arial, sans-serif;
+	font-weight: 400;
 	font-size: 14px;
 	line-height: 18px;
 	color: rgba(0, 0, 0, .3);
@@ -2479,7 +2500,8 @@ a.sort-by-order-current:active::before {
 	padding-bottom: 22px;
 
 	text-align: center;
-	font-family: "gilroyextrabold", Arial, sans-serif;
+	font-family: "gilroy", Arial, sans-serif;
+	font-weight: 900;
 	font-size: 14px;
 	line-height: 1.2;
 	letter-spacing: .05em;
@@ -2527,6 +2549,7 @@ a.sort-by-order-current:active::before {
 .button-add-to-comparison {
 	padding: 0;
 	font-family: "opensans", Arial, sans-serif;
+	font-weight: 400;
 	font-size: 13px;
 	line-height: 36px;
 	letter-spacing: .01em;
@@ -2549,7 +2572,8 @@ a.sort-by-order-current:active::before {
 }
 
 .goods-item-name {
-	font-family: "gilroyextrabold", Arial, sans-serif;
+	font-family: "gilroy", Arial, sans-serif;
+	font-weight: 900;
 	font-size: 18px;
 	line-height: 1.2;
 	color: #000000;
@@ -2561,7 +2585,8 @@ a.sort-by-order-current:active::before {
 }
 
 .goods-item-price {
-	font-family: "gilroylight", Arial, sans-serif;
+	font-family: "gilroy", Arial, sans-serif;
+	font-weight: 300;
 	font-size: 16px;
 	line-height: 1.2;
 	letter-spacing: .01em;
@@ -2574,7 +2599,8 @@ a.sort-by-order-current:active::before {
 	min-height: 70px;
 	margin-bottom: 30px;
 
-	font-family: "gilroyextrabold", Arial, sans-serif;
+	font-family: "gilroy", Arial, sans-serif;
+	font-weight: 900;
 	font-size: 16px;
 	line-height: 1.2;
 	letter-spacing: .2em;

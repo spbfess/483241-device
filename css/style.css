@@ -193,8 +193,8 @@ input[type="radio"].visually-hidden {
 	padding-right: 9px;
 }
 
-.user-login a:before,
-.user-profile a:before {
+.user-login a::before,
+.user-profile a::before {
 	content: "";
 	display: inline-block;
 	vertical-align: baseline;
@@ -1874,7 +1874,7 @@ margin-top: 4px;
 .modal-map iframe {
 	width: 960px;
 	height: 559px;
-	
+
 	border:0;
 } 
 

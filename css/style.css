@@ -197,6 +197,7 @@ input[type="radio"].visually-hidden {
 .user-profile a:before {
 	content: "";
 	display: inline-block;
+	vertical-align: baseline;
 	width: 13px;
 	height: 12px;
 	margin-right: 13px;
@@ -235,6 +236,7 @@ input[type="radio"].visually-hidden {
 .goods-cart a::before {
 	content: "";
 	display: inline-block;
+	vertical-align: baseline;
 	width: 12px;
 	height: 12px;
 	margin-right: 12px;
@@ -247,6 +249,7 @@ input[type="radio"].visually-hidden {
 .goods-compare a::before {
 	content: "";
 	display: inline-block;
+	vertical-align: baseline;
 	width: 10px;
 	height: 10px;
 	margin-right: 10px;
@@ -300,23 +303,23 @@ input[type="radio"].visually-hidden {
 	outline: none;
 }
 
-.main-search input[placeholder] 					{ color: rgba(0, 0, 0, .3); }
 .main-search input::-webkit-input-placeholder 		{ color: rgba(0, 0, 0, .3); }
 .main-search input::-moz-placeholder 				{ color: rgba(0, 0, 0, .3); }
 .main-search input:-moz-placeholder 				{ color: rgba(0, 0, 0, .3); }
 .main-search input:-ms-input-placeholder 			{ color: rgba(0, 0, 0, .3); }
+.main-search input[placeholder] 					{ color: rgba(0, 0, 0, .3); }
 
-.main-search input[placeholder]:hover 					{ color: rgba(0, 0, 0, .6); }
 .main-search input:hover::-webkit-input-placeholder		{ color: rgba(0, 0, 0, .6); }
 .main-search input:hover::-moz-placeholder 				{ color: rgba(0, 0, 0, .6); }
 .main-search input:hover:-moz-placeholder				{ color: rgba(0, 0, 0, .6); }
 .main-search input:hover:-ms-input-placeholder			{ color: rgba(0, 0, 0, .6); }
+.main-search input[placeholder]:hover 					{ color: rgba(0, 0, 0, .6); }
 
-.main-search input[placeholder]:focus 					{ color: rgba(0, 0, 0, 1); }
 .main-search input:focus::-webkit-input-placeholder		{ color: rgba(0, 0, 0, 1); }
 .main-search input:focus::-moz-placeholder 				{ color: rgba(0, 0, 0, 1); }
 .main-search input:focus:-moz-placeholder				{ color: rgba(0, 0, 0, 1); }
 .main-search input:focus:-ms-input-placeholder			{ color: rgba(0, 0, 0, 1); }
+.main-search input[placeholder]:focus 					{ color: rgba(0, 0, 0, 1); }
 
 .main-search label[for="main_search_input"] {
 	position: absolute;
@@ -518,6 +521,7 @@ input[type="radio"].visually-hidden {
 
 .button {
 	display: inline-block;
+	vertical-align: baseline;
 	position: relative;
 	padding-left: 13px;
 	padding-right: 10px;
@@ -1427,6 +1431,7 @@ margin-top: 4px;
 .main-footer-user-login a::before{
 	content: "";
 	display: inline-block;
+	vertical-align: baseline;
 	width: 13px;
 	height: 12px;
 	margin-right: 12px;
@@ -1439,6 +1444,7 @@ margin-top: 4px;
 .main-footer-goods-compare a::before {
 	content: "";
 	display: inline-block;
+	vertical-align: baseline;
 	width: 10px;
 	height: 10px;
 	margin-right: 10px;
@@ -1451,6 +1457,7 @@ margin-top: 4px;
 .main-footer-goods-cart a::before{
 	content: "";
 	display: inline-block;
+	vertical-align: baseline;
 	width: 12px;
 	height: 12px;
 	margin-right: 10px;
@@ -1828,29 +1835,29 @@ margin-top: 4px;
 	background-color: #f6dada;
 } 
 
-.modal-write-us-field input[placeholder] 						{ color: rgba(70, 70, 70, .4); }
 .modal-write-us-field input::-webkit-input-placeholder 			{ color: rgba(70, 70, 70, .4); }
 .modal-write-us-field input::-moz-placeholder 					{ color: rgba(70, 70, 70, .4); opacity: 1; }
 .modal-write-us-field input:-moz-placeholder 					{ color: rgba(70, 70, 70, .4); opacity: 1; }
 .modal-write-us-field input:-ms-input-placeholder 				{ color: rgba(70, 70, 70, .4); }
+.modal-write-us-field input[placeholder] 						{ color: rgba(70, 70, 70, .4); }
 
-.modal-write-us-field textarea[placeholder] 						{ color: rgba(70, 70, 70, .4); }
 .modal-write-us-field textarea::-webkit-input-placeholder 			{ color: rgba(70, 70, 70, .4); }
 .modal-write-us-field textarea::-moz-placeholder 					{ color: rgba(70, 70, 70, .4); opacity: 1; }
 .modal-write-us-field textarea:-moz-placeholder 					{ color: rgba(70, 70, 70, .4); opacity: 1; }
 .modal-write-us-field textarea:-ms-input-placeholder 				{ color: rgba(70, 70, 70, .4); }
+.modal-write-us-field textarea[placeholder] 						{ color: rgba(70, 70, 70, .4); }
 
-.modal-write-us-field input[placeholder]:focus 					{ color: rgba(70, 70, 70, 1); }
 .modal-write-us-field input:focus::-webkit-input-placeholder	{ color: rgba(70, 70, 70, 1); }
 .modal-write-us-field input:focus::-moz-placeholder 			{ color: rgba(70, 70, 70, 1); }
 .modal-write-us-field input:focus:-moz-placeholder				{ color: rgba(70, 70, 70, 1); }
 .modal-write-us-field input:focus:-ms-input-placeholder			{ color: rgba(70, 70, 70, 1); }
+.modal-write-us-field input[placeholder]:focus 					{ color: rgba(70, 70, 70, 1); }
 
-.modal-write-us-field textarea[placeholder]:focus 					{ color: rgba(70, 70, 70, 1); }
 .modal-write-us-field textarea:focus::-webkit-input-placeholder		{ color: rgba(70, 70, 70, 1); }
 .modal-write-us-field textarea:focus::-moz-placeholder 				{ color: rgba(70, 70, 70, 1); }
 .modal-write-us-field textarea:focus:-moz-placeholder				{ color: rgba(70, 70, 70, 1); }
 .modal-write-us-field textarea:focus:-ms-input-placeholder			{ color: rgba(70, 70, 70, 1); }
+.modal-write-us-field textarea[placeholder]:focus 					{ color: rgba(70, 70, 70, 1); }
 
 .button-modal-write-us {
 	min-width: 200px;
@@ -2108,6 +2115,7 @@ margin-top: 4px;
 .filter-cost-values label {
 	position: absolute;
 	display: inline-block;
+	vertical-align: baseline;
 	font-family: "gilroy", Arial, sans-serif;
 	font-weight: 300;
 	font-size: 14px;
@@ -2162,6 +2170,7 @@ margin-top: 4px;
 .filter-color-list label,
 .filter-bluetooth-list label {
 	display: inline-block;
+	vertical-align: baseline;
 	position: relative;
 	padding-left: 38px;
 	letter-spacing: .01em;
@@ -2488,10 +2497,9 @@ a.sort-by-order-current:active::before {
 }
 
 .goods-item-new .goods-item-bar::after {
-	position: absolute;
-	content: "New";
-	text-transform: uppercase;
 	display: inline-block;
+	position: absolute;
+	content: "New";		
 	top: 28px;
 	right: 27px;
 	width: 60px;
@@ -2500,12 +2508,15 @@ a.sort-by-order-current:active::before {
 	padding-bottom: 22px;
 
 	text-align: center;
+	vertical-align: baseline;
 	font-family: "gilroy", Arial, sans-serif;
 	font-weight: 900;
 	font-size: 14px;
 	line-height: 1.2;
 	letter-spacing: .05em;
 	color: rgba(0, 0, 0, .2);
+	text-transform: uppercase;
+
 	border: 2px solid rgba(0, 0, 0, .1);
 	border-radius: 50%;
 }
@@ -2612,6 +2623,7 @@ a.sort-by-order-current:active::before {
 .pagination-item-prev a,
 .pagination-item-next a {
 	display: inline-block;
+	vertical-align: baseline;
 	padding-top: 26px;
 	padding-bottom: 25px;
 }

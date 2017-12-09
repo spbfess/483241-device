@@ -2155,9 +2155,15 @@ margin-top: 4px;
   background: #91c92f;
 }
 
-.filter-body input[type="checkbox"]:disabled + span,
-.filter-body input[type="radio"]:disabled +span {
+.filter-body input[type="checkbox"]:disabled + label,
+.filter-body input[type="radio"]:disabled + label {
 	color: rgb(166, 166, 166);
+}
+
+.filter-body input[type="checkbox"]:disabled + label::before,
+.filter-body input[type="radio"]:disabled + label::before,
+.filter-body input[type="radio"]:disabled + label::after {
+	opacity: .25;
 }
 
 .filter-color-list,

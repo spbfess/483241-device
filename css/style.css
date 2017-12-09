@@ -1872,6 +1872,9 @@ margin-top: 4px;
 }
 
 .modal-map iframe {
+	width: 960px;
+	height: 559px;
+	
 	border:0;
 } 
 

@@ -9,8 +9,8 @@ var writeUsMessage = writeUsPopup.querySelector("[name=text]");
 
 function localStorageIsOk() {
 	try {
-    	return 'localStorage' in window && window['localStorage'] !== null;
-	} catch (e) {
+		return "localStorage" in window && window["localStorage"] !== null;
+	} catch(e) {
 		return false;
 	}
 }
@@ -26,29 +26,29 @@ var map = document.querySelector(".contacts .contacts-map");
 var mapPopup = document.querySelector(".modal-map");
 var mapClose = mapPopup.querySelector(".modal-close");
 
-writeUs.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    writeUsPopup.classList.add("modal-show");
-    if (writeUsLoginCached) {
-            writeUsLogin.value = writeUsLoginCached;
-            if (writeUsEmailCached) {
-                    writeUsEmail.value = writeUsEmailCached;
-                    writeUsMessage.focus();
-            } else {
-            writeUsEmail.focus();
-            }
-    } else {
-            writeUsLogin.focus();
-    }
+writeUs.addEventListener("click", function(evt) {
+	evt.preventDefault();
+	writeUsPopup.classList.add("modal-show");
+	if (writeUsLoginCached) {
+		writeUsLogin.value = writeUsLoginCached;
+		if (writeUsEmailCached) {
+			writeUsEmail.value = writeUsEmailCached;
+			writeUsMessage.focus();
+		} else {
+			writeUsEmail.focus();
+		}
+	} else {
+		writeUsLogin.focus();
+	}
 });
 
-writeUsClose.addEventListener("click", function (evt) {
+writeUsClose.addEventListener("click", function(evt) {
 	evt.preventDefault();
 	writeUsPopup.classList.remove("modal-show");
 	writeUsPopup.classList.remove("modal-error");
 });
 
-writeUsForm.addEventListener("submit", function (evt) {
+writeUsForm.addEventListener("submit", function(evt) {
 	if (!writeUsLogin.value || !writeUsEmail.value || !writeUsMessage.value) {
 		evt.preventDefault();
 		writeUsPopup.classList.remove("modal-error");
@@ -60,7 +60,7 @@ writeUsForm.addEventListener("submit", function (evt) {
 	}
 });
 
-window.addEventListener("keydown", function (evt) {
+window.addEventListener("keydown", function(evt) {
 	if (evt.keyCode === 27) {
 		if (writeUsPopup.classList.contains("modal-show")) {
 			writeUsPopup.classList.remove("modal-show");
@@ -72,13 +72,13 @@ window.addEventListener("keydown", function (evt) {
 	}
 });
 
-map.addEventListener("click", function (evt) {
+map.addEventListener("click", function(evt) {
 	evt.preventDefault();
 	console.log("map here");
 	mapPopup.classList.add("modal-show");
 });
 
-mapClose.addEventListener("click", function (evt) {
+mapClose.addEventListener("click", function(evt) {
 	evt.preventDefault();
 	mapPopup.classList.remove("modal-show");
 });

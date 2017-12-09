@@ -10,8 +10,8 @@ var writeUsMessage = writeUsPopup.querySelector("[name=text]");
 function localStorageIsOk() {
 	try {
     	return 'localStorage' in window && window['localStorage'] !== null;
-} catch (e) {
-	return false;
+	} catch (e) {
+		return false;
 	}
 }
  
@@ -27,19 +27,19 @@ var mapPopup = document.querySelector(".modal-map");
 var mapClose = mapPopup.querySelector(".modal-close");
 
 writeUs.addEventListener("click", function (evt) {
-        evt.preventDefault();
-        writeUsPopup.classList.add("modal-show");
-        if (writeUsLoginCached) {
-                writeUsLogin.value = writeUsLoginCached;
-                if (writeUsEmailCached) {
-                        writeUsEmail.value = writeUsEmailCached;
-                        writeUsMessage.focus();
-                } else {
-                writeUsEmail.focus();
-                }
-        } else {
-                writeUsLogin.focus();
-        }
+    evt.preventDefault();
+    writeUsPopup.classList.add("modal-show");
+    if (writeUsLoginCached) {
+            writeUsLogin.value = writeUsLoginCached;
+            if (writeUsEmailCached) {
+                    writeUsEmail.value = writeUsEmailCached;
+                    writeUsMessage.focus();
+            } else {
+            writeUsEmail.focus();
+            }
+    } else {
+            writeUsLogin.focus();
+    }
 });
 
 writeUsClose.addEventListener("click", function (evt) {

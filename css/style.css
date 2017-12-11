@@ -1446,6 +1446,8 @@ a.categories-item-copters::after {
 	-webkit-box-pack: justify;
 	    -ms-flex-pack: justify;
 	        justify-content: space-between;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
 	width: 212px;
 }
 
@@ -1457,6 +1459,8 @@ a.categories-item-copters::after {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
 	width: 300px;
 }
 
